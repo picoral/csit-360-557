@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "modules.html",
+    "href": "modules.html",
+    "title": "Modules",
+    "section": "",
+    "text": "Topic: Introduction – Python review\n\n\n\nCourse Introduction"
+  },
+  {
+    "objectID": "modules.html#slides",
+    "href": "modules.html#slides",
+    "title": "Modules",
+    "section": "",
+    "text": "Course Introduction"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CSIT-360-557 Syllabus",
+    "section": "",
+    "text": "Course Information\n\nMonday and Wednesday, 12:00 – 1:25pm\nMode: in-person, at School of Business 011\n\n\n\nCourse Description\nThis course provides the advanced techniques in Data Science. After learning data manipulating, processing, cleaning, and visualization, the major goals of this course are to learn how to make data-driven inferences and decisions by using fundamental techniques in machine learning, in Python language.\n\n\nInstructor\n\nAdriana Picoral, PhD\nOffice:\nemail: picorala@montclair.edu\nOffice Hours (open door/drop in):\n\nTuesdays and Thursdays, 1:45pm to 3:30pm\n\n\n\n\nCourse Outcomes\nUpon completion of the course, students should be able to:\n\nCO1: understand the concepts and various phases of Data Science\nCO2: understand how to use Python data science libraries to demonstrate the data science skills and visualize data\nCO3: understand the concepts of fundamental techniques in machine learning and neural networks\nCO4: implement techniques of machine learning algorithms on data analysis using advanced libraries such as sci-kit learn and TensorFlow in Python\nCO5: apply data science concepts and skills to solve problems with real-world data sets.\n\n\n\nCourse Schedule\n\n\n\n\n\n\nWeek\nStart Date\nTopic\n\n\n\n\n01\nJanuary 22\nIntroduction – Python review\n\n\n02\nJanuary 29\nPython Projects\n\n\n03\nFeb 05\nNumpy & Pandas\n\n\n04\nFebruary 12\nData Wrangling\n\n\n05\nFebruary 19\nSupervised Learning\n\n\n06\nFebruary 26\nSupervised Learning\n\n\n07\nMarch 05\nSupervised Learning\n\n\n08\nMarch 17\nSupervised Learning\n\n\n09\nMarch 24\nSupervised Learning\n\n\n10\nMarch 31\nUnsupervised Learning\n\n\n11\nApril 07\nUnsupervised Learning\n\n\n12\nApril 14\nUnsupervised Learning\n\n\n13\nApril 21\nOther Advanced Techniques\n\n\n14\nApril 28\nFinal Project Presentations\n\n\n\n\n\n\n\n\nGrading Breakdown\n\n\n\nAssessment Element\nPercentage of Final Grade\n\n\n\n\nHomework Assignments\n20%\n\n\nProjects\n20%\n\n\nQuizzes (5)\n30%\n\n\nGroup Project\n20%\n\n\nProject Presentation\n10%\n\n\n\n\n\nLate Work Policy\nStudents are expected to complete work on schedule. The late policy for all assignments is as follows:\n\n20% points off if submitted within 24 hours after the due date\n30% off if submitted 24-48 hours after the due date\nNo credit if submitted two days or more days after the due date unless prior arrangements are made with the instructor with acceptable reasons.\n\nNote: This is a firm policy and it will be automatically applied\n\n\nAttendance Policy\nAttendance is mandatory. All students must sign an attendance sheet at the beginning of class. Excused absences include illness or a serious personal crisis (a letter from the Dean of students is required). If you are missing class and have a reasonable excuse, contact me before lecture if you want to make up missed assessments.\n\n\nGrading Scale\n\n\n\nLetter Grade\nGrade Percentage\n\n\n\n\nA\n94-100%\n\n\nA-\n90-93%\n\n\nB+\n87-89%\n\n\nB\n84-86%\n\n\nB-\n80-83%\n\n\nC+\n77-79%\n\n\nC\n74-76%\n\n\nC-\n70-73%\n\n\nD+ (undergraduate only)\n67-69%\n\n\nD (undergraduate only)\n64-66%\n\n\nD- (undergraduate only)\n60-63%\n\n\nF\n0-59%\n\n\n\n\n\nAcademic Honesty and Integrity\nAcademic Honesty is a core University value. Take time to understand the University’s policy. Your questions about academic honesty are always welcome.\nAll work you submit for grading in this course must be your own. Submitting work that includes (minor and/or major) components that are not your own work is considered plagiarism. I recommend that when talking with others about the assignment, do not write anything down.\nKeep in mind that all assignments and practice problems provided in this course are meant to help you practice the skills that you will need to do well in all assessments (including on paper quizzes), so it is generally in your best interest to avoid taking shortcuts even on practice problems (which are ungraded).\nSharing your code with others (in addition to copying code from others) is considered a break of the academic integrity code (unauthorized assistance) as well.\n\n\nLand Acknowledgement\nWe respectfully acknowledge that Montclair State University occupies land in Lenapehoking, the traditional and expropriated territory of the Lenape. As a state institution, we recognize and support the sovereignty of New Jersey’s three state-recognized tribes: the Ramapough Lenape, Nanticoke Lenni-Lenape, and Powhatan Renape nations.\nWe recognize the sovereign nations of the Lenape diaspora elsewhere in North America, as well as other Indigenous individuals and communities now residing in New Jersey. By offering this land acknowledgement, we commit to addressing the historical legacies of Indigenous dispossession and dismantling practices of erasure that persist today. We recognize the resilience and persistence of contemporary Indigenous communities and their role in educating all of us about justice, equity, and the stewardship of the land throughout the generations.\n\n\nSubject to Change\nChanges may be made to this syllabus as needed to support student learning. Any updates will be announced in class or through course materials with advance notice."
+  },
+  {
+    "objectID": "slides-01-01.html#hello",
+    "href": "slides-01-01.html#hello",
+    "title": "Introduction",
+    "section": "Hello",
+    "text": "Hello\n\nAdriana Picoral (PhD, you can call me Adriana)\npicorala@montclair.edu\nOffice:\nOffice hours: Tuesdays and Thursdays, 1:45pm to 3:30pm"
+  },
+  {
+    "objectID": "slides-01-01.html#active-learning",
+    "href": "slides-01-01.html#active-learning",
+    "title": "Introduction",
+    "section": "Active Learning",
+    "text": "Active Learning\n\nI expect you to actively participate in class (that does not mean you have to speak to the entire group)\nLots of hands-on activities and discussions\nWe will be using Gradescope (more on this later) to submit in-class work and for homework assignments"
+  },
+  {
+    "objectID": "slides-01-01.html#ice-breaker",
+    "href": "slides-01-01.html#ice-breaker",
+    "title": "Introduction",
+    "section": "Ice Breaker",
+    "text": "Ice Breaker\n\nFind at least one person to talk to.\nIntroduce yourself (name, major/program, anything else you’d like to share)\nWhat is something you are good at and that took many hours of practice?"
+  },
+  {
+    "objectID": "slides-01-01.html#course-overview",
+    "href": "slides-01-01.html#course-overview",
+    "title": "Introduction",
+    "section": "Course Overview",
+    "text": "Course Overview\n\nIntroduction to advanced techniques in Data Science\nFocus on both concepts and examples\nFocus on hands-on, bring a laptop to class if you have one\nFocus on real data in assignments"
+  },
+  {
+    "objectID": "slides-01-01.html#course-overview-1",
+    "href": "slides-01-01.html#course-overview-1",
+    "title": "Introduction",
+    "section": "Course Overview",
+    "text": "Course Overview\nWhat is missing in this image?"
+  },
+  {
+    "objectID": "slides-01-01.html#course-overview-2",
+    "href": "slides-01-01.html#course-overview-2",
+    "title": "Introduction",
+    "section": "Course Overview",
+    "text": "Course Overview\nTopics:\n\nReview the cycle of data science: data wrangling, and visualization\nMajor topics: how to make data-driven inferences and decisions by using fundamental techniques in machine learning and neural networks"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This course website was created by Adriana Picoral and is licensed under the CC BY-NC-SA 4.0 Creative Commons License.\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format.\nAdapt — remix, transform, and build upon the material.\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.\nNon Commercial — You may not use the material for commercial purposes. (Remove this line if commercial use is permitted.)\nShare Alike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. (Include this if Share Alike applies.)"
+  }
+]
