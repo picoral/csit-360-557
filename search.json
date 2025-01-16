@@ -4,7 +4,7 @@
     "href": "modules.html",
     "title": "Modules",
     "section": "",
-    "text": "Topic: Introduction – Python review\n\n\n\nSet up your coding environment\n\n\n\n\n\nCourse Introduction"
+    "text": "Topic: Introduction – Python review\n\n\n\nSet up your coding environment\n\n\n\n\n\nCourse Introduction\nData"
   },
   {
     "objectID": "modules.html#reading",
@@ -18,7 +18,7 @@
     "href": "modules.html#slides",
     "title": "Modules",
     "section": "",
-    "text": "Course Introduction"
+    "text": "Course Introduction\nData"
   },
   {
     "objectID": "about.html",
@@ -82,5 +82,40 @@
     "title": "Coding Environment",
     "section": "",
     "text": "We will be applying the concepts in this course to hands-on coding applications using real world data. For this, you need to have Python 3.8+ installed in your computer (or a computer that you have access to). I also recommend using Visual Studio Code for your development environment. That is what I will be using during class demonstrations and lecture materials.\n\nDownload Visual Studio Code\n\nAfter installing and opening VS code, go to the File menu option and then select the Open Folder... option. Open an empty folder that you created, and that you know the location of in your computer. Create a new file that ends with the .py extension. If you do not have Python install in your machine, VS code will prompt you to install it.\nFor the next step you will need to have bash in your machine. If you have a windows machine, you will have to install bash – I recommend you install git bash.\nNext step is to install sckit-learn, one of the packages that we will be working with in this course. To do this, you can open a bash terminal in your VS code and type the following:\npip install -U scikit-learn\nWait and read the terminal standard output to check if the installation was completed successfully.\n\nTesting your coding environment\nDownload the csv file for the gpa study hours data and placed it in a folder called data.\nCreate a new python file with the following:\n\nimport pandas\n\nfrom sklearn.linear_model import LinearRegression\n\nif __name__ == \"__main__\":\n    data = pandas.read_csv(\"data/gpa_study_hours.csv\")\n    print(data.head())\n\n    X = data[['study_hours']]  \n    y = data['gpa'] \n\n    model = LinearRegression().fit(X, y)\n\n    print(model.coef_, model.intercept_)\n\nWhen you run this, it should ouput the following:\n    gpa  study_hours\n0  4.00         10.0\n1  3.80         25.0\n2  3.93         45.0\n3  3.40         10.0\n4  3.20          4.0\n[0.00332834] 3.5279974190338232"
+  },
+  {
+    "objectID": "slides-01-01.html#coding-tools",
+    "href": "slides-01-01.html#coding-tools",
+    "title": "Introduction",
+    "section": "Coding tools",
+    "text": "Coding tools\n\nWe will be coding in Python for this class.\nFor next lecture (Monday) you are expected to have set up your coding environment."
+  },
+  {
+    "objectID": "slides-01-01.html#what-is-machine-learning",
+    "href": "slides-01-01.html#what-is-machine-learning",
+    "title": "Introduction",
+    "section": "What is Machine Learning?",
+    "text": "What is Machine Learning?\n\nsubfield of computer science + statistics\nbuilding algorithms/models based on data (i.e. collection of examples of some phenomenon)"
+  },
+  {
+    "objectID": "slides-01-01.html#types-of-machine-learning",
+    "href": "slides-01-01.html#types-of-machine-learning",
+    "title": "Introduction",
+    "section": "Types of Machine Learning",
+    "text": "Types of Machine Learning\n\nsupervised (labeled data)\nsemi-supervised (both labeled and unlabeled data)\nunsupervised (unlabeled data)\nreinforcement (reward system, with the goal of learning a policy)\n\nFor all of these, data is required"
+  },
+  {
+    "objectID": "slides-01-02.html#tidy-data",
+    "href": "slides-01-02.html#tidy-data",
+    "title": "Data",
+    "section": "Tidy Data",
+    "text": "Tidy Data\nThe data we will be working with contains variables as columns and observations as rows"
+  },
+  {
+    "objectID": "slides-01-02.html#matrices-and-vectors",
+    "href": "slides-01-02.html#matrices-and-vectors",
+    "title": "Data",
+    "section": "Matrices and Vectors",
+    "text": "Matrices and Vectors\nFor machine learning, we have a feature matrix that contains all of our predictor variables, and a target vector that contains the label or target for each observation."
   }
 ]
