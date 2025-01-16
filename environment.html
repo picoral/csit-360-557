@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CSIT-360-557 Syllabus – CSIT 360/557 Advanced Techniques in Data Science</title>
+<title>Coding Environment – CSIT 360/557 Advanced Techniques in Data Science</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -88,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -115,18 +149,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#course-information" id="toc-course-information" class="nav-link active" data-scroll-target="#course-information">Course Information</a></li>
-  <li><a href="#course-description" id="toc-course-description" class="nav-link" data-scroll-target="#course-description">Course Description</a></li>
-  <li><a href="#instructor" id="toc-instructor" class="nav-link" data-scroll-target="#instructor">Instructor</a></li>
-  <li><a href="#course-outcomes" id="toc-course-outcomes" class="nav-link" data-scroll-target="#course-outcomes">Course Outcomes</a></li>
-  <li><a href="#course-schedule" id="toc-course-schedule" class="nav-link" data-scroll-target="#course-schedule">Course Schedule</a></li>
-  <li><a href="#grading-breakdown" id="toc-grading-breakdown" class="nav-link" data-scroll-target="#grading-breakdown">Grading Breakdown</a></li>
-  <li><a href="#late-work-policy" id="toc-late-work-policy" class="nav-link" data-scroll-target="#late-work-policy">Late Work Policy</a></li>
-  <li><a href="#attendance-policy" id="toc-attendance-policy" class="nav-link" data-scroll-target="#attendance-policy">Attendance Policy</a></li>
-  <li><a href="#grading-scale" id="toc-grading-scale" class="nav-link" data-scroll-target="#grading-scale">Grading Scale</a></li>
-  <li><a href="#academic-honesty-and-integrity" id="toc-academic-honesty-and-integrity" class="nav-link" data-scroll-target="#academic-honesty-and-integrity">Academic Honesty and Integrity</a></li>
-  <li><a href="#land-acknowledgement" id="toc-land-acknowledgement" class="nav-link" data-scroll-target="#land-acknowledgement">Land Acknowledgement</a></li>
-  <li><a href="#subject-to-change" id="toc-subject-to-change" class="nav-link" data-scroll-target="#subject-to-change">Subject to Change</a></li>
+  <li><a href="#testing-your-coding-environment" id="toc-testing-your-coding-environment" class="nav-link active" data-scroll-target="#testing-your-coding-environment">Testing your coding environment</a></li>
   </ul>
 </nav>
     </div>
@@ -135,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">CSIT-360-557 Syllabus</h1>
+<h1 class="title">Coding Environment</h1>
 </div>
 
 
@@ -152,253 +175,43 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="course-information" class="level1">
-<h1>Course Information</h1>
+<p>We will be applying the concepts in this course to hands-on coding applications using real world data. For this, you need to have Python 3.8+ installed in your computer (or a computer that you have access to). I also recommend using Visual Studio Code for your development environment. That is what I will be using during class demonstrations and lecture materials.</p>
 <ul>
-<li>Monday and Wednesday, 12:00 – 1:25pm</li>
-<li>Mode: in-person, at School of Business 011</li>
+<li><a href="https://code.visualstudio.com/download">Download Visual Studio Code</a></li>
 </ul>
-</section>
-<section id="course-description" class="level1">
-<h1>Course Description</h1>
-<p>This course provides the advanced techniques in Data Science. After learning data manipulating, processing, cleaning, and visualization, the major goals of this course are to learn how to make data-driven inferences and decisions by using fundamental techniques in machine learning, in Python language.</p>
-</section>
-<section id="instructor" class="level1">
-<h1>Instructor</h1>
-<ul>
-<li>Adriana Picoral, PhD</li>
-<li>Office:</li>
-<li>email: picorala@montclair.edu</li>
-<li>Office Hours (open door/drop in):
-<ul>
-<li>Tuesdays and Thursdays, 1:45pm to 3:30pm</li>
-</ul></li>
-</ul>
-</section>
-<section id="course-outcomes" class="level1">
-<h1>Course Outcomes</h1>
-<p>Upon completion of the course, students should be able to:</p>
-<ul>
-<li>CO1: understand the concepts and various phases of Data Science</li>
-<li>CO2: understand how to use Python data science libraries to demonstrate the data science skills and visualize data</li>
-<li>CO3: understand the concepts of fundamental techniques in machine learning and neural networks</li>
-<li>CO4: implement techniques of machine learning algorithms on data analysis using advanced libraries such as sci-kit learn and TensorFlow in Python</li>
-<li>CO5: apply data science concepts and skills to solve problems with real-world data sets</li>
-</ul>
-</section>
-<section id="course-schedule" class="level1">
-<h1>Course Schedule</h1>
-<div class="cell">
-<div class="cell-output-display">
-<div class="kable-table">
-<table class="caption-top table table-sm table-striped small">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Week</th>
-<th style="text-align: left;">Start Date</th>
-<th style="text-align: left;">Topic</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">01</td>
-<td style="text-align: left;">January 22</td>
-<td style="text-align: left;">Introduction – Python review</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">02</td>
-<td style="text-align: left;">January 29</td>
-<td style="text-align: left;">Python Projects</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">03</td>
-<td style="text-align: left;">Feb 05</td>
-<td style="text-align: left;">Numpy &amp; Pandas</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">04</td>
-<td style="text-align: left;">February 12</td>
-<td style="text-align: left;">Data Wrangling</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">05</td>
-<td style="text-align: left;">February 19</td>
-<td style="text-align: left;">Supervised Learning</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">06</td>
-<td style="text-align: left;">February 26</td>
-<td style="text-align: left;">Supervised Learning</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">07</td>
-<td style="text-align: left;">March 05</td>
-<td style="text-align: left;">Supervised Learning</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">08</td>
-<td style="text-align: left;">March 17</td>
-<td style="text-align: left;">Supervised Learning</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">09</td>
-<td style="text-align: left;">March 24</td>
-<td style="text-align: left;">Supervised Learning</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">March 31</td>
-<td style="text-align: left;">Unsupervised Learning</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">April 07</td>
-<td style="text-align: left;">Unsupervised Learning</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">12</td>
-<td style="text-align: left;">April 14</td>
-<td style="text-align: left;">Unsupervised Learning</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">13</td>
-<td style="text-align: left;">April 21</td>
-<td style="text-align: left;">Other Advanced Techniques</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">14</td>
-<td style="text-align: left;">April 28</td>
-<td style="text-align: left;">Final Project Presentations</td>
-</tr>
-</tbody>
-</table>
+<p>After installing and opening VS code, go to the <code>File</code> menu option and then select the <code>Open Folder...</code> option. Open an empty folder that you created, and that you know the location of in your computer. Create a new file that ends with the <code>.py</code> extension. If you do not have Python install in your machine, VS code will prompt you to install it.</p>
+<p>For the next step you will need to have <code>bash</code> in your machine. If you have a windows machine, you will have to install <code>bash</code> – I recommend you <a href="https://www.atlassian.com/git/tutorials/git-bash">install git bash</a>.</p>
+<p>Next step is to install sckit-learn, one of the packages that we will be working with in this course. To do this, you can open a bash terminal in your VS code and type the following:</p>
+<p><code>pip install -U scikit-learn</code></p>
+<p>Wait and read the terminal standard output to check if the installation was completed successfully.</p>
+<section id="testing-your-coding-environment" class="level1">
+<h1>Testing your coding environment</h1>
+<p><a href="https://www.openintro.org/data/index.php?data=gpa_study_hours">Download the csv file for the gpa study hours data</a> and placed it in a folder called <code>data</code>.</p>
+<p>Create a new python file with the following:</p>
+<div id="5e52c111" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> pandas.read_csv(<span class="st">"data/gpa_study_hours.csv"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(data.head())</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    X <span class="op">=</span> data[[<span class="st">'study_hours'</span>]]  </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> data[<span class="st">'gpa'</span>] </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> LinearRegression().fit(X, y)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(model.coef_, model.intercept_)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div>
-</section>
-<section id="grading-breakdown" class="level1">
-<h1>Grading Breakdown</h1>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Assessment Element</th>
-<th>Percentage of Final Grade</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Homework Assignments</td>
-<td>20%</td>
-</tr>
-<tr class="even">
-<td>Projects</td>
-<td>20%</td>
-</tr>
-<tr class="odd">
-<td>Quizzes (5)</td>
-<td>30%</td>
-</tr>
-<tr class="even">
-<td>Group Project</td>
-<td>20%</td>
-</tr>
-<tr class="odd">
-<td>Project Presentation</td>
-<td>10%</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="late-work-policy" class="level1">
-<h1>Late Work Policy</h1>
-<p>Students are expected to complete work on schedule. The late policy for all assignments is as follows:</p>
-<ul>
-<li>20% points off if submitted within 24 hours after the due date</li>
-<li>30% off if submitted 24-48 hours after the due date</li>
-<li>No credit if submitted two days or more days after the due date unless prior arrangements are made with the instructor with acceptable reasons.</li>
-</ul>
-<p>Note: This is a firm policy and it will be automatically applied</p>
-</section>
-<section id="attendance-policy" class="level1">
-<h1>Attendance Policy</h1>
-<p>Attendance is mandatory. All students must sign an attendance sheet at the beginning of class. Excused absences include illness or a serious personal crisis (a letter from the Dean of students is required). If you are missing class and have a reasonable excuse, contact me <strong>before</strong> lecture if you want to make up missed assessments.</p>
-</section>
-<section id="grading-scale" class="level1">
-<h1>Grading Scale</h1>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Letter Grade</th>
-<th>Grade Percentage</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>A</td>
-<td>94-100%</td>
-</tr>
-<tr class="even">
-<td>A-</td>
-<td>90-93%</td>
-</tr>
-<tr class="odd">
-<td>B+</td>
-<td>87-89%</td>
-</tr>
-<tr class="even">
-<td>B</td>
-<td>84-86%</td>
-</tr>
-<tr class="odd">
-<td>B-</td>
-<td>80-83%</td>
-</tr>
-<tr class="even">
-<td>C+</td>
-<td>77-79%</td>
-</tr>
-<tr class="odd">
-<td>C</td>
-<td>74-76%</td>
-</tr>
-<tr class="even">
-<td>C-</td>
-<td>70-73%</td>
-</tr>
-<tr class="odd">
-<td>D+ (undergraduate only)</td>
-<td>67-69%</td>
-</tr>
-<tr class="even">
-<td>D (undergraduate only)</td>
-<td>64-66%</td>
-</tr>
-<tr class="odd">
-<td>D- (undergraduate only)</td>
-<td>60-63%</td>
-</tr>
-<tr class="even">
-<td>F</td>
-<td>0-59%</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="academic-honesty-and-integrity" class="level1">
-<h1>Academic Honesty and Integrity</h1>
-<p>Academic Honesty is a core University value. Take time to understand the <a href="https://www.montclair.edu/policies/all-policies/academic-dishonesty/">University’s policy</a>. Your questions about academic honesty are always welcome.</p>
-<p>All work you submit for grading in this course must be your own. Submitting work that includes (minor and/or major) components that are not your own work is considered plagiarism. I recommend that when talking with others about the assignment, do not write anything down.</p>
-<p>Keep in mind that all assignments and practice problems provided in this course are meant to help you practice the skills that you will need to do well in all assessments (including on paper quizzes), so it is generally in your best interest to avoid taking shortcuts even on practice problems (which are ungraded).</p>
-<p>Sharing your code with others (in addition to copying code from others) is considered a break of the academic integrity code (unauthorized assistance) as well.</p>
-</section>
-<section id="land-acknowledgement" class="level1">
-<h1>Land Acknowledgement</h1>
-<p>We respectfully acknowledge that Montclair State University occupies land in Lenapehoking, the traditional and expropriated territory of the Lenape. As a state institution, we recognize and support the sovereignty of New Jersey’s three state-recognized tribes: the Ramapough Lenape, Nanticoke Lenni-Lenape, and Powhatan Renape nations.</p>
-<p>We recognize the sovereign nations of the Lenape diaspora elsewhere in North America, as well as other Indigenous individuals and communities now residing in New Jersey. By offering this land acknowledgement, we commit to addressing the historical legacies of Indigenous dispossession and dismantling practices of erasure that persist today. We recognize the resilience and persistence of contemporary Indigenous communities and their role in educating all of us about justice, equity, and the stewardship of the land throughout the generations.</p>
-</section>
-<section id="subject-to-change" class="level1">
-<h1>Subject to Change</h1>
-<p>Changes may be made to this syllabus as needed to support student learning. Any updates will be announced in class or through course materials with advance notice.</p>
+<p>When you run this, it should ouput the following:</p>
+<pre><code>    gpa  study_hours
+0  4.00         10.0
+1  3.80         25.0
+2  3.93         45.0
+3  3.40         10.0
+4  3.20          4.0
+[0.00332834] 3.5279974190338232</code></pre>
 
 
 </section>
