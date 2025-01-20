@@ -4,7 +4,7 @@
     "href": "modules.html",
     "title": "Modules",
     "section": "",
-    "text": "Topic: Introduction – Python review\n\n\n\nSet up your coding environment\n\n\n\n\n\nCourse Introduction\nMachine Learning\nData"
+    "text": "Topic: Introduction – Python review\n\n\n\nSet up your coding environment\n\n\n\n\n\nCourse Introduction\nAdvanced Methods Intro\nData"
   },
   {
     "objectID": "modules.html#reading",
@@ -18,7 +18,7 @@
     "href": "modules.html#slides",
     "title": "Modules",
     "section": "",
-    "text": "Course Introduction\nMachine Learning\nData"
+    "text": "Course Introduction\nAdvanced Methods Intro\nData"
   },
   {
     "objectID": "about.html",
@@ -31,8 +31,8 @@
     "objectID": "slides-01-01.html#hello",
     "href": "slides-01-01.html#hello",
     "title": "Introduction",
-    "section": "",
-    "text": "Adriana Picoral (PhD, you can call me Adriana)\npicorala@montclair.edu\nOffice:\nOffice hours: Tuesdays and Thursdays, 1:45pm to 3:30pm"
+    "section": "Hello",
+    "text": "Hello\n\nAdriana Picoral (PhD, you can call me Adriana)\npicorala@montclair.edu\nOffice:\nOffice hours: Tuesdays and Thursdays, 1:45pm to 3:30pm"
   },
   {
     "objectID": "slides-01-01.html#active-learning",
@@ -122,50 +122,50 @@
     "objectID": "slides-01-02.html#what-is-machine-learning",
     "href": "slides-01-02.html#what-is-machine-learning",
     "title": "Advanced Methods in Data Science",
-    "section": "",
-    "text": "subfield of computer science + statistics\nbuilding algorithms/models based on data (i.e. collection of examples of some phenomenon)"
+    "section": "What is Machine Learning?",
+    "text": "What is Machine Learning?\n\nsubfield of computer science + statistics\nbuilding algorithms/models based on data (i.e. collection of examples of some phenomenon)"
   },
   {
     "objectID": "slides-01-02.html#types-of-machine-learning",
     "href": "slides-01-02.html#types-of-machine-learning",
     "title": "Advanced Methods in Data Science",
-    "section": "",
-    "text": "supervised (labeled data) – classification and regression\nsemi-supervised (both labeled and unlabeled data)\nunsupervised (unlabeled data)\nreinforcement (reward system, with the goal of learning a policy)\n\nFor all of these, data is required – one important step is feature engineering (how to transform data into feature – more on this later)"
+    "section": "Types of Machine Learning",
+    "text": "Types of Machine Learning\n\nsupervised (labeled data) – classification and regression\nsemi-supervised (both labeled and unlabeled data)\nunsupervised (unlabeled data)\nreinforcement (reward system, with the goal of learning a policy)\n\nFor all of these, data is required – one important step is feature engineering (how to transform data into feature – more on this later)"
   },
   {
     "objectID": "slides-01-02.html#supervised-learning",
     "href": "slides-01-02.html#supervised-learning",
     "title": "Advanced Methods in Data Science",
-    "section": "",
-    "text": "Labeled data – input (features), output (target, response)\n\nCan you think of examples of supervised learning?"
+    "section": "Supervised Learning",
+    "text": "Supervised Learning\n\nLabeled data – input (features), output (target, response)\n\nCan you think of examples of supervised learning?"
   },
   {
     "objectID": "slides-01-02.html#supervised-learning-1",
     "href": "slides-01-02.html#supervised-learning-1",
     "title": "Advanced Methods in Data Science",
-    "section": "",
-    "text": "Example: spam vs. not spam\n\nWhat features can we use?"
+    "section": "Supervised Learning",
+    "text": "Supervised Learning\n\nExample: spam vs. not spam\n\nWhat features can we use?"
   },
   {
     "objectID": "slides-01-02.html#supervised-learning-algorithms",
     "href": "slides-01-02.html#supervised-learning-algorithms",
     "title": "Advanced Methods in Data Science",
-    "section": "",
-    "text": "Support Vector Machines (SVM)\nDecision Tree/Random Forest\nLogistic Regression\nLinear Regression\nNaive Bayes\nK-Nearest Neighbors\n\nHow to decide?"
+    "section": "Supervised Learning Algorithms",
+    "text": "Supervised Learning Algorithms\n\nSupport Vector Machines (SVM)\nDecision Tree/Random Forest\nLogistic Regression\nLinear Regression\nNaive Bayes\nK-Nearest Neighbors\n\nHow to decide?"
   },
   {
     "objectID": "slides-01-02.html#unsupervised-learning",
     "href": "slides-01-02.html#unsupervised-learning",
     "title": "Advanced Methods in Data Science",
-    "section": "",
-    "text": "Clustering (K-Means)\nPrincipal Component Analysis (Dimensionality Reduction)"
+    "section": "Unsupervised Learning",
+    "text": "Unsupervised Learning\n\nClustering (K-Means)\nPrincipal Component Analysis (Dimensionality Reduction)"
   },
   {
     "objectID": "slides-01-02.html#reinforcement-learning",
     "href": "slides-01-02.html#reinforcement-learning",
     "title": "Advanced Methods in Data Science",
-    "section": "",
-    "text": "Recommendation Systems (users give feed on whether a recommendation was good or not)\nAutomated Robots\nAutonomous Driving\nNatural Language Processing – text prediction, translation"
+    "section": "Reinforcement Learning",
+    "text": "Reinforcement Learning\n\nRecommendation Systems (users give feed on whether a recommendation was good or not)\nAutomated Robots\nAutonomous Driving\nNatural Language Processing – text prediction, translation"
   },
   {
     "objectID": "slides-01-03.html#data",
