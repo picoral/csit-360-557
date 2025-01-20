@@ -4,7 +4,7 @@
     "href": "modules.html",
     "title": "Modules",
     "section": "",
-    "text": "Topic: Introduction – Python review\n\n\n\nSet up your coding environment\n\n\n\n\n\nCourse Introduction\nData"
+    "text": "Topic: Introduction – Python review\n\n\n\nSet up your coding environment\n\n\n\n\n\nCourse Introduction\nMachine Learning\nData"
   },
   {
     "objectID": "modules.html#reading",
@@ -18,7 +18,7 @@
     "href": "modules.html#slides",
     "title": "Modules",
     "section": "",
-    "text": "Course Introduction\nData"
+    "text": "Course Introduction\nMachine Learning\nData"
   },
   {
     "objectID": "about.html",
@@ -31,8 +31,8 @@
     "objectID": "slides-01-01.html#hello",
     "href": "slides-01-01.html#hello",
     "title": "Introduction",
-    "section": "Hello",
-    "text": "Hello\n\nAdriana Picoral (PhD, you can call me Adriana)\npicorala@montclair.edu\nOffice:\nOffice hours: Tuesdays and Thursdays, 1:45pm to 3:30pm"
+    "section": "",
+    "text": "Adriana Picoral (PhD, you can call me Adriana)\npicorala@montclair.edu\nOffice:\nOffice hours: Tuesdays and Thursdays, 1:45pm to 3:30pm"
   },
   {
     "objectID": "slides-01-01.html#active-learning",
@@ -81,7 +81,7 @@
     "href": "environment.html",
     "title": "Coding Environment",
     "section": "",
-    "text": "We will be applying the concepts in this course to hands-on coding applications using real world data. For this, you need to have Python 3.8+ installed in your computer (or a computer that you have access to). I also recommend using Visual Studio Code for your development environment. That is what I will be using during class demonstrations and lecture materials.\n\nDownload Visual Studio Code\n\nAfter installing and opening VS code, go to the File menu option and then select the Open Folder... option. Open an empty folder that you created, and that you know the location of in your computer. Create a new file that ends with the .py extension. If you do not have Python install in your machine, VS code will prompt you to install it.\nFor the next step you will need to have bash in your machine. If you have a windows machine, you will have to install bash – I recommend you install git bash.\nNext step is to install sckit-learn, one of the packages that we will be working with in this course. To do this, you can open a bash terminal in your VS code and type the following:\npip install -U scikit-learn\nWait and read the terminal standard output to check if the installation was completed successfully.\n\nTesting your coding environment\nDownload the csv file for the gpa study hours data and placed it in a folder called data.\nCreate a new python file with the following:\n\nimport pandas\n\nfrom sklearn.linear_model import LinearRegression\n\nif __name__ == \"__main__\":\n    data = pandas.read_csv(\"data/gpa_study_hours.csv\")\n    print(data.head())\n\n    X = data[['study_hours']]  \n    y = data['gpa'] \n\n    model = LinearRegression().fit(X, y)\n\n    print(model.coef_, model.intercept_)\n\nWhen you run this, it should ouput the following:\n    gpa  study_hours\n0  4.00         10.0\n1  3.80         25.0\n2  3.93         45.0\n3  3.40         10.0\n4  3.20          4.0\n[0.00332834] 3.5279974190338232"
+    "text": "We will be applying the concepts in this course to hands-on coding applications using real world data. For this, you need to have Python 3.8+ installed in your computer (or a computer that you have access to). I also recommend using Visual Studio Code for your development environment. That is what I will be using during class demonstrations and lecture materials.\nAfter installing and opening VS code, go to the File menu option and then select the Open Folder... option. Open an empty folder that you created, and that you know the location of in your computer. Create a new file that ends with the .py extension. If you do not have Python install in your machine, VS code will prompt you to install it.\nFor the next step you will need to have bash in your machine. If you have a windows machine, you will have to install bash – I recommend you install git bash.\nNext step is to install sckit-learn, one of the packages that we will be working with in this course. To do this, you can open a bash terminal in your VS code and type the following:\npip install -U scikit-learn\nWait and read the terminal standard output to check if the installation was completed successfully."
   },
   {
     "objectID": "slides-01-01.html#coding-tools",
@@ -117,5 +117,138 @@
     "title": "Data",
     "section": "Matrices and Vectors",
     "text": "Matrices and Vectors\nFor machine learning, we have a feature matrix that contains all of our predictor variables, and a target vector that contains the label or target for each observation."
+  },
+  {
+    "objectID": "slides-01-02.html#what-is-machine-learning",
+    "href": "slides-01-02.html#what-is-machine-learning",
+    "title": "Advanced Methods in Data Science",
+    "section": "",
+    "text": "subfield of computer science + statistics\nbuilding algorithms/models based on data (i.e. collection of examples of some phenomenon)"
+  },
+  {
+    "objectID": "slides-01-02.html#types-of-machine-learning",
+    "href": "slides-01-02.html#types-of-machine-learning",
+    "title": "Advanced Methods in Data Science",
+    "section": "",
+    "text": "supervised (labeled data) – classification and regression\nsemi-supervised (both labeled and unlabeled data)\nunsupervised (unlabeled data)\nreinforcement (reward system, with the goal of learning a policy)\n\nFor all of these, data is required – one important step is feature engineering (how to transform data into feature – more on this later)"
+  },
+  {
+    "objectID": "slides-01-02.html#supervised-learning",
+    "href": "slides-01-02.html#supervised-learning",
+    "title": "Advanced Methods in Data Science",
+    "section": "",
+    "text": "Labeled data – input (features), output (target, response)\n\nCan you think of examples of supervised learning?"
+  },
+  {
+    "objectID": "slides-01-02.html#supervised-learning-1",
+    "href": "slides-01-02.html#supervised-learning-1",
+    "title": "Advanced Methods in Data Science",
+    "section": "",
+    "text": "Example: spam vs. not spam\n\nWhat features can we use?"
+  },
+  {
+    "objectID": "slides-01-02.html#supervised-learning-algorithms",
+    "href": "slides-01-02.html#supervised-learning-algorithms",
+    "title": "Advanced Methods in Data Science",
+    "section": "",
+    "text": "Support Vector Machines (SVM)\nDecision Tree/Random Forest\nLogistic Regression\nLinear Regression\nNaive Bayes\nK-Nearest Neighbors\n\nHow to decide?"
+  },
+  {
+    "objectID": "slides-01-02.html#unsupervised-learning",
+    "href": "slides-01-02.html#unsupervised-learning",
+    "title": "Advanced Methods in Data Science",
+    "section": "",
+    "text": "Clustering (K-Means)\nPrincipal Component Analysis (Dimensionality Reduction)"
+  },
+  {
+    "objectID": "slides-01-02.html#reinforcement-learning",
+    "href": "slides-01-02.html#reinforcement-learning",
+    "title": "Advanced Methods in Data Science",
+    "section": "",
+    "text": "Recommendation Systems (users give feed on whether a recommendation was good or not)\nAutomated Robots\nAutonomous Driving\nNatural Language Processing – text prediction, translation"
+  },
+  {
+    "objectID": "slides-01-03.html#data",
+    "href": "slides-01-03.html#data",
+    "title": "Data",
+    "section": "Data",
+    "text": "Data\nThe data we will be working with contains variables as columns and observations as rows (often called tidy data)\nFeature engineering: data –&gt; features\nRemember the spam vs not spam example? How do we go from words to features?"
+  },
+  {
+    "objectID": "slides-01-03.html#data-quality",
+    "href": "slides-01-03.html#data-quality",
+    "title": "Data",
+    "section": "Data quality",
+    "text": "Data quality\nWhat to look for:\n\na data dictionary\ninformation on how the data were collected"
+  },
+  {
+    "objectID": "slides-01-03.html#data-format",
+    "href": "slides-01-03.html#data-format",
+    "title": "Data",
+    "section": "Data format",
+    "text": "Data format\n\ntabular – tables, rows and columns\nhierachical – values are nested (like a tree)\nunstructured data – no structure, for example: emails, videos, pictures"
+  },
+  {
+    "objectID": "slides-01-03.html#tabular-data",
+    "href": "slides-01-03.html#tabular-data",
+    "title": "Data",
+    "section": "Tabular Data",
+    "text": "Tabular Data\nRows and Columns\n\n\n\nDay\nHigh\nLow\nWind\nForecast\n\n\n\n\nTuesday\n24\n15\n0 to 15 mph\nSunny\n\n\nWednesday\n38\n17\n5 to 15 mph\nMostly Sunny\n\n\nThursday\n34\n13\n5 to 15 mph\nMostly Sunny"
+  },
+  {
+    "objectID": "slides-01-03.html#hierachical-data",
+    "href": "slides-01-03.html#hierachical-data",
+    "title": "Data",
+    "section": "Hierachical Data",
+    "text": "Hierachical Data\nTuesday:\n   ↳ Temperature:\n      ↳ Low: 15\n      ↳ High: 24\n   ↳ Wind:\n      ↳ Speed: 0 to 15 mph \n      ↳ Direction: West\nWednesday:\n   ↳ Temperature:\n      ↳ Low: 17\n      ↳ High: 38\n   ↳ Wind:\n      ↳ Speed: 5 to 15 mph\n      ↳ Direction: North West"
+  },
+  {
+    "objectID": "slides-01-03.html#unstructured-data",
+    "href": "slides-01-03.html#unstructured-data",
+    "title": "Data",
+    "section": "Unstructured Data",
+    "text": "Unstructured Data\nOne winter, I became very quiet\nand saw my life. It was February\n\nand outside in the city streets,\nsnow fell but would not collect.\n\nI bought snapdragons and thistle,\ngot some discount peach roses\n\nthat smelled off. I split them\nbetween vases and moved\n\nthe bouquets from room to room\nwhile a violin solo rang out.\nfull poem"
+  },
+  {
+    "objectID": "slides-01-03.html#matrices-and-vectors",
+    "href": "slides-01-03.html#matrices-and-vectors",
+    "title": "Data",
+    "section": "Matrices and Vectors",
+    "text": "Matrices and Vectors\nFor machine learning, we have a feature matrix that contains all of our predictor variables, and a target vector that contains the label or target for each observation."
+  },
+  {
+    "objectID": "slides-01-03.html#training-validation-and-testing",
+    "href": "slides-01-03.html#training-validation-and-testing",
+    "title": "Data",
+    "section": "Training, Validation and Testing",
+    "text": "Training, Validation and Testing\nWe usually need enough data to split it into training and validation (and testing)\n\nMost of our data will be used to build our model (training)\nWe never predict data that was in our training data set\nOur validation data set is used to fine tune our model (we can also do cross-validation)\nThe test data set is used to assess the final mode that has been selected during the validation process\n\nThe goal is to not overfit our data to our model"
+  },
+  {
+    "objectID": "slides-01-02.html",
+    "href": "slides-01-02.html",
+    "title": "Advanced Methods in Data Science",
+    "section": "",
+    "text": "What is it? (discuss)\n\n\n\nsubfield of computer science + statistics\nbuilding algorithms/models based on data (i.e. collection of examples of some phenomenon)\n\n\n\n\n\nsupervised (labeled data) – classification and regression\nsemi-supervised (both labeled and unlabeled data)\nunsupervised (unlabeled data)\nreinforcement (reward system, with the goal of learning a policy)\n\nFor all of these, data is required – one important step is feature engineering (how to transform data into feature – more on this later)\n\n\n\n\nLabeled data – input (features), output (target, response)\n\nCan you think of examples of supervised learning?\n\n\n\n\nExample: spam vs. not spam\n\nWhat features can we use?\n\n\n\n\nSupport Vector Machines (SVM)\nDecision Tree/Random Forest\nLogistic Regression\nLinear Regression\nNaive Bayes\nK-Nearest Neighbors\n\nHow to decide?\n\n\n\n\nClustering (K-Means)\nPrincipal Component Analysis (Dimensionality Reduction)\n\n\n\n\n\nRecommendation Systems (users give feed on whether a recommendation was good or not)\nAutomated Robots\nAutonomous Driving\nNatural Language Processing – text prediction, translation"
+  },
+  {
+    "objectID": "slides-01-01.html",
+    "href": "slides-01-01.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Adriana Picoral (PhD, you can call me Adriana)\npicorala@montclair.edu\nOffice:\nOffice hours: Tuesdays and Thursdays, 1:45pm to 3:30pm"
+  },
+  {
+    "objectID": "environment.html#trouble-shooting",
+    "href": "environment.html#trouble-shooting",
+    "title": "Coding Environment",
+    "section": "Trouble Shooting",
+    "text": "Trouble Shooting\n\nRun where python and which python to find which Python installation your terminal has associated with different python aliases.\nYou can install a package to a specific python installation by running something like this: /usr/local/bin/python3 -m pip install statsmodels"
+  },
+  {
+    "objectID": "environment.html#troubleshooting",
+    "href": "environment.html#troubleshooting",
+    "title": "Coding Environment",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nRun where python and which python to find which Python installation your terminal has associated with different python aliases.\nYou can install a package to a specific python installation by running something like this: /usr/local/bin/python3 -m pip install statsmodels"
   }
 ]

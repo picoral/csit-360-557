@@ -149,7 +149,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#testing-your-coding-environment" id="toc-testing-your-coding-environment" class="nav-link active" data-scroll-target="#testing-your-coding-environment">Testing your coding environment</a></li>
+  <li><a href="#testing-your-coding-environment" id="toc-testing-your-coding-environment" class="nav-link active" data-scroll-target="#testing-your-coding-environment">Testing your coding environment</a>
+  <ul class="collapse">
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -188,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Testing your coding environment</h1>
 <p><a href="https://www.openintro.org/data/index.php?data=gpa_study_hours">Download the csv file for the gpa study hours data</a> and placed it in a folder called <code>data</code>.</p>
 <p>Create a new python file with the following:</p>
-<div id="5e52c111" class="cell" data-execution_count="1">
+<div id="c1ea84f5" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
@@ -212,8 +215,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 3  3.40         10.0
 4  3.20          4.0
 [0.00332834] 3.5279974190338232</code></pre>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li>Run <code>where python</code> and <code>which python</code> to find which Python installation your terminal has associated with different python aliases.</li>
+<li>You can install a package to a specific python installation by running something <em>like</em> this: <code>/usr/local/bin/python3 -m pip install statsmodels</code></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
