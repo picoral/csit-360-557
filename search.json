@@ -130,7 +130,7 @@
     "href": "slides-01-02.html#types-of-machine-learning",
     "title": "Advanced Methods in Data Science",
     "section": "Types of Machine Learning",
-    "text": "Types of Machine Learning\n\nsupervised (labeled data) – classification and regression\nsemi-supervised (both labeled and unlabeled data)\nunsupervised (unlabeled data)\nreinforcement (reward system, with the goal of learning a policy)\n\nFor all of these, data is required – one important step is feature engineering (how to transform data into feature – more on this later)"
+    "text": "Types of Machine Learning\n\nsupervised (labeled data)\nsemi-supervised (both labeled and unlabeled data)\nunsupervised (unlabeled data)\nreinforcement (reward system, with the goal of learning a policy)\n\nFor all of these, data is required – one important step is feature engineering (how to transform data into feature – more on this later)\nDepending on the target type, classification or regression"
   },
   {
     "objectID": "slides-01-02.html#supervised-learning",
