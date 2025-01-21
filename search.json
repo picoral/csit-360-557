@@ -257,5 +257,12 @@
     "title": "Modules",
     "section": "",
     "text": "Beginning of semester survey"
+  },
+  {
+    "objectID": "slides-01-03.html#practice",
+    "href": "slides-01-03.html#practice",
+    "title": "Data",
+    "section": "Practice",
+    "text": "Practice\n\nAccess this kaggle dataset on house prices\nWhat are the variables in the data? (is there a data dictionary?)\nWhat is this data set from? What’s its source?\nAny problems you see with it?\nWhich variable could we use as target (response)?\nWhich variables would you use as features? Any feature engineering you can think of?"
   }
 ]
