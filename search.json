@@ -4,7 +4,7 @@
     "href": "modules.html",
     "title": "Modules",
     "section": "",
-    "text": "Topic: Introduction – Python review\n\n\n\nSet up your coding environment\nWhat Is Machine Learning?\n\n\n\n\n\nCourse Introduction\nAdvanced Methods Intro\nData"
+    "text": "Topic: Introduction – Python review\n\n\n\nSet up your coding environment\nWhat Is Machine Learning?\n\n\n\n\n\nCourse Introduction\nAdvanced Methods Intro\nData\n\n\n\n\n\nBeginning of semester survey"
   },
   {
     "objectID": "modules.html#reading",
@@ -250,5 +250,12 @@
     "title": "Coding Environment",
     "section": "Troubleshooting",
     "text": "Troubleshooting\n\nRun where python and which python to find which Python installation your terminal has associated with different python aliases.\nYou can install a package to a specific python installation by running something like this: /usr/local/bin/python3 -m pip install statsmodels"
+  },
+  {
+    "objectID": "modules.html#assignments",
+    "href": "modules.html#assignments",
+    "title": "Modules",
+    "section": "",
+    "text": "Beginning of semester survey"
   }
 ]
