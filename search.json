@@ -4,7 +4,7 @@
     "href": "modules.html",
     "title": "Modules",
     "section": "",
-    "text": "Topic: Introduction – Python review\n\n\n\nSet up your coding environment\nWhat Is Machine Learning?\n\n\n\n\n\nCourse Introduction\nAdvanced Methods Intro\nData\n\n\n\n\n\nBeginning of semester survey"
+    "text": "Topic: Introduction\n\n\n\nSet up your coding environment\nWhat Is Machine Learning?\n\n\n\n\n\nCourse Introduction\nAdvanced Methods Intro\nData\n\n\n\n\n\nBeginning of semester survey"
   },
   {
     "objectID": "modules.html#reading",
@@ -264,5 +264,12 @@
     "title": "Data",
     "section": "Practice",
     "text": "Practice\n\nAccess this kaggle dataset on house prices\nWhat are the variables in the data? (is there a data dictionary?)\nWhat is this data set from? What’s its source?\nAny problems you see with it?\nWhich variable could we use as target (response)?\nWhich variables would you use as features? Any feature engineering you can think of?"
+  },
+  {
+    "objectID": "modules.html#video-lessons",
+    "href": "modules.html#video-lessons",
+    "title": "Modules",
+    "section": "Video Lessons",
+    "text": "Video Lessons\n\nOpening data files in VS Code Passcode: Uu5.@XE*"
   }
 ]
