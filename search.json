@@ -271,5 +271,117 @@
     "title": "Modules",
     "section": "Video Lessons",
     "text": "Video Lessons\n\nOpening data files in VS Code Passcode: Uu5.@XE*"
+  },
+  {
+    "objectID": "pandas-reference.html",
+    "href": "pandas-reference.html",
+    "title": "Pandas – reference sheet",
+    "section": "",
+    "text": "Import the package\n\nimport pandas\n\nYou can provide a shorter alias, which makes it easier to type\n\nimport pandas as pd\n\n\n\nLoad Data"
+  },
+  {
+    "objectID": "slides-02-01.html",
+    "href": "slides-02-01.html",
+    "title": "Intro to Pandas",
+    "section": "",
+    "text": "Open a folder (that you have created, with the data we are going to be using) in VS code"
+  },
+  {
+    "objectID": "slides-02-01.html#import-the-package",
+    "href": "slides-02-01.html#import-the-package",
+    "title": "Intro to Pandas",
+    "section": "Import the package",
+    "text": "Import the package\n\nimport pandas\n\nYou can provide a shorter alias, which makes it easier to type\n\nimport pandas as pd"
+  },
+  {
+    "objectID": "slides-02-01.html#load-data",
+    "href": "slides-02-01.html#load-data",
+    "title": "Intro to Pandas",
+    "section": "Load Data",
+    "text": "Load Data\nLet’s use this kaggle dataset on house prices as an example. I downloaded the data and saved it in a folder called data.\n\ndata_frame = pd.read_csv(\"data/US houuse price of 10 states.csv\")"
+  },
+  {
+    "objectID": "slides-02-01.html#inspect-the-data",
+    "href": "slides-02-01.html#inspect-the-data",
+    "title": "Intro to Pandas",
+    "section": "Inspect the data",
+    "text": "Inspect the data\n\ndata_frame.head()\ndata_frame.info()\ndata_frame.describe()\ndata_frame.shape\ndata_frame.columns\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 12075 entries, 0 to 12074\nData columns (total 10 columns):\n #   Column      Non-Null Count  Dtype \n---  ------      --------------  ----- \n 0   date        12075 non-null  object\n 1   house_size  11107 non-null  object\n 2   bed         11410 non-null  object\n 3   bath        11410 non-null  object\n 4   price       11009 non-null  object\n 5   broker      9569 non-null   object\n 6   street      12075 non-null  object\n 7   city        12075 non-null  object\n 8   state_name  12075 non-null  object\n 9   zip_code    12075 non-null  int64 \ndtypes: int64(1), object(9)\nmemory usage: 943.5+ KB\n\n\nIndex(['date', 'house_size', 'bed', 'bath', 'price', 'broker', 'street',\n       'city', 'state_name', 'zip_code'],\n      dtype='object')"
+  },
+  {
+    "objectID": "slides-02-01.html#setting-up-your-coding-environment",
+    "href": "slides-02-01.html#setting-up-your-coding-environment",
+    "title": "Intro to Pandas",
+    "section": "Setting up your coding environment",
+    "text": "Setting up your coding environment\nOpen a folder (that you have created, with the data we are going to be using) in VS code"
+  },
+  {
+    "objectID": "slides-02-01.html#inspect-variables",
+    "href": "slides-02-01.html#inspect-variables",
+    "title": "Intro to Pandas",
+    "section": "Inspect variables",
+    "text": "Inspect variables\n\ndata_frame[\"bed\"].head()\ndata_frame[[\"bed\", \"bath\"]].head()\n\n\n\n\n\n\n\n\nbed\nbath\n\n\n\n\n0\n4bd\n4bd\n\n\n1\n2bd\n2bd\n\n\n2\n3bd\n3bd\n\n\n3\nStudio\nStudio\n\n\n4\n3bd\n3bd"
+  },
+  {
+    "objectID": "slides-02-01.html#inspect-variables-1",
+    "href": "slides-02-01.html#inspect-variables-1",
+    "title": "Intro to Pandas",
+    "section": "Inspect variables",
+    "text": "Inspect variables\n\ndata_frame[\"bed\"].count() # number of non-null values\ndata_frame[\"bed\"].nunique() # count of unique values\ndata_frame[\"bed\"].value_counts() # count for each unique value\n\nbed\n3bd       5172\n4bd       2998\n2bd       1797\n5bd        762\n1bd        290\nStudio     153\n6bd        150\n7bd         31\n8bd         31\n9bd          9\n12bd         4\n10bd         3\n14bd         2\n21bd         2\n15bd         2\n11bd         2\n16bd         1\n13bd         1\nName: count, dtype: int64"
+  },
+  {
+    "objectID": "slides-02-01.html#pandas.series.str",
+    "href": "slides-02-01.html#pandas.series.str",
+    "title": "Intro to Pandas",
+    "section": "pandas.Series.str",
+    "text": "pandas.Series.str\nA pandas.Series is one column in our data frame\nRead the documentation on pandas.Series.str – how can we create a numeric variable based on the \"bed\" column?"
+  },
+  {
+    "objectID": "modules.html#video-lesson",
+    "href": "modules.html#video-lesson",
+    "title": "Modules",
+    "section": "Video Lesson",
+    "text": "Video Lesson\n\nOpening data files in VS Code Passcode: Uu5.@XE*"
+  },
+  {
+    "objectID": "modules.html#slides-1",
+    "href": "modules.html#slides-1",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nIntro to Pandas\nIntro to Seaborn"
+  },
+  {
+    "objectID": "slides-02-02.html#set-up-your-coding-environment",
+    "href": "slides-02-02.html#set-up-your-coding-environment",
+    "title": "Intro to Seaborn",
+    "section": "Set up your coding environment",
+    "text": "Set up your coding environment\n\nCreate a new .ipynb in your VS code folder.\nYou might need to run pip install notebook (python3 -m pip install notebook)\nYou also might need to run pip install jupyterlab"
+  },
+  {
+    "objectID": "slides-02-02.html#import-the-libraries-we-will-be-using",
+    "href": "slides-02-02.html#import-the-libraries-we-will-be-using",
+    "title": "Intro to Seaborn",
+    "section": "Import the libraries we will be using",
+    "text": "Import the libraries we will be using\n\nimport seaborn as sns\n\nMake sure you import pandas and read the data in:\n\nimport pandas as pd\ndata_frame = pd.read_csv(\"data/US houuse price of 10 states.csv\")"
+  },
+  {
+    "objectID": "slides-02-02.html#scatter-plot",
+    "href": "slides-02-02.html#scatter-plot",
+    "title": "Intro to Seaborn",
+    "section": "Scatter plot",
+    "text": "Scatter plot\n\nsns.scatterplot(data = data_frame, x = \"bed_numeric\", y = \"price_numeric\")"
+  },
+  {
+    "objectID": "slides-02-02.html",
+    "href": "slides-02-02.html",
+    "title": "Intro to Seaborn",
+    "section": "",
+    "text": "Create a new .ipynb in your VS code folder.\nYou might need to run pip install notebook (python3 -m pip install notebook)\nYou also might need to run pip install jupyterlab"
+  },
+  {
+    "objectID": "slides-02-01.html#filtering-the-data",
+    "href": "slides-02-01.html#filtering-the-data",
+    "title": "Intro to Pandas",
+    "section": "Filtering the data",
+    "text": "Filtering the data\n\n\n\n\n\n\n\n\n\ndate\nhouse_size\nbed\nbath\nprice\nbroker\nstreet\ncity\nstate_name\nzip_code\n\n\n\n\n2\nAUG 29, 2024\n1,926 sqft (on 0.45 acres)\n3bd\n3bd\n$375,000\nColdwell Banker Hartung\n6761 Landover Cir\nTallahassee\nFlorida\n32317\n\n\n4\nAUG 29, 2024\n1,205 sqft\n3bd\n3bd\n$233,900\nD R Horton Realty of NW Florida, LLC\n6274 June Bug Dr\nMilton\nFlorida\n32583\n\n\n14\nAUG 28, 2024\n1,820 sqft\n3bd\n3bd\n$330,500\nEXP Realty, LLC\n8564 Westview Ln\nPensacola\nFlorida\n32514\n\n\n15\nAUG 28, 2024\n1,370 sqft\n3bd\n3bd\n$173,000\nBetter Homes And Gardens Real Estate Main Stre...\n6905 Woodley Dr\nPensacola\nFlorida\n32503\n\n\n17\nAUG 28, 2024\n2,681 sqft (on 1.82 acres)\n3bd\n3bd\n$525,000\nAmerican Valor Realty LLC\n8021 Quiet Dr\nPensacola\nFlorida\n32526\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n12059\nAUG 30, 2024\n2,610 sqft\n3bd\n3bd\n$1,143,909\nBALBOA REAL ESTATE, INC.\n50525 Spyglass Hill Dr\nLa Quinta\nCA\n92253\n\n\n12063\nAUG 30, 2024\n1,983 sqft (on 1 acre)\n3bd\n3bd\n$1,385,000\nCompass\n10241 McBroom St\nSunland\nCA\n91040\n\n\n12065\nAUG 30, 2024\n1,757 sqft\n3bd\n3bd\n$568,000\nBerkshire Hathaway Home Serv.\n26848 Hanford St\nMenifee\nCA\n92584\n\n\n12069\nAUG 30, 2024\n2,000 sqft\n3bd\n3bd\n$1,880,000\nReal Estate Legends USA\n16 Riveroaks\nIrvine\nCA\n92602\n\n\n12074\nAUG 30, 2024\n1,615 sqft\n3bd\n3bd\n$508,000\nStarlitloan&Realty\n1668 Ravenswood Rd\nBeaumont\nCA\n92223\n\n\n\n\n5172 rows × 10 columns"
   }
 ]
