@@ -383,5 +383,54 @@
     "title": "Intro to Pandas",
     "section": "Filtering the data",
     "text": "Filtering the data\n\ndata_frame[data_frame[\"bed\"] == \"3bd\"]\n\n\n\n\n\n\n\n\ndate\nhouse_size\nbed\nbath\nprice\nbroker\nstreet\ncity\nstate_name\nzip_code\n\n\n\n\n2\nAUG 29, 2024\n1,926 sqft (on 0.45 acres)\n3bd\n3bd\n$375,000\nColdwell Banker Hartung\n6761 Landover Cir\nTallahassee\nFlorida\n32317\n\n\n4\nAUG 29, 2024\n1,205 sqft\n3bd\n3bd\n$233,900\nD R Horton Realty of NW Florida, LLC\n6274 June Bug Dr\nMilton\nFlorida\n32583\n\n\n14\nAUG 28, 2024\n1,820 sqft\n3bd\n3bd\n$330,500\nEXP Realty, LLC\n8564 Westview Ln\nPensacola\nFlorida\n32514\n\n\n15\nAUG 28, 2024\n1,370 sqft\n3bd\n3bd\n$173,000\nBetter Homes And Gardens Real Estate Main Stre...\n6905 Woodley Dr\nPensacola\nFlorida\n32503\n\n\n17\nAUG 28, 2024\n2,681 sqft (on 1.82 acres)\n3bd\n3bd\n$525,000\nAmerican Valor Realty LLC\n8021 Quiet Dr\nPensacola\nFlorida\n32526\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n12059\nAUG 30, 2024\n2,610 sqft\n3bd\n3bd\n$1,143,909\nBALBOA REAL ESTATE, INC.\n50525 Spyglass Hill Dr\nLa Quinta\nCA\n92253\n\n\n12063\nAUG 30, 2024\n1,983 sqft (on 1 acre)\n3bd\n3bd\n$1,385,000\nCompass\n10241 McBroom St\nSunland\nCA\n91040\n\n\n12065\nAUG 30, 2024\n1,757 sqft\n3bd\n3bd\n$568,000\nBerkshire Hathaway Home Serv.\n26848 Hanford St\nMenifee\nCA\n92584\n\n\n12069\nAUG 30, 2024\n2,000 sqft\n3bd\n3bd\n$1,880,000\nReal Estate Legends USA\n16 Riveroaks\nIrvine\nCA\n92602\n\n\n12074\nAUG 30, 2024\n1,615 sqft\n3bd\n3bd\n$508,000\nStarlitloan&Realty\n1668 Ravenswood Rd\nBeaumont\nCA\n92223\n\n\n\n\n5172 rows × 10 columns"
+  },
+  {
+    "objectID": "slides-02-01.html#handling-missing-data-drop-missing-data",
+    "href": "slides-02-01.html#handling-missing-data-drop-missing-data",
+    "title": "Intro to Pandas",
+    "section": "Handling Missing Data – drop missing data",
+    "text": "Handling Missing Data – drop missing data\nDocumentation on .dropna()\n\ndata_frame.dropna()\n\n\n\n\n\n\n\n\ndate\nhouse_size\nbed\nbath\nprice\nbroker\nstreet\ncity\nstate_name\nzip_code\n\n\n\n\n2\nAUG 29, 2024\n1,926 sqft (on 0.45 acres)\n3bd\n3bd\n$375,000\nColdwell Banker Hartung\n6761 Landover Cir\nTallahassee\nFlorida\n32317\n\n\n3\nAUG 29, 2024\n1,132 sqft\nStudio\nStudio\n$190,000\nEXP Realty, LLC\n1701 S Fairfield Dr\nPerdido Key\nFlorida\n32507\n\n\n4\nAUG 29, 2024\n1,205 sqft\n3bd\n3bd\n$233,900\nD R Horton Realty of NW Florida, LLC\n6274 June Bug Dr\nMilton\nFlorida\n32583\n\n\n5\nAUG 29, 2024\n3,044 sqft (on 0.34 acres)\n4bd\n4bd\n$416,402\nADAMS HOME REALTY, INC\n6528 Benelli Dr\nMilton\nFlorida\n32570\n\n\n13\nAUG 28, 2024\n1,254 sqft\n2bd\n2bd\n$250,000\nJANET COULTER REALTY\n520 Richard Jackson Blvd #2810\nPanama City Beach\nFlorida\n32407\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n12067\nAUG 30, 2024\n2,352 sqft\n4bd\n4bd\n$795,000\nRealty Masters\n12549 Navel Ct\nRiverside\nCA\n92503\n\n\n12069\nAUG 30, 2024\n2,000 sqft\n3bd\n3bd\n$1,880,000\nReal Estate Legends USA\n16 Riveroaks\nIrvine\nCA\n92602\n\n\n12070\nAUG 30, 2024\n3,835 sqft\n5bd\n5bd\n$1,935,000\nRealty ONE Group Pacific\n1154 Via Vera Cruz\nSan Marcos\nCA\n92078\n\n\n12072\nAUG 30, 2024\n2,616 sqft\n4bd\n4bd\n$685,000\nAnderson Real Estate Group\n5509 W Modoc Avenue\nVisalia\nCA\n93291\n\n\n12074\nAUG 30, 2024\n1,615 sqft\n3bd\n3bd\n$508,000\nStarlitloan&Realty\n1668 Ravenswood Rd\nBeaumont\nCA\n92223\n\n\n\n\n8068 rows × 10 columns"
+  },
+  {
+    "objectID": "slides-02-01.html#handling-missing-data-fill-missing-data",
+    "href": "slides-02-01.html#handling-missing-data-fill-missing-data",
+    "title": "Intro to Pandas",
+    "section": "Handling Missing Data – fill missing data",
+    "text": "Handling Missing Data – fill missing data\nDocumentation on .fillna()\n\ndata_frame.fillna(0)\ndata_frame.ffill()\ndata_frame.bfill()\ndata_frame.fillna(data_frame.mean())\ndata_frame[\"bed_numeric\"].fillna(data_frame[\"bed_numeric\"].mean())"
+  },
+  {
+    "objectID": "slides-02-03.html#regex",
+    "href": "slides-02-03.html#regex",
+    "title": "Regular Expressions",
+    "section": "Regex",
+    "text": "Regex\nRegular expressions are:\n\npatterns used to match and manipulate text strings"
+  },
+  {
+    "objectID": "slides-02-03.html#other-syntax",
+    "href": "slides-02-03.html#other-syntax",
+    "title": "Regular Expressions",
+    "section": "Other syntax",
+    "text": "Other syntax\n\n\\d - matches any digit (0-9)\n\\w - matches any word character (a-z, A-Z, 0-9, _)\n\\s - matches any whitespace character (space, tab, newline)\n[] used to indicate a set of characters.\n{m} matches m times\n{m,n} matches m to n times\n\ne.g., lower case letters: [a-z], upper case letters: [A-Z]"
+  },
+  {
+    "objectID": "slides-02-03.html#python-examples",
+    "href": "slides-02-03.html#python-examples",
+    "title": "Regular Expressions",
+    "section": "Python examples",
+    "text": "Python examples\nEmail validation pattern:\n\npattern = r'^[\\w\\.-]+@[\\w\\.-]+\\.\\w+$'\n\nPhone number pattern (US format):\n\npattern = r'\\d{3}-\\d{3}-\\d{4}'"
+  },
+  {
+    "objectID": "slides-02-03.html#basic-patterns",
+    "href": "slides-02-03.html#basic-patterns",
+    "title": "Regular Expressions",
+    "section": "Basic Patterns",
+    "text": "Basic Patterns\n\nLiteral characters match themselves (“cat” matches “cat”)\nSpecial characters have specific meanings:\n\n. (dot) - matches any single character except newline\n* matches 0 or more of the previous character\n+ matches 1 or more of the previous character\n? - matches 0 or 1 of the previous character\n^ - matches start of line\n$ - matches end of line"
+  },
+  {
+    "objectID": "slides-02-03.html#examples",
+    "href": "slides-02-03.html#examples",
+    "title": "Regular Expressions",
+    "section": "Examples",
+    "text": "Examples\n[abc] - matches any single character from the set (a, b, or c)\n[^abc] - matches any single character NOT in the set"
   }
 ]

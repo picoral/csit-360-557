@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>CSIT 360/557 Advanced Techniques in Data Science – Intro to Seaborn</title>
+  <title>CSIT 360/557 Advanced Techniques in Data Science – Regular Expressions</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -191,35 +191,60 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Intro to Seaborn</h1>
+  <h1 class="title">Regular Expressions</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="set-up-your-coding-environment" class="slide level2">
-<h2>Set up your coding environment</h2>
+<section id="regex" class="slide level2">
+<h2>Regex</h2>
+<p>Regular expressions are:</p>
 <ul>
-<li>Create a new <code>.ipynb</code> in your VS code folder.</li>
-<li>You might need to run <code>pip install notebook</code> (<code>python3 -m pip install notebook</code>)</li>
-<li>You also might need to run <code>pip install jupyterlab</code></li>
+<li>patterns used to match and manipulate text strings</li>
 </ul>
 </section>
-<section id="import-the-libraries-we-will-be-using" class="slide level2">
-<h2>Import the libraries we will be using</h2>
-<div id="c6c2a450" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Make sure you import <code>pandas</code> and read the data in:</p>
-<div id="bd93e203" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-2"><a></a>data_frame <span class="op">=</span> pd.read_csv(<span class="st">"data/US houuse price of 10 states.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="basic-patterns" class="slide level2">
+<h2>Basic Patterns</h2>
+<ul>
+<li>Literal characters match themselves (“cat” matches “cat”)</li>
+<li>Special characters have specific meanings:
+<ul>
+<li><code>.</code> (dot) - matches any single character except newline</li>
+<li><code>*</code> matches 0 or more of the previous character</li>
+<li><code>+</code> matches 1 or more of the previous character</li>
+<li><code>?</code> - matches 0 or 1 of the previous character</li>
+<li><code>^</code> - matches start of line</li>
+<li><code>$</code> - matches end of line</li>
+</ul></li>
+</ul>
 </section>
-<section id="scatter-plot" class="slide level2">
-<h2>Scatter plot</h2>
-<div id="f140215f" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>sns.scatterplot(data <span class="op">=</span> data_frame, x <span class="op">=</span> <span class="st">"bed_numeric"</span>, y <span class="op">=</span> <span class="st">"price_numeric"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="other-syntax" class="slide level2">
+<h2>Other syntax</h2>
+<ul>
+<li><code>\d</code> - matches any digit (0-9)</li>
+<li><code>\w</code> - matches any word character (a-z, A-Z, 0-9, _)</li>
+<li><code>\s</code> - matches any whitespace character (space, tab, newline)</li>
+<li><code>[]</code> used to indicate a set of characters.</li>
+<li><code>{m}</code> matches m times</li>
+<li><code>{m,n}</code> matches m to n times</li>
+</ul>
+<p>e.g., lower case letters: [a-z], upper case letters: [A-Z]</p>
+</section>
+<section id="examples" class="slide level2">
+<h2>Examples</h2>
+<p><code>[abc]</code> - matches any single character from the set (a, b, or c)</p>
+<p><code>[^abc]</code> - matches any single character NOT in the set</p>
+</section>
+<section id="python-examples" class="slide level2">
+<h2>Python examples</h2>
+<p>Email validation pattern:</p>
+<div id="a6ebbd4b" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>pattern <span class="op">=</span> <span class="vs">r'^[\w\.-]+@[\w\.-]+\.\w+$'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Phone number pattern (US format):</p>
+<div id="16e05c80" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>pattern <span class="op">=</span> <span class="vs">r'\d</span><span class="sc">{3}</span><span class="vs">-\d</span><span class="sc">{3}</span><span class="vs">-\d</span><span class="sc">{4}</span><span class="vs">'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
