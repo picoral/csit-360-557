@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Modules – CSIT 360/557 Advanced Techniques in Data Science</title>
+<title>Numpy – CSIT 360/557 Advanced Techniques in Data Science</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -92,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./modules.html" aria-current="page"> 
+    <a class="nav-link" href="./modules.html"> 
 <span class="menu-text">Modules</span></a>
   </li>  
   <li class="nav-item">
@@ -115,30 +149,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-01-january-22" id="toc-week-01-january-22" class="nav-link active" data-scroll-target="#week-01-january-22">Week 01 – January 22</a>
-  <ul class="collapse">
-  <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading">Reading</a></li>
-  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
-  <li><a href="#assignments" id="toc-assignments" class="nav-link" data-scroll-target="#assignments">Assignments</a></li>
-  </ul></li>
-  <li><a href="#week-02-january-29" id="toc-week-02-january-29" class="nav-link" data-scroll-target="#week-02-january-29">Week 02 – January 29</a>
-  <ul class="collapse">
-  <li><a href="#video-lesson" id="toc-video-lesson" class="nav-link" data-scroll-target="#video-lesson">Video Lesson</a></li>
-  </ul></li>
-  <li><a href="#week-03-feb-05" id="toc-week-03-feb-05" class="nav-link" data-scroll-target="#week-03-feb-05">Week 03 – Feb 05</a>
-  <ul class="collapse">
-  <li><a href="#slides-1" id="toc-slides-1" class="nav-link" data-scroll-target="#slides-1">Slides</a></li>
-  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">Practice</a></li>
-  </ul></li>
+  <li><a href="#package-and-data" id="toc-package-and-data" class="nav-link active" data-scroll-target="#package-and-data">Package and Data</a></li>
+  <li><a href="#recode-data" id="toc-recode-data" class="nav-link" data-scroll-target="#recode-data">Recode Data</a></li>
+  <li><a href="#transform-data" id="toc-transform-data" class="nav-link" data-scroll-target="#transform-data">Transform Data</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="slides-02-04.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Modules</h1>
+<h1 class="title">Numpy</h1>
 </div>
 
 
@@ -155,58 +177,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="week-01-january-22" class="level1">
-<h1>Week 01 – January 22</h1>
-<p>Topic: Introduction</p>
-<section id="reading" class="level2">
-<h2 class="anchored" data-anchor-id="reading">Reading</h2>
-<ul>
-<li><a href="environment.html">Set up your coding environment</a></li>
-<li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/05.01-what-is-machine-learning.html">What Is Machine Learning?</a></li>
-</ul>
+<section id="package-and-data" class="level2">
+<h2 class="anchored" data-anchor-id="package-and-data">Package and Data</h2>
+<div id="7bfd75d0" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<ul>
-<li><a href="slides-01-01.html">Course Introduction</a></li>
-<li><a href="slides-01-02.html">Advanced Methods Intro</a></li>
-<li><a href="slides-01-03.html">Data</a></li>
-</ul>
+<section id="recode-data" class="level2">
+<h2 class="anchored" data-anchor-id="recode-data">Recode Data</h2>
+<div id="fb6cbcc3" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>bank[<span class="st">'GenderDummy_F'</span>] <span class="op">=</span> np.where(bank[<span class="st">'Gender'</span>] <span class="op">==</span> <span class="st">"Female"</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>bank.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="assignments" class="level2">
-<h2 class="anchored" data-anchor-id="assignments">Assignments</h2>
-<ul>
-<li><a href="https://montclair.co1.qualtrics.com/jfe/form/SV_bQTjyYrDIkt2je6">Beginning of semester survey</a></li>
-</ul>
-</section>
-</section>
-<section id="week-02-january-29" class="level1">
-<h1>Week 02 – January 29</h1>
-<p>Topic: Python Review</p>
-<section id="video-lesson" class="level2">
-<h2 class="anchored" data-anchor-id="video-lesson">Video Lesson</h2>
-<ul>
-<li><a href="https://montclair.zoom.us/rec/share/jyL0was3SCvUDfykq5CNbjQPXa9hkbpFcwMvg_ik4I9lrh8WzwmxP6lPF8S3Bwqq.-oK7pTjuQ48FJWqD">Opening data files in VS Code</a> Passcode: <code>Uu5.@XE*</code></li>
-</ul>
-</section>
-</section>
-<section id="week-03-feb-05" class="level1">
-<h1>Week 03 – Feb 05</h1>
-<p>Topic: Numpy &amp; Pandas</p>
-<section id="slides-1" class="level2">
-<h2 class="anchored" data-anchor-id="slides-1">Slides</h2>
-<ul>
-<li><a href="slides-02-01.html">Intro to Pandas</a></li>
-<li><a href="slides-02-02.html">Intro to Seaborn</a></li>
-<li><a href="slides-02-03.html">Regular Expressions</a></li>
-</ul>
-</section>
-<section id="practice" class="level2">
-<h2 class="anchored" data-anchor-id="practice">Practice</h2>
-<p>Clean <a href="data/titanic.csv">this data set on Titanic survivors</a></p>
+<section id="transform-data" class="level2">
+<h2 class="anchored" data-anchor-id="transform-data">Transform Data</h2>
+<div id="c4e7a100" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>bank[<span class="st">'logSalary'</span>] <span class="op">=</span> np.log(bank[<span class="st">'Salary'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

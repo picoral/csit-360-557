@@ -432,5 +432,40 @@
     "title": "Regular Expressions",
     "section": "Examples",
     "text": "Examples\n[abc] - matches any single character from the set (a, b, or c)\n[^abc] - matches any single character NOT in the set"
+  },
+  {
+    "objectID": "modules.html#practice",
+    "href": "modules.html#practice",
+    "title": "Modules",
+    "section": "Practice",
+    "text": "Practice\nClean this data set on Titanic survivors"
+  },
+  {
+    "objectID": "slides-02-04.html",
+    "href": "slides-02-04.html",
+    "title": "Numpy",
+    "section": "",
+    "text": "import numpy as np"
+  },
+  {
+    "objectID": "slides-02-04.html#package-and-data",
+    "href": "slides-02-04.html#package-and-data",
+    "title": "Numpy",
+    "section": "",
+    "text": "import numpy as np"
+  },
+  {
+    "objectID": "slides-02-04.html#recode-data",
+    "href": "slides-02-04.html#recode-data",
+    "title": "Numpy",
+    "section": "Recode Data",
+    "text": "Recode Data\n\nbank['GenderDummy_F'] = np.where(bank['Gender'] == \"Female\", 1, 0)\nbank.head()"
+  },
+  {
+    "objectID": "slides-02-04.html#transform-data",
+    "href": "slides-02-04.html#transform-data",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\n\nbank['logSalary'] = np.log(bank['Salary'])"
   }
 ]
