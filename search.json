@@ -467,5 +467,40 @@
     "title": "Numpy",
     "section": "Transform Data",
     "text": "Transform Data\n\nbank['logSalary'] = np.log(bank['Salary'])"
+  },
+  {
+    "objectID": "slides-03-01.html#methods-to-use",
+    "href": "slides-03-01.html#methods-to-use",
+    "title": "Data Wrangling",
+    "section": "Methods to use",
+    "text": "Methods to use\nTwo .replace() methods, one from pandas.Series.str and another from pandas.DataFrame\n\ndata_frame[column_name] = data_frame[column_name].str.replace(r\"none\", \"0\")\ndata_frame[column_name] = pd.to_numeric(data_frame[column_name])\ndata_frame = data_frame.replace({'data_frame': {'value1': '0', 'value2': '1'}})"
+  },
+  {
+    "objectID": "slides-03-01.html#practice",
+    "href": "slides-03-01.html#practice",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\n\nClean this data set on Titanic survivors\nMake sure you define a main() methods that reads and writes the data\nJoin Gradescope – it’s free, and join our course (Entry Code:8XG2NV)\nSubmit your file(s) to the Data Wrangling assignment"
+  },
+  {
+    "objectID": "slides-03-01.html#exploratory-data-analysis",
+    "href": "slides-03-01.html#exploratory-data-analysis",
+    "title": "Data Wrangling",
+    "section": "Exploratory data analysis",
+    "text": "Exploratory data analysis\nCalculating descriptive stats of a numeric variable by a group.\n\ndata_frame.groupby(\"category\")[\"numeric_value\"].mean().reset_index()\ndata_frame.groupby(\"category\")[\"numeric_value\"].agg([\"mean\", \"std\", \"max\", \"min\"]).reset_index()"
+  },
+  {
+    "objectID": "slides-03-01.html#bar-plots",
+    "href": "slides-03-01.html#bar-plots",
+    "title": "Data Wrangling",
+    "section": "Bar plots",
+    "text": "Bar plots\n\nimport seaborn as sns\n\nsns.barplot(data = desc_stats, x = \"category\", y = \"mean\")"
+  },
+  {
+    "objectID": "modules.html#slides-2",
+    "href": "modules.html#slides-2",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nData Wrangling"
   }
 ]
