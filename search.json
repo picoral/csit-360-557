@@ -347,7 +347,7 @@
     "href": "modules.html#slides-1",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nIntro to Pandas\nIntro to Seaborn\nRegular Expressions"
+    "text": "Slides\n\nIntro to Pandas\nIntro to Seaborn\nRegular Expressions\nNumpy"
   },
   {
     "objectID": "slides-02-02.html#set-up-your-coding-environment",
@@ -451,22 +451,22 @@
     "objectID": "slides-02-04.html#package-and-data",
     "href": "slides-02-04.html#package-and-data",
     "title": "Numpy",
-    "section": "",
-    "text": "import numpy as np"
+    "section": "Package and Data",
+    "text": "Package and Data\n\nimport numpy as np"
   },
   {
     "objectID": "slides-02-04.html#recode-data",
     "href": "slides-02-04.html#recode-data",
     "title": "Numpy",
     "section": "Recode Data",
-    "text": "Recode Data\n\nbank['GenderDummy_F'] = np.where(bank['Gender'] == \"Female\", 1, 0)\nbank.head()"
+    "text": "Recode Data\n\nbank['sex'] = np.where(bank['sex'] == \"Female\", 0, 1)\nbank.head()"
   },
   {
     "objectID": "slides-02-04.html#transform-data",
     "href": "slides-02-04.html#transform-data",
     "title": "Numpy",
     "section": "Transform Data",
-    "text": "Transform Data\n\nbank['logSalary'] = np.log(bank['Salary'])"
+    "text": "Transform Data\n\nbank['log_salary'] = np.log(bank['salary'])"
   },
   {
     "objectID": "slides-03-01.html#methods-to-use",
