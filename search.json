@@ -614,5 +614,19 @@
     "title": "Intro to Data Modeling",
     "section": "OLS regression results",
     "text": "OLS regression results\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst          1.0825      0.040     26.795      0.000       1.003       1.162\npclass        -0.1577      0.016    -10.029      0.000      -0.189      -0.127\nsex           -0.5161      0.027    -18.776      0.000      -0.570      -0.462\n==============================================================================\nOmnibus:                       40.150   Durbin-Watson:                   1.921\nProb(Omnibus):                  0.000   Jarque-Bera (JB):               44.755\nSkew:                           0.549   Prob(JB):                     1.91e-10\nKurtosis:                       3.060   Cond. No.                         9.07\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+  },
+  {
+    "objectID": "slides-03-02.html#ols-regression-results-2",
+    "href": "slides-03-02.html#ols-regression-results-2",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression results",
+    "text": "OLS regression results\n\nWhat other variables can you add to the model?\nHow does the model change?"
+  },
+  {
+    "objectID": "slides-03-02.html#ols-regression-results-3",
+    "href": "slides-03-02.html#ols-regression-results-3",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression results",
+    "text": "OLS regression results\nRun OLS regression on this kaggle dataset on house prices"
   }
 ]
