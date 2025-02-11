@@ -502,5 +502,117 @@
     "title": "Modules",
     "section": "Slides",
     "text": "Slides\n\nData Wrangling"
+  },
+  {
+    "objectID": "slides-03-02.html#data-modeling",
+    "href": "slides-03-02.html#data-modeling",
+    "title": "Intro to Data Modeling",
+    "section": "Data Modeling",
+    "text": "Data Modeling"
+  },
+  {
+    "objectID": "slides-03-02.html#inference-vs.-prediction",
+    "href": "slides-03-02.html#inference-vs.-prediction",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nInference:\n\nunderstanding relationships and testing hypotheses about how variables interact\nexplain the underlying mechanisms and relationships in the data\nHow does education relates to income?"
+  },
+  {
+    "objectID": "slides-03-02.html#inference-vs.-prediction-1",
+    "href": "slides-03-02.html#inference-vs.-prediction-1",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nPrediction:\n\ngenerating accurate estimates of future or unknown values\noptimizing the model’s ability to make correct predictions\nAccurately forecast someone’s income based on their education level."
+  },
+  {
+    "objectID": "slides-03-02.html#inference-vs.-prediction-2",
+    "href": "slides-03-02.html#inference-vs.-prediction-2",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nInference models prioritize interpretability and often use simpler, more transparent methods like linear regression\nPrediction models may use more complex “black box” approaches like neural networks if they improve accuracy"
+  },
+  {
+    "objectID": "slides-03-02.html#inference-vs.-prediction-3",
+    "href": "slides-03-02.html#inference-vs.-prediction-3",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nIn inference, you carefully choose variables based on theory and prior research\nFor prediction, you might include any feature that improves predictive performance, even if the relationship isn’t theoretically clear (! careful with this approach)"
+  },
+  {
+    "objectID": "slides-03-02.html#inference-vs.-prediction-4",
+    "href": "slides-03-02.html#inference-vs.-prediction-4",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nInference focuses on metrics like p-values, confidence intervals, and effect sizes\nPrediction emphasizes metrics like mean squared error, classification accuracy, or the area under the ROC curve (AUC)"
+  },
+  {
+    "objectID": "slides-03-02.html#inference-vs.-prediction-5",
+    "href": "slides-03-02.html#inference-vs.-prediction-5",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\nOverfitting concerns\n\nboth approaches need to address overfitting\nit’s especially critical in prediction\ninference models might accept slightly worse fit for better interpretability\nprediction models focus heavily on cross-validation and out-of-sample performance"
+  },
+  {
+    "objectID": "slides-03-02.html#inference",
+    "href": "slides-03-02.html#inference",
+    "title": "Intro to Data Modeling",
+    "section": "Inference",
+    "text": "Inference\nFor interpreting statistical models, we will be using the statsmodels Python package"
+  },
+  {
+    "objectID": "slides-03-02.html#ordinary-least-squares-ols-regression",
+    "href": "slides-03-02.html#ordinary-least-squares-ols-regression",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nOLS is a method that finds the best-fitting straight line through a set of points by minimizing the sum of squared vertical distances between the data points and the line.\nThe goal is to find a line y = β₀ + β₁x that best fits your data, where:\n\nβ₀ is the y-intercept\nβ₁ is the slope\nx is your independent variable – or target\ny is your dependent variable – or feature(s)"
+  },
+  {
+    "objectID": "slides-03-02.html#ordinary-least-squares-ols-regression-1",
+    "href": "slides-03-02.html#ordinary-least-squares-ols-regression-1",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nFor each data point, OLS:\n\nCalculates the vertical distance (residual) between the actual y-value and the predicted y-value\nSquares these distances (to make negatives positive and penalize larger errors more)\nSums all squared distances\nFinds the line that minimizes this sum"
+  },
+  {
+    "objectID": "slides-03-02.html#ordinary-least-squares-ols-regression-2",
+    "href": "slides-03-02.html#ordinary-least-squares-ols-regression-2",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nKey Assumptions:\n\nLinear relationship between variables\nIndependent observations\nHomoscedasticity (constant variance in errors)\nNormally distributed errors\nNo perfect multicollinearity"
+  },
+  {
+    "objectID": "slides-03-02.html#ordinary-least-squares-ols-regression-3",
+    "href": "slides-03-02.html#ordinary-least-squares-ols-regression-3",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nAdvantages:\n\nSimple to understand and implement\nBest Linear Unbiased Estimator (BLUE) under certain conditions\nComputationally efficient\nClear interpretation of results"
+  },
+  {
+    "objectID": "slides-03-02.html#ordinary-least-squares-ols-regression-4",
+    "href": "slides-03-02.html#ordinary-least-squares-ols-regression-4",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nLimitations:\n\nSensitive to outliers\nAssumes linear relationships\nMay not capture complex patterns\nAll predictors must be independent"
+  },
+  {
+    "objectID": "slides-03-02.html#ols-regression-in-statsmodels",
+    "href": "slides-03-02.html#ols-regression-in-statsmodels",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression in statsmodels",
+    "text": "OLS regression in statsmodels\n\nimport pandas as pd\nimport statsmodels.api as sm\n\n\ndef main():\n    data = pd.read_csv(\"data/clean_titanic.csv\")\n    X = data[[\"pclass\", \"sex\"]]  \n    y = data[\"survived\"] \n\n    # Ordinary Least Squares (regression)\n    result = sm.OLS(y, sm.add_constant(X)).fit()\n    print(result.summary())\n\nmain()"
+  },
+  {
+    "objectID": "slides-03-02.html#ols-regression-results",
+    "href": "slides-03-02.html#ols-regression-results",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression results",
+    "text": "OLS regression results\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:               survived   R-squared:                       0.366\nModel:                            OLS   Adj. R-squared:                  0.365\nMethod:                 Least Squares   F-statistic:                     255.2\nDate:                Tue, 11 Feb 2025   Prob (F-statistic):           3.19e-88\nTime:                        14:23:34   Log-Likelihood:                -417.77\nNo. Observations:                 887   AIC:                             841.5\nDf Residuals:                     884   BIC:                             855.9\nDf Model:                           2                                         \nCovariance Type:            nonrobust                                         \n=============================================================================="
+  },
+  {
+    "objectID": "slides-03-02.html#ols-regression-results-1",
+    "href": "slides-03-02.html#ols-regression-results-1",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression results",
+    "text": "OLS regression results\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst          1.0825      0.040     26.795      0.000       1.003       1.162\npclass        -0.1577      0.016    -10.029      0.000      -0.189      -0.127\nsex           -0.5161      0.027    -18.776      0.000      -0.570      -0.462\n==============================================================================\nOmnibus:                       40.150   Durbin-Watson:                   1.921\nProb(Omnibus):                  0.000   Jarque-Bera (JB):               44.755\nSkew:                           0.549   Prob(JB):                     1.91e-10\nKurtosis:                       3.060   Cond. No.                         9.07\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
   }
 ]
