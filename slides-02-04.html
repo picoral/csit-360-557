@@ -199,22 +199,57 @@
 </section>
 <section id="package-and-data" class="slide level2">
 <h2>Package and Data</h2>
-<div id="d52711fc" class="cell" data-execution_count="1">
+<div id="3d4fcb13" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="recode-data" class="slide level2">
 <h2>Recode Data</h2>
-<div id="d42ce224" class="cell" data-execution_count="2">
+<div id="34f841a5" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>bank[<span class="st">'sex'</span>] <span class="op">=</span> np.where(bank[<span class="st">'sex'</span>] <span class="op">==</span> <span class="st">"Female"</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
 <span id="cb2-2"><a></a>bank.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="transform-data" class="slide level2">
 <h2>Transform Data</h2>
-<div id="18d0d99b" class="cell" data-execution_count="3">
+<div id="59af8554" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>bank[<span class="st">'log_salary'</span>] <span class="op">=</span> np.log(bank[<span class="st">'salary'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="transform-data-1" class="slide level2">
+<h2>Transform Data</h2>
+<p>When do we log-transform numeric variables?</p>
+<ul>
+<li>Normalizing skewed distributions: Many real-world variables (like income, population, prices) tend to have right-skewed distributions, where most values are small but there are some very large values. Taking the logarithm can make these distributions more symmetric and closer to normal, which is beneficial for many statistical methods.</li>
+</ul>
+</section>
+<section id="transform-data-2" class="slide level2">
+<h2>Transform Data</h2>
+<p>When do we log-transform numeric variables?</p>
+<ul>
+<li>Managing outliers: Log transformation reduces the impact of extreme values or outliers. For example, the difference between $1M and $2M becomes similar in magnitude to the difference between $10K and $20K when logged.</li>
+</ul>
+</section>
+<section id="transform-data-3" class="slide level2">
+<h2>Transform Data</h2>
+<p>When do we log-transform numeric variables?</p>
+<ul>
+<li>Linearizing relationships: Many relationships that appear exponential become linear after log transformation. For instance, if <span class="math inline">\(y = ax^b\)</span>, then <span class="math inline">\(log(y) = log(a) + b*log(x)\)</span> is linear. This makes the relationship easier to model and interpret.</li>
+</ul>
+</section>
+<section id="transform-data-4" class="slide level2">
+<h2>Transform Data</h2>
+<p>When do we log-transform numeric variables?</p>
+<ul>
+<li>Making multiplicative relationships additive: When variables have multiplicative effects (like compound growth), logging transforms them into additive relationships. This often makes more sense for how variables actually interact in real-world systems.</li>
+</ul>
+</section>
+<section id="transform-data-5" class="slide level2">
+<h2>Transform Data</h2>
+<p>When do we log-transform numeric variables?</p>
+<ul>
+<li>Stabilizing variance: When the variability of data increases with its magnitude (heteroscedasticity), log transformation can help create more constant variance across the range of values, which is important for many statistical methods.</li>
+</ul>
 
 
 </section>

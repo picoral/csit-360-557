@@ -628,5 +628,40 @@
     "title": "Intro to Data Modeling",
     "section": "OLS regression results",
     "text": "OLS regression results\nRun OLS regression on this kaggle dataset on house prices"
+  },
+  {
+    "objectID": "slides-02-04.html#transform-data-1",
+    "href": "slides-02-04.html#transform-data-1",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nNormalizing skewed distributions: Many real-world variables (like income, population, prices) tend to have right-skewed distributions, where most values are small but there are some very large values. Taking the logarithm can make these distributions more symmetric and closer to normal, which is beneficial for many statistical methods."
+  },
+  {
+    "objectID": "slides-02-04.html#transform-data-2",
+    "href": "slides-02-04.html#transform-data-2",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nManaging outliers: Log transformation reduces the impact of extreme values or outliers. For example, the difference between $1M and $2M becomes similar in magnitude to the difference between $10K and $20K when logged."
+  },
+  {
+    "objectID": "slides-02-04.html#transform-data-3",
+    "href": "slides-02-04.html#transform-data-3",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nLinearizing relationships: Many relationships that appear exponential become linear after log transformation. For instance, if \\(y = ax^b\\), then \\(log(y) = log(a) + b*log(x)\\) is linear. This makes the relationship easier to model and interpret."
+  },
+  {
+    "objectID": "slides-02-04.html#transform-data-4",
+    "href": "slides-02-04.html#transform-data-4",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nMaking multiplicative relationships additive: When variables have multiplicative effects (like compound growth), logging transforms them into additive relationships. This often makes more sense for how variables actually interact in real-world systems."
+  },
+  {
+    "objectID": "slides-02-04.html#transform-data-5",
+    "href": "slides-02-04.html#transform-data-5",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nStabilizing variance: When the variability of data increases with its magnitude (heteroscedasticity), log transformation can help create more constant variance across the range of values, which is important for many statistical methods."
   }
 ]
