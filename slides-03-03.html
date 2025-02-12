@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>CSIT 360/557 Advanced Techniques in Data Science – Numpy</title>
+  <title>CSIT 360/557 Advanced Techniques in Data Science – Intro to Data Modeling</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -191,65 +191,186 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Numpy</h1>
+  <h1 class="title">Intro to Data Modeling</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="package-and-data" class="slide level2">
-<h2>Package and Data</h2>
-<div id="e2fb46f6" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="data-modeling" class="slide level2">
+<h2>Data Modeling</h2>
+
+<img data-src="images/data-science-cycle.png" class="r-stretch"></section>
+<section id="inference-vs.-prediction" class="slide level2">
+<h2>Inference vs.&nbsp;Prediction</h2>
+<ul>
+<li>Inference:
+<ul>
+<li>understanding relationships and testing hypotheses about how variables interact</li>
+<li>explain the underlying mechanisms and relationships in the data</li>
+<li>How does education relates to income?</li>
+</ul></li>
+</ul>
+</section>
+<section id="inference-vs.-prediction-1" class="slide level2">
+<h2>Inference vs.&nbsp;Prediction</h2>
+<ul>
+<li>Prediction:
+<ul>
+<li>generating accurate estimates of future or unknown values</li>
+<li>optimizing the model’s ability to make correct predictions</li>
+<li>Accurately forecast someone’s income based on their education level.</li>
+</ul></li>
+</ul>
+</section>
+<section id="inference-vs.-prediction-2" class="slide level2">
+<h2>Inference vs.&nbsp;Prediction</h2>
+<ul>
+<li>Inference models prioritize interpretability and often use simpler, more transparent methods like linear regression</li>
+<li>Prediction models may use more complex “black box” approaches like neural networks if they improve accuracy</li>
+</ul>
+</section>
+<section id="inference-vs.-prediction-3" class="slide level2">
+<h2>Inference vs.&nbsp;Prediction</h2>
+<ul>
+<li>In inference, you carefully choose variables based on theory and prior research</li>
+<li>For prediction, you might include any feature that improves predictive performance, even if the relationship isn’t theoretically clear (! careful with this approach)</li>
+</ul>
+</section>
+<section id="inference-vs.-prediction-4" class="slide level2">
+<h2>Inference vs.&nbsp;Prediction</h2>
+<ul>
+<li>Inference focuses on metrics like p-values, confidence intervals, and effect sizes</li>
+<li>Prediction emphasizes metrics like mean squared error, classification accuracy, or the area under the ROC curve (AUC)</li>
+</ul>
+</section>
+<section id="inference-vs.-prediction-5" class="slide level2">
+<h2>Inference vs.&nbsp;Prediction</h2>
+<p>Overfitting concerns</p>
+<ul>
+<li>both approaches need to address overfitting</li>
+<li>it’s especially critical in prediction</li>
+<li>inference models might accept slightly worse fit for better interpretability</li>
+<li>prediction models focus heavily on cross-validation and out-of-sample performance</li>
+</ul>
+</section>
+<section id="inference" class="slide level2">
+<h2>Inference</h2>
+<p>For interpreting statistical models, we will be using the <code>statsmodels</code> Python package</p>
+</section>
+<section id="ordinary-least-squares-ols-regression" class="slide level2">
+<h2>Ordinary Least Squares (OLS) regression</h2>
+<p>OLS is a method that finds the best-fitting straight line through a set of points by minimizing the sum of squared vertical distances between the data points and the line.</p>
+<p>The goal is to find a line y = β₀ + β₁x that best fits your data, where:</p>
+<ul>
+<li>β₀ is the y-intercept</li>
+<li>β₁ is the slope</li>
+<li>x is your independent variable – or target</li>
+<li>y is your dependent variable – or feature(s)</li>
+</ul>
+</section>
+<section id="ordinary-least-squares-ols-regression-1" class="slide level2">
+<h2>Ordinary Least Squares (OLS) regression</h2>
+<p>For each data point, OLS:</p>
+<ul>
+<li>Calculates the vertical distance (residual) between the actual y-value and the predicted y-value</li>
+<li>Squares these distances (to make negatives positive and penalize larger errors more)</li>
+<li>Sums all squared distances</li>
+<li>Finds the line that minimizes this sum</li>
+</ul>
+</section>
+<section id="ordinary-least-squares-ols-regression-2" class="slide level2">
+<h2>Ordinary Least Squares (OLS) regression</h2>
+<p>Key Assumptions:</p>
+<ul>
+<li>Linear relationship between variables</li>
+<li>Independent observations</li>
+<li>Homoscedasticity (constant variance in errors)</li>
+<li>Normally distributed errors</li>
+<li>No perfect multicollinearity</li>
+</ul>
+</section>
+<section id="ordinary-least-squares-ols-regression-3" class="slide level2">
+<h2>Ordinary Least Squares (OLS) regression</h2>
+<p>Advantages:</p>
+<ul>
+<li>Simple to understand and implement</li>
+<li>Best Linear Unbiased Estimator (BLUE) under certain conditions</li>
+<li>Computationally efficient</li>
+<li>Clear interpretation of results</li>
+</ul>
+</section>
+<section id="ordinary-least-squares-ols-regression-4" class="slide level2">
+<h2>Ordinary Least Squares (OLS) regression</h2>
+<p>Limitations:</p>
+<ul>
+<li>Sensitive to outliers</li>
+<li>Assumes linear relationships</li>
+<li>May not capture complex patterns</li>
+<li>All predictors must be independent</li>
+</ul>
+</section>
+<section id="ols-regression-in-statsmodels" class="slide level2">
+<h2>OLS regression in statsmodels</h2>
+<div id="2d72dcab" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a><span class="kw">def</span> main():</span>
+<span id="cb1-6"><a></a>    data <span class="op">=</span> pd.read_csv(<span class="st">"data/clean_titanic.csv"</span>)</span>
+<span id="cb1-7"><a></a>    X <span class="op">=</span> data[[<span class="st">"pclass"</span>, <span class="st">"sex"</span>]]  </span>
+<span id="cb1-8"><a></a>    y <span class="op">=</span> data[<span class="st">"survived"</span>] </span>
+<span id="cb1-9"><a></a></span>
+<span id="cb1-10"><a></a>    <span class="co"># Ordinary Least Squares (regression)</span></span>
+<span id="cb1-11"><a></a>    result <span class="op">=</span> sm.OLS(y, sm.add_constant(X)).fit()</span>
+<span id="cb1-12"><a></a>    <span class="bu">print</span>(result.summary())</span>
+<span id="cb1-13"><a></a></span>
+<span id="cb1-14"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="recode-data" class="slide level2">
-<h2>Recode Data</h2>
-<div id="904c984a" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>bank[<span class="st">'sex'</span>] <span class="op">=</span> np.where(bank[<span class="st">'sex'</span>] <span class="op">==</span> <span class="st">"Female"</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb2-2"><a></a>bank.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="ols-regression-results" class="slide level2">
+<h2>OLS regression results</h2>
+<pre><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               survived   R-squared:                       0.366
+Model:                            OLS   Adj. R-squared:                  0.365
+Method:                 Least Squares   F-statistic:                     255.2
+Date:                Tue, 11 Feb 2025   Prob (F-statistic):           3.19e-88
+Time:                        14:23:34   Log-Likelihood:                -417.77
+No. Observations:                 887   AIC:                             841.5
+Df Residuals:                     884   BIC:                             855.9
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================</code></pre>
 </section>
-<section id="transform-data" class="slide level2">
-<h2>Transform Data</h2>
-<div id="39fab5ef" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>bank[<span class="st">'log_salary'</span>] <span class="op">=</span> np.log(bank[<span class="st">'salary'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="ols-regression-results-1" class="slide level2">
+<h2>OLS regression results</h2>
+<pre><code>                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          1.0825      0.040     26.795      0.000       1.003       1.162
+pclass        -0.1577      0.016    -10.029      0.000      -0.189      -0.127
+sex           -0.5161      0.027    -18.776      0.000      -0.570      -0.462
+==============================================================================
+Omnibus:                       40.150   Durbin-Watson:                   1.921
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               44.755
+Skew:                           0.549   Prob(JB):                     1.91e-10
+Kurtosis:                       3.060   Cond. No.                         9.07
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</code></pre>
 </section>
-<section id="transform-data-1" class="slide level2">
-<h2>Transform Data</h2>
-<p>When do we log-transform numeric variables?</p>
+<section id="ols-regression-results-2" class="slide level2">
+<h2>OLS regression results</h2>
 <ul>
-<li>Normalizing skewed distributions: Many real-world variables (like income, population, prices) tend to have right-skewed distributions, where most values are small but there are some very large values. Taking the logarithm can make these distributions more symmetric and closer to normal, which is beneficial for many statistical methods.</li>
+<li>What other variables can you add to the model?</li>
+<li>How does the model change?</li>
 </ul>
 </section>
-<section id="transform-data-2" class="slide level2">
-<h2>Transform Data</h2>
-<p>When do we log-transform numeric variables?</p>
-<ul>
-<li>Managing outliers: Log transformation reduces the impact of extreme values or outliers. For example, the difference between $1M and $2M becomes similar in magnitude to the difference between $10K and $20K when logged.</li>
-</ul>
-</section>
-<section id="transform-data-3" class="slide level2">
-<h2>Transform Data</h2>
-<p>When do we log-transform numeric variables?</p>
-<ul>
-<li>Linearizing relationships: Many relationships that appear exponential become linear after log transformation. For instance, if <span class="math inline">\(y = ax^b\)</span>, then <span class="math inline">\(log(y) = log(a) + b*log(x)\)</span> is linear. This makes the relationship easier to model and interpret.</li>
-</ul>
-</section>
-<section id="transform-data-4" class="slide level2">
-<h2>Transform Data</h2>
-<p>When do we log-transform numeric variables?</p>
-<ul>
-<li>Making multiplicative relationships additive: When variables have multiplicative effects (like compound growth), logging transforms them into additive relationships. This often makes more sense for how variables actually interact in real-world systems.</li>
-</ul>
-</section>
-<section id="transform-data-5" class="slide level2">
-<h2>Transform Data</h2>
-<p>When do we log-transform numeric variables?</p>
-<ul>
-<li>Stabilizing variance: When the variability of data increases with its magnitude (heteroscedasticity), log transformation can help create more constant variance across the range of values, which is important for many statistical methods.</li>
-</ul>
+<section id="ols-regression-results-3" class="slide level2">
+<h2>OLS regression results</h2>
+<p>Run OLS regression on <a href="https://www.kaggle.com/datasets/mdferojahmed178/12000-house-price-list-from-10-states-of-usa">this kaggle dataset on house prices</a></p>
 
 
 </section>
