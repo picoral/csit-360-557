@@ -781,7 +781,7 @@
     "href": "slides-03-03.html#ordinary-least-squares-ols-regression",
     "title": "Intro to Data Modeling",
     "section": "Ordinary Least Squares (OLS) regression",
-    "text": "Ordinary Least Squares (OLS) regression\nOLS is a method that finds the best-fitting straight line through a set of points by minimizing the sum of squared vertical distances between the data points and the line.\nThe goal is to find a line y = β₀ + β₁x that best fits your data, where:\n\nβ₀ is the y-intercept\nβ₁ is the slope\nx is your independent variable – or target\ny is your dependent variable – or feature(s)"
+    "text": "Ordinary Least Squares (OLS) regression\nOLS is a method that finds the best-fitting straight line through a set of points by minimizing the sum of squared vertical distances between the data points and the line.\nThe goal is to find a line y = β₀ + β₁x that best fits your data, where:\n\nβ₀ is the y-intercept\nβ₁ is the slope\nx is your independent variable – or feature(s)\ny is your dependent variable – or target"
   },
   {
     "objectID": "slides-03-03.html#ordinary-least-squares-ols-regression-1",
