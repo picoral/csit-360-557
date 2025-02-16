@@ -845,5 +845,75 @@
     "title": "Intro to Data Modeling",
     "section": "OLS regression results",
     "text": "OLS regression results\nRun OLS regression on this kaggle dataset on house prices"
+  },
+  {
+    "objectID": "modules.html#slides-3",
+    "href": "modules.html#slides-3",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nOLS case study\nLogistic Regression"
+  },
+  {
+    "objectID": "slides-04-02.html#logistic-regression",
+    "href": "slides-04-02.html#logistic-regression",
+    "title": "Logistic Regression",
+    "section": "Logistic Regression",
+    "text": "Logistic Regression\n\nBinary Outcome – statistical model used for binary classification problems\nPredicts probability of an event occurring (between 0 and 1)\nUses the logistic/sigmoid function to transform predictions"
+  },
+  {
+    "objectID": "slides-04-02.html#the-logistic-function",
+    "href": "slides-04-02.html#the-logistic-function",
+    "title": "Logistic Regression",
+    "section": "The Logistic Function",
+    "text": "The Logistic Function\n\nS-shaped curve (sigmoid)\nTransforms any input into a probability between 0 and 1\nFormula: \\(p = \\frac{1}{1 + e^{-z}}\\) where z is the linear predictor \\(\\beta_0 + \\beta_1 * x\\)"
+  },
+  {
+    "objectID": "slides-04-02.html#assumptions",
+    "href": "slides-04-02.html#assumptions",
+    "title": "Logistic Regression",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nIndependent observations\nNo multicollinearity among predictors\nLinear relationship between target (in log odds) and predictors\nAdequate sample size"
+  },
+  {
+    "objectID": "slides-04-02.html#data",
+    "href": "slides-04-02.html#data",
+    "title": "Logistic Regression",
+    "section": "Data",
+    "text": "Data\nDowload Tagliamonte’s that expresion data and inspect it\nPhenomenom:\n\nI think that I will have a great time\nI think I will have a great time\n\nQuestion: What linguistics and social factor affect the expression of that"
+  },
+  {
+    "objectID": "slides-04-02.html#logistic-regression-with-statsmodels",
+    "href": "slides-04-02.html#logistic-regression-with-statsmodels",
+    "title": "Logistic Regression",
+    "section": "Logistic Regression with statsmodels",
+    "text": "Logistic Regression with statsmodels\n\nimport statsmodels.api as sm \nimport pandas as pd  \n\ndef main():\n    # loading the training dataset  \n    data = pd.read_csv(\"data/that-expression.csv\") \n    \n    # defining the dependent and independent variables \n    X = data[[\"know\"]] \n    y = data[\"expressed\"]\n    \n    # building the model and fitting the data \n    log_reg = sm.Logit(y, sm.add_constant(X)).fit() \n    print(log_reg.summary()) \n\nmain()"
+  },
+  {
+    "objectID": "slides-04-01.html#house-prices",
+    "href": "slides-04-01.html#house-prices",
+    "title": "OLS Case Study",
+    "section": "House Prices",
+    "text": "House Prices\n\nimport pandas as pd\nimport numpy as np\nimport statsmodels.api as sm\n\ndef main():\n    data = pd.read_csv(\"data/clean_house_prices.csv\")\n\n    columns_to_exclude = [\"price\"]\n    features = data.drop(columns=columns_to_exclude)\n    X = np.array(features)\n\n    X = data[[\"bed\", \"house_size\"]]\n    y = data[\"price\"]\n\n    result = sm.OLS(y, sm.add_constant(X)).fit()\n    print(result.summary())\n\n\nmain()"
+  },
+  {
+    "objectID": "slides-04-01.html#results-part-1",
+    "href": "slides-04-01.html#results-part-1",
+    "title": "OLS Case Study",
+    "section": "Results – part 1",
+    "text": "Results – part 1\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:                  price   R-squared:                       0.242\nModel:                            OLS   Adj. R-squared:                  0.242\nMethod:                 Least Squares   F-statistic:                     1623.\nDate:                Sun, 16 Feb 2025   Prob (F-statistic):               0.00\nTime:                        09:06:45   Log-Likelihood:            -1.4998e+05\nNo. Observations:               10154   AIC:                         3.000e+05\nDf Residuals:                   10151   BIC:                         3.000e+05\nDf Model:                           2                                         \nCovariance Type:            nonrobust                                         \n=============================================================================="
+  },
+  {
+    "objectID": "slides-04-01.html#results-part-2",
+    "href": "slides-04-01.html#results-part-2",
+    "title": "OLS Case Study",
+    "section": "Results – part 2",
+    "text": "Results – part 2\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst       -2.26e+04   1.92e+04     -1.177      0.239   -6.02e+04     1.5e+04\nbed        -2.675e+04   7072.066     -3.783      0.000   -4.06e+04   -1.29e+04\nhouse_size   391.1845      8.311     47.067      0.000     374.893     407.476\n==============================================================================\nOmnibus:                    12672.728   Durbin-Watson:                   1.202\nProb(Omnibus):                  0.000   Jarque-Bera (JB):          3902146.529\nSkew:                           6.543   Prob(JB):                         0.00\nKurtosis:                      98.141   Cond. No.                     6.85e+03\n=============================================================================="
+  },
+  {
+    "objectID": "slides-04-01.html#interpretation",
+    "href": "slides-04-01.html#interpretation",
+    "title": "OLS Case Study",
+    "section": "Interpretation",
+    "text": "Interpretation\nFor every added square foot, the price of the house goes up by 391.1845 dollars"
   }
 ]
