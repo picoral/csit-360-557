@@ -936,5 +936,12 @@
     "title": "OLS Case Study",
     "section": "Selecting some columns from data",
     "text": "Selecting some columns from data\n\nselected_data  = filtered_data.loc[:, [\"price\", \"bed\", \"house_size\", \"zip_code\"]]"
+  },
+  {
+    "objectID": "slides-04-02.html#data-wrangling",
+    "href": "slides-04-02.html#data-wrangling",
+    "title": "Logistic Regression",
+    "section": "Data wrangling",
+    "text": "Data wrangling\n\nMake every variable in Tagliamonte’s that expresion data a numeric variable\nCall your python script data_wrangling.py\nSubmit it to gradescope\n\n\nassert isinstance(data.iloc[:,0][0], np.int64)\nassert isinstance(data.iloc[:,1][0], np.int64)\nassert isinstance(data.iloc[:,2][0], np.int64)"
   }
 ]
