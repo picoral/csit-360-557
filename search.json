@@ -922,5 +922,19 @@
     "title": "OLS Case Study",
     "section": "Predicting new data",
     "text": "Predicting new data\n\nimport pandas as pd\nimport numpy as np\nimport statsmodels.api as sm\n\ndef main():\n    data = pd.read_csv(\"data/clean_house_prices.csv\")\n\n    columns_to_exclude = [\"price\"]\n    features = data.drop(columns=columns_to_exclude)\n    X = np.array(features)\n\n    X = data[[\"bed\", \"house_size\", \"zip_code_99350\"]]\n    y = data[\"price\"]\n\n    result = sm.OLS(y, sm.add_constant(X)).fit()\n    print(result.summary())\n\n    data_dict = {\"bed\": [2, 3, 2], \n                 \"house_size\": [1400, 2300, 1400],\n                 \"zip_code_99350\": [0, 0, 1] }\n    df_dict = pd.DataFrame(data_dict)\n    new_data = sm.add_constant(df_dict[[\"bed\", \"house_size\", \"zip_code_99350\"]])\n    \n    predictions = result.predict(new_data)\n    print(predictions)\n\n\nmain()"
+  },
+  {
+    "objectID": "slides-04-01.html#removing-columns-from-data",
+    "href": "slides-04-01.html#removing-columns-from-data",
+    "title": "OLS Case Study",
+    "section": "Removing columns from data",
+    "text": "Removing columns from data\n\ncolumns_to_exclude = [\"price\"]\nselected_data = data.drop(columns=columns_to_exclude)"
+  },
+  {
+    "objectID": "slides-04-01.html#selecting-some-columns-from-data",
+    "href": "slides-04-01.html#selecting-some-columns-from-data",
+    "title": "OLS Case Study",
+    "section": "Selecting some columns from data",
+    "text": "Selecting some columns from data\n\nselected_data  = filtered_data.loc[:, [\"price\", \"bed\", \"house_size\", \"zip_code\"]]"
   }
 ]
