@@ -879,7 +879,7 @@
     "href": "slides-04-02.html#data",
     "title": "Logistic Regression",
     "section": "Data",
-    "text": "Data\nDowload Tagliamonte’s that expresion data and inspect it\nPhenomenom:\n\nI think that I will have a great time\nI think I will have a great time\n\nQuestion: What linguistics and social factor affect the expression of that"
+    "text": "Data\nDownload Tagliamonte’s that expresion data and inspect it\nPhenomenom:\n\nI think that I will have a great time\nI think I will have a great time\n\nQuestion: What linguistics and social factor affect the expression of that"
   },
   {
     "objectID": "slides-04-02.html#logistic-regression-with-statsmodels",
