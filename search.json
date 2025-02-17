@@ -915,5 +915,12 @@
     "title": "OLS Case Study",
     "section": "Interpretation",
     "text": "Interpretation\nFor every added square foot, the price of the house goes up by 391.1845 dollars"
+  },
+  {
+    "objectID": "slides-04-01.html#predicting-new-data",
+    "href": "slides-04-01.html#predicting-new-data",
+    "title": "OLS Case Study",
+    "section": "Predicting new data",
+    "text": "Predicting new data\n\nimport pandas as pd\nimport numpy as np\nimport statsmodels.api as sm\n\ndef main():\n    data = pd.read_csv(\"data/clean_house_prices.csv\")\n\n    columns_to_exclude = [\"price\"]\n    features = data.drop(columns=columns_to_exclude)\n    X = np.array(features)\n\n    X = data[[\"bed\", \"house_size\", \"zip_code_99350\"]]\n    y = data[\"price\"]\n\n    result = sm.OLS(y, sm.add_constant(X)).fit()\n    print(result.summary())\n\n    data_dict = {\"bed\": [2, 3, 2], \n                 \"house_size\": [1400, 2300, 1400],\n                 \"zip_code_99350\": [0, 0, 1] }\n    df_dict = pd.DataFrame(data_dict)\n    new_data = sm.add_constant(df_dict[[\"bed\", \"house_size\", \"zip_code_99350\"]])\n    \n    predictions = result.predict(new_data)\n    print(predictions)\n\n\nmain()"
   }
 ]
