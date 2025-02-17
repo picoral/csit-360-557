@@ -199,7 +199,7 @@
 </section>
 <section id="house-prices" class="slide level2">
 <h2>House Prices</h2>
-<div id="e41c9c0f" class="cell" data-execution_count="1">
+<div id="390dae1b" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
@@ -207,18 +207,14 @@
 <span id="cb1-5"><a></a><span class="kw">def</span> main():</span>
 <span id="cb1-6"><a></a>    data <span class="op">=</span> pd.read_csv(<span class="st">"data/clean_house_prices.csv"</span>)</span>
 <span id="cb1-7"><a></a></span>
-<span id="cb1-8"><a></a>    columns_to_exclude <span class="op">=</span> [<span class="st">"price"</span>]</span>
-<span id="cb1-9"><a></a>    features <span class="op">=</span> data.drop(columns<span class="op">=</span>columns_to_exclude)</span>
-<span id="cb1-10"><a></a>    X <span class="op">=</span> np.array(features)</span>
-<span id="cb1-11"><a></a></span>
-<span id="cb1-12"><a></a>    X <span class="op">=</span> data[[<span class="st">"bed"</span>, <span class="st">"house_size"</span>]]</span>
-<span id="cb1-13"><a></a>    y <span class="op">=</span> data[<span class="st">"price"</span>]</span>
+<span id="cb1-8"><a></a>    X <span class="op">=</span> data[[<span class="st">"bed"</span>, <span class="st">"house_size"</span>]]</span>
+<span id="cb1-9"><a></a>    y <span class="op">=</span> data[<span class="st">"price"</span>]</span>
+<span id="cb1-10"><a></a></span>
+<span id="cb1-11"><a></a>    result <span class="op">=</span> sm.OLS(y, sm.add_constant(X)).fit()</span>
+<span id="cb1-12"><a></a>    <span class="bu">print</span>(result.summary())</span>
+<span id="cb1-13"><a></a></span>
 <span id="cb1-14"><a></a></span>
-<span id="cb1-15"><a></a>    result <span class="op">=</span> sm.OLS(y, sm.add_constant(X)).fit()</span>
-<span id="cb1-16"><a></a>    <span class="bu">print</span>(result.summary())</span>
-<span id="cb1-17"><a></a></span>
-<span id="cb1-18"><a></a></span>
-<span id="cb1-19"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-15"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="results-part-1" class="slide level2">
@@ -256,7 +252,7 @@ Kurtosis:                      98.141   Cond. No.                     6.85e+03
 </section>
 <section id="predicting-new-data" class="slide level2">
 <h2>Predicting new data</h2>
-<div id="6918f16b" class="cell" data-execution_count="2">
+<div id="6ef473ad" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb4-2"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-3"><a></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
@@ -289,13 +285,13 @@ Kurtosis:                      98.141   Cond. No.                     6.85e+03
 </section>
 <section id="selecting-some-columns-from-data" class="slide level2">
 <h2>Selecting some columns from data</h2>
-<div id="0bae28c1" class="cell" data-execution_count="3">
+<div id="2ce321c3" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>selected_data  <span class="op">=</span> filtered_data.loc[:, [<span class="st">"price"</span>, <span class="st">"bed"</span>, <span class="st">"house_size"</span>, <span class="st">"zip_code"</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="removing-columns-from-data" class="slide level2">
 <h2>Removing columns from data</h2>
-<div id="8184c8e1" class="cell" data-execution_count="4">
+<div id="18074caa" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>columns_to_exclude <span class="op">=</span> [<span class="st">"price"</span>]</span>
 <span id="cb6-2"><a></a>selected_data <span class="op">=</span> data.drop(columns<span class="op">=</span>columns_to_exclude)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>

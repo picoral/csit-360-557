@@ -893,7 +893,7 @@
     "href": "slides-04-01.html#house-prices",
     "title": "OLS Case Study",
     "section": "House Prices",
-    "text": "House Prices\n\nimport pandas as pd\nimport numpy as np\nimport statsmodels.api as sm\n\ndef main():\n    data = pd.read_csv(\"data/clean_house_prices.csv\")\n\n    columns_to_exclude = [\"price\"]\n    features = data.drop(columns=columns_to_exclude)\n    X = np.array(features)\n\n    X = data[[\"bed\", \"house_size\"]]\n    y = data[\"price\"]\n\n    result = sm.OLS(y, sm.add_constant(X)).fit()\n    print(result.summary())\n\n\nmain()"
+    "text": "House Prices\n\nimport pandas as pd\nimport numpy as np\nimport statsmodels.api as sm\n\ndef main():\n    data = pd.read_csv(\"data/clean_house_prices.csv\")\n\n    X = data[[\"bed\", \"house_size\"]]\n    y = data[\"price\"]\n\n    result = sm.OLS(y, sm.add_constant(X)).fit()\n    print(result.summary())\n\n\nmain()"
   },
   {
     "objectID": "slides-04-01.html#results-part-1",
