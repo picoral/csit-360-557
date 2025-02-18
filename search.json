@@ -1006,5 +1006,12 @@
     "title": "OLS vs. Logit",
     "section": "Logit",
     "text": "Logit\n\nimport pandas as pd\nimport numpy as np\nimport statsmodels.api as sm\n\ndef logit_to_probability(logit):\n  return 1 / (1 + np.exp(-logit))\n\ndef main():\n    data = pd.read_csv(\"data/clean_titanic.csv\")\n\n    X = data[[\"fare\", \"sex\", \"age\", \n          \"siblings_spouses_aboard\",\n          \"parents_children_aboard\"]]\n    y = data[\"survived\"]\n\n    model = sm.Logit(y, sm.add_constant(X)).fit()\n    print(model.summary())\n\n    coeffs = pd.DataFrame(model.params)\n    print(coeffs)\n    coeffs_prob = coeffs[0].apply(logit_to_probability)\n    print(coeffs_prob)\n\nmain()"
+  },
+  {
+    "objectID": "slides-04-03.html#spam-vs.-ham",
+    "href": "slides-04-03.html#spam-vs.-ham",
+    "title": "OLS vs. Logit",
+    "section": "Spam vs. Ham",
+    "text": "Spam vs. Ham\nRun both OLS and Logit on this email data\n\nDownload the data\nClean the data\nWhat’s the target/response variable? What are the features/predictors?\nModel the data"
   }
 ]
