@@ -985,5 +985,26 @@
     "title": "Project 1",
     "section": "Data modeling",
     "text": "Data modeling\nCreate a modeling.py Python script and run Ordinary Least Squares on the clean-tution.csv data.\nEnsure that your main() function:\n\nprints out only the summary of the model, and the rsquared and rsquared adjusted values (in this order, your script should not print anything else) – you can use print(model.summary()), print(model.rsquared) and print(model.rsquared_adj) (replace model with the variable name you use in your script)\nwrites a coefficients.csv file with all of your model’s coefficients – you can use this block of code to based your code on (again, replace model with your variable name)\n\n\ncoeffs = model.params\ndf_coeffs = pd.DataFrame(coeffs)\ndf_coeffs.columns = [\"coefficient\"]\ndf_coeffs[\"variable\"] = df_coeffs.index\ndf_coeffs.to_csv(\"coefficients.csv\", index=False)\n\nHere’s what your coefficients.csv file should look like (showing first rows only):"
+  },
+  {
+    "objectID": "slides-04-03.html#comparing-model-results",
+    "href": "slides-04-03.html#comparing-model-results",
+    "title": "OLS vs. Logit",
+    "section": "Comparing model results",
+    "text": "Comparing model results\nData: clean_titanic.csv\n\nCreate two Python scripts, one with OLS modeling, another with Logit modeling.\nWhat are the differences in the results?"
+  },
+  {
+    "objectID": "slides-04-03.html#ols",
+    "href": "slides-04-03.html#ols",
+    "title": "OLS vs. Logit",
+    "section": "OLS",
+    "text": "OLS\n\nimport pandas as pd\nimport numpy as np\nimport statsmodels.api as sm\n\ndef logit_to_probability(logit):\n  return 1 / (1 + np.exp(-logit))\n\ndef main():\n    data = pd.read_csv(\"data/clean_titanic.csv\")\n\n    X = data[[\"fare\", \"sex\", \"age\", \n          \"siblings_spouses_aboard\",\n          \"parents_children_aboard\"]]\n    y = data[\"survived\"]\n\n    model = sm.OLS(y, sm.add_constant(X)).fit()\n    print(model.summary())\n\n    coeffs = pd.DataFrame(model.params)\n    print(coeffs)\n    coeffs_prob = coeffs[0].apply(logit_to_probability)\n    print(coeffs_prob)\n\nmain()"
+  },
+  {
+    "objectID": "slides-04-03.html#logit",
+    "href": "slides-04-03.html#logit",
+    "title": "OLS vs. Logit",
+    "section": "Logit",
+    "text": "Logit\n\nimport pandas as pd\nimport numpy as np\nimport statsmodels.api as sm\n\ndef logit_to_probability(logit):\n  return 1 / (1 + np.exp(-logit))\n\ndef main():\n    data = pd.read_csv(\"data/clean_titanic.csv\")\n\n    X = data[[\"fare\", \"sex\", \"age\", \n          \"siblings_spouses_aboard\",\n          \"parents_children_aboard\"]]\n    y = data[\"survived\"]\n\n    model = sm.Logit(y, sm.add_constant(X)).fit()\n    print(model.summary())\n\n    coeffs = pd.DataFrame(model.params)\n    print(coeffs)\n    coeffs_prob = coeffs[0].apply(logit_to_probability)\n    print(coeffs_prob)\n\nmain()"
   }
 ]
