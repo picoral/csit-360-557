@@ -943,5 +943,40 @@
     "title": "Logistic Regression",
     "section": "Data wrangling",
     "text": "Data wrangling\n\nMake every variable in Tagliamonte’s that expresion data a numeric variable\nCall your python script data_wrangling.py\nYour script should read data/that-expression.csv and write data/clean-that-expression.csv\nSubmit it to gradescope\n\n\nassert isinstance(data.iloc[:,0][0], np.int64)\nassert isinstance(data.iloc[:,1][0], np.int64)\nassert isinstance(data.iloc[:,2][0], np.int64)"
+  },
+  {
+    "objectID": "project-01.html",
+    "href": "project-01.html",
+    "title": "Project 1",
+    "section": "",
+    "text": "In this project, you will be fitting a linear regression model to tuition in the US data.\nDownload the tuition data and set up your coding environment."
+  },
+  {
+    "objectID": "project-01.html#data-wrangling",
+    "href": "project-01.html#data-wrangling",
+    "title": "Project 1",
+    "section": "Data wrangling",
+    "text": "Data wrangling\nCreate a data_wrangling.py Python script and unsure that:\n\nthe year variable is an integer – remove the - and everything after the dash\nthe state variable is transformed into dummy variables, with one variable for each state, one hot encoded (with zeros and 1, integer format)\nyour main() function reads the original file in a folder called data (use pd.read_csv(\"data/tuition.csv\")) and write out a clean-tuition.csv file to the data folder (use .to_csv(\"data/clean-tuition.csv\"))\n\nHere’s what your clean-tuition.csv file should look like (showing first rows and first columns only):"
+  },
+  {
+    "objectID": "project-01.html#plot",
+    "href": "project-01.html#plot",
+    "title": "Project 1",
+    "section": "Plot",
+    "text": "Plot\nCreate a plots.ipynb python notebook file and with the clean-tuition.csv data create a scatterplot of tuition vs. academic year.\nYou should replicate this scatterplot:\n ## Data modeling\nCreate a modeling.py Python script and run Ordinary Least Squares on the clean-tution.csv data.\nEnsure that your main() function:\n\nprints out only the summary of the model, and the rsquared and rsquared adjusted values (in this order, your script should not print anything else) – you can use print(model.summary()), print(model.rsquared) and print(model.rsquared_adj) (replace model with the variable name you use in your script)\nwrites a coefficients.csv file with all of your model’s coefficients – you can use this block of code to based your code on (again, replace model with your variable name)\n\n\ncoeffs = model.params\ndf_coeffs = pd.DataFrame(coeffs)\ndf_coeffs.columns = [\"coefficient\"]\ndf_coeffs[\"variable\"] = df_coeffs.index\ndf_coeffs.to_csv(\"coefficients.csv\", index=False)\n\nHere’s what your coefficients.csv file should look like (showing first rows only):"
+  },
+  {
+    "objectID": "project-01.html#submit-to-gradescope",
+    "href": "project-01.html#submit-to-gradescope",
+    "title": "Project 1",
+    "section": "Submit to gradescope",
+    "text": "Submit to gradescope\nYou are to submit three files to gradescope:\n\ndata_wrangling.py\nplots.ipynb\nmodeling.py\n\nYou can submit other .py files if you are using any – don’t include any subfolders in your submission though, gradescope will not be considering any folders when running the code.\nThe data gradescope will be using is slightly different from the data you are being provided with, but your code should be generalizable (meaning, no hardcoding of model coefficients, for example)."
+  },
+  {
+    "objectID": "modules.html#assignment",
+    "href": "modules.html#assignment",
+    "title": "Modules",
+    "section": "Assignment",
+    "text": "Assignment\n\nProject 01 – due Friday, February 28, 11:59pm"
   }
 ]
