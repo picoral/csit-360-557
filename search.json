@@ -970,7 +970,7 @@
     "href": "project-01.html#submit-to-gradescope",
     "title": "Project 1",
     "section": "Submit to gradescope",
-    "text": "Submit to gradescope\nYou are to submit three files to gradescope:\n\ndata_wrangling.py\nplots.ipynb\nmodeling.py\n\nYou can submit other .py files if you are using any – don’t include any subfolders in your submission though, gradescope will not be considering any folders when running the code.\nThe data gradescope will be using is slightly different from the data you are being provided with, but your code should be generalizable (meaning, no hardcoding of model coefficients, for example)."
+    "text": "Submit to gradescope\nYou are to submit three files to gradescope:\n\ndata_wrangling.py\nplots.ipynb\nmodeling.py\n\nYou can submit other .py files if you are using any – don’t include any subfolders in your submission though, gradescope will not be considering any folders when running the code (only the data folder where .csv files should be placed).\nThe data gradescope will be using is slightly different from the data you are being provided with, but your code should be generalizable (meaning, no hardcoding of model coefficients, for example)."
   },
   {
     "objectID": "modules.html#assignment",
