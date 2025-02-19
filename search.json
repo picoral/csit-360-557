@@ -886,7 +886,7 @@
     "href": "slides-04-02.html#logistic-regression-with-statsmodels",
     "title": "Logistic Regression",
     "section": "Logistic Regression with statsmodels",
-    "text": "Logistic Regression with statsmodels\n\nimport statsmodels.api as sm \nimport pandas as pd  \n\ndef main():\n    # loading the training dataset  \n    data = pd.read_csv(\"data/that-expression.csv\") \n    \n    # defining the dependent and independent variables \n    X = data[[\"know\"]] \n    y = data[\"expressed\"]\n    \n    # building the model and fitting the data \n    log_reg = sm.Logit(y, sm.add_constant(X)).fit() \n    print(log_reg.summary()) \n\nmain()"
+    "text": "Logistic Regression with statsmodels\nDownload clean-that-expression.csv\n\nimport statsmodels.api as sm \nimport pandas as pd  \n\ndef main():\n    # loading the training dataset  \n    data = pd.read_csv(\"data/clean-that-expression.csv\") \n    \n    # defining the dependent and independent variables \n    X = data[[\"know\"]] \n    y = data[\"expressed\"]\n    \n    # building the model and fitting the data \n    log_reg = sm.Logit(y, sm.add_constant(X)).fit() \n    print(log_reg.summary()) \n\nmain()"
   },
   {
     "objectID": "slides-04-01.html#house-prices",
