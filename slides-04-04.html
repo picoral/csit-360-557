@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>CSIT 360/557 Advanced Techniques in Data Science – OLS vs.&nbsp;Logit</title>
+  <title>CSIT 360/557 Advanced Techniques in Data Science – Machine Learning (Prediction)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -191,87 +191,184 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">OLS vs.&nbsp;Logit</h1>
+  <h1 class="title">Machine Learning (Prediction)</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="comparing-model-results" class="slide level2">
-<h2>Comparing model results</h2>
-<p>Data: <a href="data/clean_titanic.csv">clean_titanic.csv</a></p>
+<section id="whats-machine-learning" class="slide level2">
+<h2>What’s machine learning?</h2>
 <ul>
-<li>Create two Python scripts, one with <code>OLS</code> modeling, another with <code>Logit</code> modeling.</li>
-<li>What are the differences in the results?</li>
+<li>modeling to make predictions or find patterns in data</li>
+<li>often without explicit hypotheses</li>
+<li>a flexible pattern-matcher looking for useful relationships in data</li>
+<li>models learn patterns and relationships within the data</li>
+<li>usually needs large amounts of data to train effective models</li>
 </ul>
 </section>
-<section id="ols" class="slide level2">
-<h2>OLS</h2>
-<div id="012154cc" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
-<span id="cb1-4"><a></a></span>
-<span id="cb1-5"><a></a><span class="kw">def</span> logit_to_probability(logit):</span>
-<span id="cb1-6"><a></a>  <span class="cf">return</span> <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(<span class="op">-</span>logit))</span>
-<span id="cb1-7"><a></a></span>
-<span id="cb1-8"><a></a><span class="kw">def</span> main():</span>
-<span id="cb1-9"><a></a>    data <span class="op">=</span> pd.read_csv(<span class="st">"data/clean_titanic.csv"</span>)</span>
-<span id="cb1-10"><a></a></span>
-<span id="cb1-11"><a></a>    X <span class="op">=</span> data[[<span class="st">"fare"</span>, <span class="st">"sex"</span>, <span class="st">"age"</span>, </span>
-<span id="cb1-12"><a></a>          <span class="st">"siblings_spouses_aboard"</span>,</span>
-<span id="cb1-13"><a></a>          <span class="st">"parents_children_aboard"</span>]]</span>
-<span id="cb1-14"><a></a>    y <span class="op">=</span> data[<span class="st">"survived"</span>]</span>
-<span id="cb1-15"><a></a></span>
-<span id="cb1-16"><a></a>    model <span class="op">=</span> sm.OLS(y, sm.add_constant(X)).fit()</span>
-<span id="cb1-17"><a></a>    <span class="bu">print</span>(model.summary())</span>
-<span id="cb1-18"><a></a></span>
-<span id="cb1-19"><a></a>    coeffs <span class="op">=</span> pd.DataFrame(model.params)</span>
-<span id="cb1-20"><a></a>    <span class="bu">print</span>(coeffs)</span>
-<span id="cb1-21"><a></a>    coeffs_prob <span class="op">=</span> coeffs[<span class="dv">0</span>].<span class="bu">apply</span>(logit_to_probability)</span>
-<span id="cb1-22"><a></a>    <span class="bu">print</span>(coeffs_prob)</span>
-<span id="cb1-23"><a></a></span>
-<span id="cb1-24"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="logit" class="slide level2">
-<h2>Logit</h2>
-<div id="c40cfff5" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-2"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-3"><a></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
-<span id="cb2-4"><a></a></span>
-<span id="cb2-5"><a></a><span class="kw">def</span> logit_to_probability(logit):</span>
-<span id="cb2-6"><a></a>  <span class="cf">return</span> <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(<span class="op">-</span>logit))</span>
-<span id="cb2-7"><a></a></span>
-<span id="cb2-8"><a></a><span class="kw">def</span> main():</span>
-<span id="cb2-9"><a></a>    data <span class="op">=</span> pd.read_csv(<span class="st">"data/clean_titanic.csv"</span>)</span>
-<span id="cb2-10"><a></a></span>
-<span id="cb2-11"><a></a>    X <span class="op">=</span> data[[<span class="st">"fare"</span>, <span class="st">"sex"</span>, <span class="st">"age"</span>, </span>
-<span id="cb2-12"><a></a>          <span class="st">"siblings_spouses_aboard"</span>,</span>
-<span id="cb2-13"><a></a>          <span class="st">"parents_children_aboard"</span>]]</span>
-<span id="cb2-14"><a></a>    y <span class="op">=</span> data[<span class="st">"survived"</span>]</span>
-<span id="cb2-15"><a></a></span>
-<span id="cb2-16"><a></a>    model <span class="op">=</span> sm.Logit(y, sm.add_constant(X)).fit()</span>
-<span id="cb2-17"><a></a>    <span class="bu">print</span>(model.summary())</span>
-<span id="cb2-18"><a></a></span>
-<span id="cb2-19"><a></a>    coeffs <span class="op">=</span> pd.DataFrame(model.params)</span>
-<span id="cb2-20"><a></a>    <span class="bu">print</span>(coeffs)</span>
-<span id="cb2-21"><a></a>    coeffs_prob <span class="op">=</span> coeffs[<span class="dv">0</span>].<span class="bu">apply</span>(logit_to_probability)</span>
-<span id="cb2-22"><a></a>    <span class="bu">print</span>(coeffs_prob)</span>
-<span id="cb2-23"><a></a></span>
-<span id="cb2-24"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="spam-vs.-ham" class="slide level2">
-<h2>Spam vs.&nbsp;Ham</h2>
-<p>Run both OLS and Logit on this <a href="https://openintrostat.github.io/openintro/reference/email.html">email data</a></p>
+<section id="whats-machine-learning-1" class="slide level2">
+<h2>What’s machine learning?</h2>
 <ul>
-<li><a href="data/email.csv">Download the data</a></li>
-<li>Clean the data</li>
-<li>What’s the target/response variable? What are the features/predictors?</li>
-<li>Model the data</li>
+<li>less concerned with whether the data represents a random sample from a population</li>
+<li>focus on predictive accuracy and generalization performance</li>
+<li>interested in how well the model performs on new data</li>
 </ul>
+</section>
+<section id="scikit-learn" class="slide level2">
+<h2>Scikit-learn</h2>
+<ul>
+<li>often shortened to sklearn</li>
+<li>open-source machine learning library</li>
+</ul>
+</section>
+<section id="scikit-learn-1" class="slide level2">
+<h2>Scikit-learn</h2>
+<ul>
+<li>This package includes:
+<ul>
+<li>Supervised Learning Algorithms: Linear Regression, Random Forests, Support Vector Machines (SVM), and Neural Networks</li>
+<li>Unsupervised Learning Clustering Algorithms: K-means, PCA</li>
+<li>Model Selection Tools: cross-validation, parameter tuning, and metrics evaluation</li>
+<li>Data Preprocessing Tools: scalers, encoders, and feature selection</li>
+</ul></li>
+</ul>
+</section>
+<section id="train-test" class="slide level2">
+<h2>Train-Test</h2>
+<p>Since the focus of machine learning is on model performance, we worry more about overfitting – we (validate and) test data that was not used in building the models (training)</p>
+<p>Testing (and validation) helps to assess how well the model generalizes to new, unseen data.</p>
+</section>
+<section id="train-test-1" class="slide level2">
+<h2>Train-Test</h2>
+<ul>
+<li>Training Set:
+<ul>
+<li>used to train the machine learning model</li>
+<li>most of the data (70% to 80%, usually)</li>
+</ul></li>
+<li>Testing Set:
+<ul>
+<li>used to evaluate the model’s performance</li>
+<li>smaller portion of the data that the model has not seen during training.</li>
+</ul></li>
+</ul>
+</section>
+<section id="measuring-performance" class="slide level2">
+<h2>Measuring Performance</h2>
+<p>Regression vs.&nbsp;Classification – different types of measures</p>
+<p>Let’s start with regression:</p>
+<ul>
+<li><p>Mean Square Error (MSE):average of the squared differences between predicted and actual values</p></li>
+<li><p>Square Root of MSE (RMSE): makes the error values more interpretable as they are in the same units as the target variable</p></li>
+<li><p>R-squared (R2 or <span class="math inline">\(R^2\)</span>): the proportion of variance in the dependent variable explained by the model – ranges from 0 to 1, where 1 indicates a perfect fit.</p></li>
+</ul>
+</section>
+<section id="train-test-with-sklearn" class="slide level2">
+<h2>Train-Test with sklearn</h2>
+<p>We first load the method for splitting the data:</p>
+<div id="23888875" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then, after reading the data in, we call<code>train_test_split()</code></p>
+<div id="f5bcdaaa" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html">Documentation for train_test_split</a></p>
+</section>
+<section id="train-test-with-sklearn-1" class="slide level2">
+<h2>Train-Test with sklearn</h2>
+<ul>
+<li><strong>random_state</strong> parameter: integer, seed value, to ensure reproducibility, sets the seed for the random number generator</li>
+</ul>
+<p>The choice of random_state can impact the performance of your model, especially if the dataset is small or if the data points are not uniformly distributed.</p>
+<p>Different splits can lead to different training and testing sets, which in turn can affect the model’s performance metrics.</p>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<div id="600eddd2" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> random</span>
+<span id="cb3-2"><a></a><span class="bu">print</span>(random.randint(<span class="dv">1</span>, <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>7</code></pre>
+</div>
+</div>
+<div id="a410c80b" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">import</span> random</span>
+<span id="cb5-2"><a></a>random.seed(<span class="dv">123</span>)</span>
+<span id="cb5-3"><a></a><span class="bu">print</span>(random.randint(<span class="dv">1</span>, <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1</code></pre>
+</div>
+</div>
+</section>
+<section id="train-test-with-sklearn-2" class="slide level2">
+<h2>Train-Test with sklearn</h2>
+<p>Let’s use the clean email data for our first model (we will be running regression):</p>
+<div id="278ac2c9" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>data <span class="op">=</span> pd.read_csv(<span class="st">"data/clean_email.csv"</span>)</span>
+<span id="cb7-2"><a></a>X <span class="op">=</span> data[[<span class="st">"to_multiple"</span>]]</span>
+<span id="cb7-3"><a></a>y <span class="op">=</span> data[<span class="st">"spam"</span>]</span>
+<span id="cb7-4"><a></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.3</span>, random_state<span class="op">=</span><span class="dv">123</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="linear-regression" class="slide level2">
+<h2>Linear Regression</h2>
+<p>We will be using <code>LinearRegression</code> from <code>sklearn.linear_model</code></p>
+<div id="d3308aa3" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then we create and fit the model to our data</p>
+<div id="bedba8ba" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>model <span class="op">=</span> LinearRegression()</span>
+<span id="cb9-2"><a></a>model.fit(X_train, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="assessing-model" class="slide level2">
+<h2>Assessing model</h2>
+<p>We make predictions based on the test features</p>
+<div id="7f64fcc4" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>y_pred <span class="op">=</span> model.predict(X_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then we evaluate the model – lets calculate MSE and R2.</p>
+<div id="5deaac54" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error, r2_score</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then we call the appropiate methods on our observed and predicted targets:</p>
+<div id="66180a4f" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="bu">print</span>(mean_squared_error(y_test, y_pred))</span>
+<span id="cb12-2"><a></a><span class="bu">print</span>(r2_score(y_test, y_pred))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="feature-scaling" class="slide level2">
+<h2>Feature scaling</h2>
+<ul>
+<li>Puts all features on a comparable level, so the model can properly assess their relative importance</li>
+<li>Ensures fair comparison between features – especially when features have very different scales (like age [0-100] vs.&nbsp;income [$0-$1,000,000]) (the model may incorrectly prioritize features with larger values)</li>
+<li>Helps avoid overflow or underflow issues in computations caused by very large or very small numbers can cause numerical</li>
+</ul>
+</section>
+<section id="feature-scaling-1" class="slide level2">
+<h2>Feature scaling</h2>
+<p>Common scaling methods include:</p>
+<ul>
+<li>Min-Max Scaling: Scales features to a fixed range, usually [0,1]</li>
+<li>Standard Scaling: Transforms features to have zero mean and unit variance</li>
+<li>Robust Scaling: Uses statistics that are robust to outliers (like median and quartiles)</li>
+</ul>
+</section>
+<section id="scaling-features" class="slide level2">
+<h2>Scaling features</h2>
+<p>Let’s start with <code>StandardScaler</code></p>
+<div id="a1c89cc6" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We then scale our features for both training and testing data sets.</p>
+<div id="2ae8cd57" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb14-2"><a></a>X_train_scaled <span class="op">=</span> scaler.fit_transform(X_train)</span>
+<span id="cb14-3"><a></a>X_test_scaled <span class="op">=</span> scaler.transform(X_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>
