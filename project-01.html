@@ -4846,7 +4846,7 @@ vertical-align: -.125em;
 <li>prints out only the summary of the model, and the <code>rsquared</code> and <code>rsquared adjusted</code> values (in this order, your script should not print anything else) – you can use <code>print(model.summary())</code>, <code>print(model.rsquared)</code> and <code>print(model.rsquared_adj)</code> (replace <code>model</code> with the variable name you use in your script)</li>
 <li>writes a <code>coefficients.csv</code> file with all of your model’s coefficients – you can use this block of code to based your code on (again, replace <code>model</code> with your variable name)</li>
 </ol>
-<div id="0f4c9edc" class="cell" data-execution_count="1">
+<div id="8197a8b8" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>coeffs <span class="op">=</span> model.params</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df_coeffs <span class="op">=</span> pd.DataFrame(coeffs)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df_coeffs.columns <span class="op">=</span> [<span class="st">&quot;coefficient&quot;</span>]</span>
@@ -4858,14 +4858,15 @@ vertical-align: -.125em;
 </section>
 <section id="submit-to-gradescope" class="level2">
 <h2 class="anchored" data-anchor-id="submit-to-gradescope">Submit to gradescope</h2>
-<p>You are to submit three files to gradescope:</p>
+<p>You are to submit three files to <a href="https://www.gradescope.com/courses/980846/assignments/5821817">gradescope</a>:</p>
 <ul>
 <li><code>data_wrangling.py</code></li>
 <li><code>plots.ipynb</code></li>
 <li><code>modeling.py</code></li>
 </ul>
-<p>You can submit other <code>.py</code> files if you are using any – don’t include any subfolders in your submission though, gradescope will not be considering any folders when running the code (only the <code>data</code> folder where <code>.csv</code> files should be placed).</p>
-<p>The data gradescope will be using is slightly different from the data you are being provided with, but your code should be generalizable (meaning, no hardcoding of model coefficients, for example).</p>
+<p>You can submit other <code>.py</code> files if you are using any – don’t include any subfolders in your submission though, <a href="https://www.gradescope.com/courses/980846/assignments/5821817">gradescope</a> will not be considering any folders when running the code (only the <code>data</code> folder where <code>.csv</code> files should be placed).</p>
+<p>The data <a href="https://www.gradescope.com/courses/980846/assignments/5821817">gradescope</a> will be using is slightly different from the data you are being provided with, but your code should be generalizable (meaning, no hardcoding of model coefficients, for example).</p>
+<p><a href="https://www.gradescope.com/courses/980846/assignments/5821817">Click here to open gradescope assignment to submit your files</a></p>
 
 
 </section>
