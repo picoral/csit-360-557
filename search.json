@@ -1145,7 +1145,7 @@
     "href": "slides-05-01.html#example",
     "title": "Introduction to Scikit-learn",
     "section": "Example",
-    "text": "Example\n\nimport random\nprint(random.randint(1, 10))\n\n10\n\n\n\nimport random\nrandom.seed(123)\nprint(random.randint(1, 10))\n\n1"
+    "text": "Example\n\nimport random\nprint(random.randint(1, 10))\n\n1\n\n\n\nimport random\nrandom.seed(123)\nprint(random.randint(1, 10))\n\n1"
   },
   {
     "objectID": "slides-05-01.html#train-test-with-sklearn-2",
@@ -1237,5 +1237,19 @@
     "title": "Introduction to Scikit-learn",
     "section": "Cross-Validation",
     "text": "Cross-Validation\n\nfrom sklearn.model_selection import cross_val_score\n\n\ncv_scores = cross_val_score(my_model, X_train_scaled, y_train, cv=10)"
+  },
+  {
+    "objectID": "slides-05-01.html#costloss-function",
+    "href": "slides-05-01.html#costloss-function",
+    "title": "Introduction to Scikit-learn",
+    "section": "Cost/Loss Function",
+    "text": "Cost/Loss Function\n\na mathematical function that measures the difference between predicted outputs by the model and the actual target values\nthe goal is minimizing cost to improve accuracy during training\n\nLoss function: measure of error for a single training example\nCost function: average of the loss over an entire training data"
+  },
+  {
+    "objectID": "slides-05-01.html#gradient-descent",
+    "href": "slides-05-01.html#gradient-descent",
+    "title": "Introduction to Scikit-learn",
+    "section": "Gradient descent",
+    "text": "Gradient descent\n\nused to minimize a function’s cost/loss\nfinds a local minimum of a differentiable function\nstart at a random point\nfind direction that descends\nstep size: can be larger at first, smaller as it descends"
   }
 ]

@@ -200,11 +200,11 @@
 <section id="train-test-with-sklearn" class="slide level2">
 <h2>Train-Test with sklearn</h2>
 <p>We first load the method for splitting the data:</p>
-<div id="0006aba5" class="cell" data-execution_count="1">
+<div id="8bd7204d" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then, after reading the data in, we call<code>train_test_split()</code></p>
-<div id="aeee2e77" class="cell" data-execution_count="2">
+<div id="0a81bedd" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html">Documentation for train_test_split</a></p>
@@ -219,14 +219,14 @@
 </section>
 <section id="example" class="slide level2">
 <h2>Example</h2>
-<div id="3050f6e9" class="cell" data-execution_count="3">
+<div id="2c49bc3b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> random</span>
 <span id="cb3-2"><a></a><span class="bu">print</span>(random.randint(<span class="dv">1</span>, <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>10</code></pre>
+<pre><code>1</code></pre>
 </div>
 </div>
-<div id="cf9dc133" class="cell" data-execution_count="4">
+<div id="c5920aef" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">import</span> random</span>
 <span id="cb5-2"><a></a>random.seed(<span class="dv">123</span>)</span>
 <span id="cb5-3"><a></a><span class="bu">print</span>(random.randint(<span class="dv">1</span>, <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -238,7 +238,7 @@
 <section id="train-test-with-sklearn-2" class="slide level2">
 <h2>Train-Test with sklearn</h2>
 <p>Let’s use the clean email data for our first model (we will be running regression):</p>
-<div id="2e0cbdd4" class="cell" data-execution_count="5">
+<div id="393d21b4" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>data <span class="op">=</span> pd.read_csv(<span class="st">"data/clean_email.csv"</span>)</span>
 <span id="cb7-2"><a></a>X <span class="op">=</span> data[[<span class="st">"to_multiple"</span>]]</span>
 <span id="cb7-3"><a></a>y <span class="op">=</span> data[<span class="st">"spam"</span>]</span>
@@ -249,11 +249,11 @@
 <h2>Linear Regression</h2>
 <p>We will be using <code>LinearRegression</code> from <code>sklearn.linear_model</code></p>
 <p>From the implementation point of view, this is just plain Ordinary Least Squares (OLS)</p>
-<div id="18e19d13" class="cell" data-execution_count="6">
+<div id="fee10c3c" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then we create and fit the model to our data</p>
-<div id="19dd4bca" class="cell" data-execution_count="7">
+<div id="bbededec" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>model <span class="op">=</span> LinearRegression()</span>
 <span id="cb9-2"><a></a>model.fit(X_train, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -261,18 +261,37 @@
 <section id="assessing-model-linear-regression" class="slide level2">
 <h2>Assessing model – linear regression</h2>
 <p>We make predictions based on the test features</p>
-<div id="3bf7d2b6" class="cell" data-execution_count="8">
+<div id="dd7adbb5" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>y_pred <span class="op">=</span> model.predict(X_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then we evaluate the model – lets calculate MSE and R2.</p>
-<div id="e59a0205" class="cell" data-execution_count="9">
+<div id="658e99bb" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error, r2_score</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then we call the appropiate methods on our observed and predicted targets:</p>
-<div id="7c8a2bac" class="cell" data-execution_count="10">
+<div id="1d334e98" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="bu">print</span>(mean_squared_error(y_test, y_pred))</span>
 <span id="cb12-2"><a></a><span class="bu">print</span>(r2_score(y_test, y_pred))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="costloss-function" class="slide level2">
+<h2>Cost/Loss Function</h2>
+<ul>
+<li>a mathematical function that measures the difference between predicted outputs by the model and the actual target values</li>
+<li>the goal is minimizing cost to improve accuracy during training</li>
+</ul>
+<p><strong>Loss function</strong>: measure of error for a <strong>single</strong> training example</p>
+<p><strong>Cost function</strong>: average of the loss over an entire training data</p>
+</section>
+<section id="gradient-descent" class="slide level2">
+<h2>Gradient descent</h2>
+<ul>
+<li>used to minimize a function’s cost/loss</li>
+<li>finds a local minimum of a differentiable function</li>
+<li>start at a random point</li>
+<li>find direction that descends</li>
+<li>step size: can be larger at first, smaller as it descends</li>
+</ul>
 </section>
 <section id="feature-scaling" class="slide level2">
 <h2>Feature scaling</h2>
@@ -294,11 +313,11 @@
 <section id="scaling-features" class="slide level2">
 <h2>Scaling features</h2>
 <p>Let’s start with <code>StandardScaler</code></p>
-<div id="3b96dced" class="cell" data-execution_count="11">
+<div id="38d92aeb" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We then scale our features for both training and testing data sets.</p>
-<div id="36fc68de" class="cell" data-execution_count="12">
+<div id="0e1663c0" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>scaler <span class="op">=</span> StandardScaler()</span>
 <span id="cb14-2"><a></a>X_train_scaled <span class="op">=</span> scaler.fit_transform(X_train)</span>
 <span id="cb14-3"><a></a>X_test_scaled <span class="op">=</span> scaler.transform(X_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -308,11 +327,11 @@
 <h2>Logistic Regression</h2>
 <p>We will be using <code>LogisticRegression</code> from <code>sklearn.linear_model</code></p>
 <p>From the implementation point of view, this is just plain Ordinary Least Squares (OLS)</p>
-<div id="ab72e6d4" class="cell" data-execution_count="13">
+<div id="bb7acb1a" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then we create and fit the model to our data</p>
-<div id="db8c29b7" class="cell" data-execution_count="14">
+<div id="cd1f0066" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>model <span class="op">=</span> LogisticRegression()</span>
 <span id="cb16-2"><a></a>model.fit(X_train, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -328,15 +347,15 @@
 </section>
 <section id="assessing-classification-1" class="slide level2">
 <h2>Assessing Classification</h2>
-<div id="b151ed43" class="cell" data-execution_count="15">
+<div id="868dcf93" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> accuracy_score, f1_score, precision_score, recall_score</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We make predictions based on the test features</p>
-<div id="c70fdcd3" class="cell" data-execution_count="16">
+<div id="13d42378" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>y_pred <span class="op">=</span> my_model.predict(X_test_scaled)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then we call the appropiate methods on our observed and predicted targets:</p>
-<div id="30c97852" class="cell" data-execution_count="17">
+<div id="24e372f8" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="bu">print</span>(accuracy_score(y_test, y_pred))</span>
 <span id="cb19-2"><a></a></span>
 <span id="cb19-3"><a></a><span class="co"># precision -- how many messages were erronously identified as spam</span></span>
@@ -353,7 +372,7 @@
 </section>
 <section id="confusion-matrix" class="slide level2">
 <h2>Confusion Matrix</h2>
-<div id="342cca54" class="cell" data-execution_count="18">
+<div id="95a3a233" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a>table <span class="op">=</span> pd.DataFrame({<span class="st">"truth"</span>: y_test, <span class="st">"prediction"</span>: y_pred})</span>
 <span id="cb20-2"><a></a>table.to_csv(<span class="st">"truth-predictions.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb20-3"><a></a><span class="bu">print</span>(table.value_counts().reset_index())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -361,10 +380,10 @@
 </section>
 <section id="cross-validation" class="slide level2">
 <h2>Cross-Validation</h2>
-<div id="18dc4aa1" class="cell" data-execution_count="19">
+<div id="3b0a96a5" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> cross_val_score</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="8e7a0bb1" class="cell" data-execution_count="20">
+<div id="4db4ce1f" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a>cv_scores <span class="op">=</span> cross_val_score(my_model, X_train_scaled, y_train, cv<span class="op">=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
