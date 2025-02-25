@@ -1255,22 +1255,29 @@
   {
     "objectID": "slides-05-02.html#data",
     "href": "slides-05-02.html#data",
-    "title": "Case Study",
+    "title": "Case Studies",
     "section": "Data",
     "text": "Data\nWe will be working with Road Accident Survival Dataset"
   },
   {
     "objectID": "slides-05-02.html#data-cleaning",
     "href": "slides-05-02.html#data-cleaning",
-    "title": "Case Study",
+    "title": "Case Studies",
     "section": "Data Cleaning",
     "text": "Data Cleaning\nMake sure the data are in a format that can be modeled."
   },
   {
     "objectID": "slides-05-02.html#modeling",
     "href": "slides-05-02.html#modeling",
-    "title": "Case Study",
+    "title": "Case Studies",
     "section": "Modeling",
     "text": "Modeling\n\nWhat is the target?\nWhat are the features?\nInferential or Machine learning?"
+  },
+  {
+    "objectID": "slides-05-02.html#data-1",
+    "href": "slides-05-02.html#data-1",
+    "title": "Case Studies",
+    "section": "Data",
+    "text": "Data\nFatality in car crashes\n\nNo need to clean it, it’s ready to go\nSubmit your predictions as a my_predictions.csv file to gradescope – make sure you have a column named prediction in your file"
   }
 ]
