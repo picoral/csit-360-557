@@ -1194,7 +1194,7 @@
     "href": "modules.html#slides-4",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nIntroduction to scikit-learn\nCase Study"
+    "text": "Slides\n\nIntroduction to scikit-learn\nCase Studies"
   },
   {
     "objectID": "slides-05-01.html#assessing-model-linear-regression",
@@ -1278,6 +1278,34 @@
     "href": "slides-05-02.html#data-1",
     "title": "Case Studies",
     "section": "Data",
-    "text": "Data\nFatality in car crashes\n\nNo need to clean it, it’s ready to go\nSubmit your predictions as a my_predictions.csv file to gradescope – make sure you have a column named prediction in your file"
+    "text": "Data\nFatality in car crashes\n\nNo need to clean the data, it’s ready to go\nSubmit your predictions on the test.csv data as a my_predictions.csv file to gradescope – make sure you have a column named prediction in your file"
+  },
+  {
+    "objectID": "slides-05-02.html#hyperparameters",
+    "href": "slides-05-02.html#hyperparameters",
+    "title": "Case Studies",
+    "section": "Hyperparameters",
+    "text": "Hyperparameters\n\nalgorithms have a number of hyperparameters\nhyperparameters include solvers, regularization parameters, learning rate etc."
+  },
+  {
+    "objectID": "slides-05-02.html#hyperparameter-tuning",
+    "href": "slides-05-02.html#hyperparameter-tuning",
+    "title": "Case Studies",
+    "section": "Hyperparameter Tuning",
+    "text": "Hyperparameter Tuning\n\nsystematically identify the optimal hyperparameter settings\n\nGridSearchCV documentation\n\nfrom sklearn.model_selection import GridSearchCV"
+  },
+  {
+    "objectID": "slides-05-02.html#hyperparameter-tuning-with-gridsearchcv",
+    "href": "slides-05-02.html#hyperparameter-tuning-with-gridsearchcv",
+    "title": "Case Studies",
+    "section": "Hyperparameter Tuning with GridSearchCV",
+    "text": "Hyperparameter Tuning with GridSearchCV\nFirst we create a dictionary with paramenter options\n\nparam_grid = {\"solver\": [\"lbfgs\", \"liblinear\", \"newton-cg\",\n                             \"newton-cholesky\", \"sag\", \"saga\"],\n              \"penalty\": [\"l1\", \"l2\"]}\n\nAfter creating the model, we create are grid search object and fit the training data to it.\n\ngrid_search = GridSearchCV(model, param_grid, cv=10)\ngrid_search.fit(X_train_scaled, y_train)"
+  },
+  {
+    "objectID": "slides-05-02.html#hyperparameter-tuning-with-gridsearchcv-1",
+    "href": "slides-05-02.html#hyperparameter-tuning-with-gridsearchcv-1",
+    "title": "Case Studies",
+    "section": "Hyperparameter Tuning with GridSearchCV",
+    "text": "Hyperparameter Tuning with GridSearchCV\nWe can access the best model, and evalauate it\n\nbest_model = grid_search.best_estimator_\nbest_params = grid_search.best_params_\n\naccuracy = best_model.score(X_test, y_test)\n\nprint(best_params)\nprint(accuracy)"
   }
 ]
