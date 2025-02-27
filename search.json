@@ -1307,5 +1307,19 @@
     "title": "Case Studies",
     "section": "Hyperparameter Tuning with GridSearchCV",
     "text": "Hyperparameter Tuning with GridSearchCV\nWe can access the best model, and evalauate it\n\nbest_model = grid_search.best_estimator_\nbest_params = grid_search.best_params_\n\naccuracy = best_model.score(X_test, y_test)\n\nprint(best_params)\nprint(accuracy)"
+  },
+  {
+    "objectID": "project-02.html",
+    "href": "project-02.html",
+    "title": "Project 2",
+    "section": "",
+    "text": "In this project, you will modeling and predicting walkability index data.\n\nDownload the data files and set up your coding environment\nYou will find a dictionary file with the data, which provides variable descriptions\nThe target is the NatWalkInd variable – this is a continuous numeric variable\nYour model performance metrics should match the type of model you are fitting to the data\nGradescope is going to run two metrics: mean square error, and r-squared score – to get full points for this assignment, your predictions should have a mean square error lower than 1 and your r-squared score should be higher than 50%\nSubmit your predictions on the test.csv data as a my_predictions.csv file to gradescope – make sure you have a column named prediction in your file\n\nLink to Gradescope assignment"
+  },
+  {
+    "objectID": "modules.html#assignment-1",
+    "href": "modules.html#assignment-1",
+    "title": "Modules",
+    "section": "Assignment",
+    "text": "Assignment\n\nProject 02 – due Friday, March 7, 11:59pm"
   }
 ]
