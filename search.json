@@ -1321,5 +1321,124 @@
     "title": "Modules",
     "section": "Assignment",
     "text": "Assignment\n\nProject 02 – due Friday, March 7, 11:59pm"
+  },
+  {
+    "objectID": "slides-06-01.html#motivation-how-to-split-the-data",
+    "href": "slides-06-01.html#motivation-how-to-split-the-data",
+    "title": "Support Vector Machines",
+    "section": "Motivation: how to split the data?",
+    "text": "Motivation: how to split the data?\n\nbased on slides by Dr. Jiayin Wang"
+  },
+  {
+    "objectID": "slides-06-01.html#data",
+    "href": "slides-06-01.html#data",
+    "title": "Support Vector Machines",
+    "section": "Data",
+    "text": "Data\nDownload the cupcake vs. muffin data"
+  },
+  {
+    "objectID": "slides-06-01.html#motivation-how-to-split-the-data-1",
+    "href": "slides-06-01.html#motivation-how-to-split-the-data-1",
+    "title": "Support Vector Machines",
+    "section": "Motivation: how to split the data?",
+    "text": "Motivation: how to split the data?\nLinear regression: y = β₀ + β₁x"
+  },
+  {
+    "objectID": "slides-06-01.html#motivation-how-to-split-the-data-2",
+    "href": "slides-06-01.html#motivation-how-to-split-the-data-2",
+    "title": "Support Vector Machines",
+    "section": "Motivation: how to split the data?",
+    "text": "Motivation: how to split the data?"
+  },
+  {
+    "objectID": "slides-06-01.html#motivation-how-to-split-the-data-3",
+    "href": "slides-06-01.html#motivation-how-to-split-the-data-3",
+    "title": "Support Vector Machines",
+    "section": "Motivation: how to split the data?",
+    "text": "Motivation: how to split the data?\nMotivation of SVM: Use tools from optimization to find the best lines (or hyper planes or curves) that divide the two datasets."
+  },
+  {
+    "objectID": "slides-06-01.html#motivation-how-to-split-the-data-4",
+    "href": "slides-06-01.html#motivation-how-to-split-the-data-4",
+    "title": "Support Vector Machines",
+    "section": "Motivation: how to split the data?",
+    "text": "Motivation: how to split the data?"
+  },
+  {
+    "objectID": "slides-06-01.html#motivation-how-to-split-the-data-5",
+    "href": "slides-06-01.html#motivation-how-to-split-the-data-5",
+    "title": "Support Vector Machines",
+    "section": "Motivation: how to split the data?",
+    "text": "Motivation: how to split the data?"
+  },
+  {
+    "objectID": "slides-06-01.html#motivation-how-to-split-the-data-6",
+    "href": "slides-06-01.html#motivation-how-to-split-the-data-6",
+    "title": "Support Vector Machines",
+    "section": "Motivation: how to split the data?",
+    "text": "Motivation: how to split the data?"
+  },
+  {
+    "objectID": "slides-06-01.html#motivation-how-to-split-the-data-7",
+    "href": "slides-06-01.html#motivation-how-to-split-the-data-7",
+    "title": "Support Vector Machines",
+    "section": "Motivation: how to split the data?",
+    "text": "Motivation: how to split the data?"
+  },
+  {
+    "objectID": "slides-06-01.html#the-data",
+    "href": "slides-06-01.html#the-data",
+    "title": "Support Vector Machines",
+    "section": "The data",
+    "text": "The data\nWe will be working with Mental Health Care data.\nDownload the clean data by biological sex.\nReplicate the plot below:"
+  },
+  {
+    "objectID": "slides-06-01.html#motivation-how-to-split-the-data-8",
+    "href": "slides-06-01.html#motivation-how-to-split-the-data-8",
+    "title": "Support Vector Machines",
+    "section": "Motivation: how to split the data?",
+    "text": "Motivation: how to split the data?"
+  },
+  {
+    "objectID": "slides-06-01.html#support-vector-machines-vms",
+    "href": "slides-06-01.html#support-vector-machines-vms",
+    "title": "Support Vector Machines",
+    "section": "Support Vector Machines (VMS)",
+    "text": "Support Vector Machines (VMS)"
+  },
+  {
+    "objectID": "slides-06-01.html#support-vector-machines-vms-1",
+    "href": "slides-06-01.html#support-vector-machines-vms-1",
+    "title": "Support Vector Machines",
+    "section": "Support Vector Machines (VMS)",
+    "text": "Support Vector Machines (VMS)\n\nOptimization: maximize the margin\nConstrains: support vectors need to be away from the margin\nUseful when complex data that cannot be separated by a simple line\nMore computationally expensive"
+  },
+  {
+    "objectID": "slides-06-01.html#fitting-a-svm-model",
+    "href": "slides-06-01.html#fitting-a-svm-model",
+    "title": "Support Vector Machines",
+    "section": "Fitting a SVM model",
+    "text": "Fitting a SVM model\nHere’s the import statement:\n\nfrom sklearn.svm import SVC\n\nCalling it:\n\nmodel = SVC()"
+  },
+  {
+    "objectID": "slides-06-02.html#data",
+    "href": "slides-06-02.html#data",
+    "title": "Case Study",
+    "section": "Data",
+    "text": "Data\nDownload the cupcake vs. muffin data.\n\nQuestion: Are cupcakes and muffins the same thing?\n\nChallenge: Classify recipes as cupcakes or muffins. When given a new recipe, determine if it’s a cupcake or muffin."
+  },
+  {
+    "objectID": "modules.html#slides-5",
+    "href": "modules.html#slides-5",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nSupport Vector Machines\nCase Study"
+  },
+  {
+    "objectID": "slides-06-01.html",
+    "href": "slides-06-01.html",
+    "title": "Support Vector Machines",
+    "section": "",
+    "text": "based on slides by Dr. Jiayin Wang"
   }
 ]
