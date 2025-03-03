@@ -1432,7 +1432,7 @@
     "href": "modules.html#slides-5",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nSupport Vector Machines\nCase Study"
+    "text": "Slides\n\nSupport Vector Machines\nCase Studies"
   },
   {
     "objectID": "slides-06-01.html",
@@ -1454,5 +1454,12 @@
     "title": "Case Studies",
     "section": "Pumpkin Seeds",
     "text": "Pumpkin Seeds\nDownload and clean this pumpkin seeds data set"
+  },
+  {
+    "objectID": "slides-06-02.html#decision-trees",
+    "href": "slides-06-02.html#decision-trees",
+    "title": "Case Studies",
+    "section": "Decision Trees",
+    "text": "Decision Trees\nDocumentation for Decision Trees\nExample of an import statement:\n\nfrom sklearn.tree import DecisionTreeClassifier\n\nAnd then:\n\nmodel = DecisionTreeClassifier()"
   }
 ]
