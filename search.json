@@ -1446,7 +1446,7 @@
     "href": "slides-06-02.html#cupcake-vs.-muffin",
     "title": "Case Studies",
     "section": "Cupcake vs. Muffin",
-    "text": "Cupcake vs. Muffin\nDownload the cupcake vs. muffin data.\n\nQuestion: Are cupcakes and muffins the same thing?\n\nChallenge: Classify recipes as cupcakes or muffins. When given a new recipe, determine if it’s a cupcake or muffin.\nSubmit your my_predictions.csv file to gradescope – make sure you have a column names cupcake"
+    "text": "Cupcake vs. Muffin\nDownload the cupcake vs. muffin data.\n\nQuestion: Are cupcakes and muffins the same thing?\n\nChallenge: Classify recipes as cupcakes or muffins. When given a new recipe, determine if it’s a cupcake or muffin.\nSubmit your my_predictions.csv file to gradescope – make sure you have a column named prediction"
   },
   {
     "objectID": "slides-06-02.html#pumpkin-seeds",
