@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>CSIT 360/557 Advanced Techniques in Data Science – Support Vector Machines</title>
+  <title>CSIT 360/557 Advanced Techniques in Data Science – Multiclass Classification</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -191,84 +191,53 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Support Vector Machines</h1>
+  <h1 class="title">Multiclass Classification</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="motivation-how-to-split-the-data" class="slide level2">
-<h2>Motivation: how to split the data?</h2>
-
-<img data-src="images/how-to-split-01.png" class="r-stretch"><p><small>based on slides by Dr.&nbsp;Jiayin Wang</small></p>
-</section>
-<section id="motivation-how-to-split-the-data-1" class="slide level2">
-<h2>Motivation: how to split the data?</h2>
-<p>Linear regression: y = β₀ + β₁x</p>
-
-<img data-src="images/how-to-split-02.png" class="r-stretch"></section>
-<section id="motivation-how-to-split-the-data-2" class="slide level2">
-<h2>Motivation: how to split the data?</h2>
-
-<img data-src="images/how-to-split-03.png" class="r-stretch"></section>
-<section id="motivation-how-to-split-the-data-3" class="slide level2">
-<h2>Motivation: how to split the data?</h2>
-<p>Motivation of SVM: Use tools from optimization to find the best lines (or hyper planes or curves) that divide the two datasets.</p>
-
-<img data-src="images/how-to-split-04.png" class="r-stretch"></section>
-<section id="motivation-how-to-split-the-data-4" class="slide level2">
-<h2>Motivation: how to split the data?</h2>
-
-<img data-src="images/how-to-split-05.png" class="r-stretch"></section>
-<section id="motivation-how-to-split-the-data-5" class="slide level2">
-<h2>Motivation: how to split the data?</h2>
-
-<img data-src="images/how-to-split-06.png" class="r-stretch"></section>
-<section id="motivation-how-to-split-the-data-6" class="slide level2">
-<h2>Motivation: how to split the data?</h2>
-
-<img data-src="images/how-to-split-07.png" class="r-stretch"></section>
-<section id="motivation-how-to-split-the-data-7" class="slide level2">
-<h2>Motivation: how to split the data?</h2>
-
-<img data-src="images/how-to-split-08.png" class="r-stretch"></section>
-<section id="support-vector-machines-vms" class="slide level2">
-<h2>Support Vector Machines (VMS)</h2>
-
-<img data-src="images/how-to-split-09.png" class="r-stretch"></section>
-<section id="support-vector-machines-vms-1" class="slide level2">
-<h2>Support Vector Machines (VMS)</h2>
+<section id="classification-of-targets-with-more-than-two-labels" class="slide level2">
+<h2>Classification of targets with more than two labels</h2>
 <ul>
-<li>Optimization: maximize the margin</li>
-<li>Constrains: support vectors need to be away from the margin</li>
-<li>Useful when complex data that cannot be separated by a simple line</li>
-<li>More computationally expensive</li>
+<li><code>SVC</code> handles multiclass classification</li>
+<li><code>KNeighborsClassifier</code> also handles multiple classes</li>
+<li><code>LogisticRegression</code> does handle multiple classes as well</li>
 </ul>
 </section>
-<section id="the-data" class="slide level2">
-<h2>The data</h2>
-<p>We will be working with <a href="https://catalog.data.gov/dataset/mental-health-care-in-the-last-4-weeks">Mental Health Care data</a>.</p>
-<p>Download the <a href="data/mental-health-care.csv">clean data by biological sex</a>.</p>
-<p>Replicate the plot below:</p>
-<div id="2b191146" class="cell" data-message="false" data-execution_count="1">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="slides-06-01_files/figure-revealjs/cell-2-output-1.png" width="808" height="429"></p>
-</figure>
-</div>
-</div>
+<section id="case-study" class="slide level2">
+<h2>Case study</h2>
+<p>Download <a href="https://www.kaggle.com/datasets/olcaybolat1/dermatology-dataset-classification">this dermatology data</a> and fit <code>SVC</code> to it</p>
+</section>
+<section id="classification-metrics" class="slide level2">
+<h2>Classification Metrics</h2>
+<p>For precision, recall, and F1 score we have three options:</p>
+<ul>
+<li>macro – arithmetic/unweighted mean</li>
+<li>micro – global, sums True Positives (TP), False Negatives (FN), and False Positives (FP)</li>
+<li>weighted – weighted mean, considering the number of occurrences for each class</li>
+</ul>
+<div id="2a5b092d" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">print</span>(f1_score(y_test, y_pred, average<span class="op">=</span><span class="st">'macro'</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="fitting-a-svm-model" class="slide level2">
-<h2>Fitting a SVM model</h2>
-<p>Here’s the import statement:</p>
-<div id="2373a2d5" class="cell" data-message="false" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">from</span> sklearn.svm <span class="im">import</span> SVC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="classification-metrics-1" class="slide level2">
+<h2>Classification Metrics</h2>
+<ul>
+<li><strong>zero-one loss function</strong> – fraction of misclassifications – loss of 0 if the prediction is correct and 1 for incorrect</li>
+<li>returns the fraction of misclassifications by default</li>
+<li>set <code>normalize=False</code> for count of missclassification cases</li>
+</ul>
+<div id="6502e74a" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> zero_one_loss</span>
+<span id="cb2-2"><a></a>zero_one_loss(y_test, y_pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Calling it:</p>
-<div id="b6741b62" class="cell" data-message="false" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>model <span class="op">=</span> SVC()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="classification-report" class="slide level2">
+<h2>Classification Report</h2>
+<div id="f15872c5" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> classification_report</span>
+<span id="cb3-2"><a></a>classification_report(y_test, y_pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

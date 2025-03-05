@@ -1432,7 +1432,7 @@
     "href": "modules.html#slides-5",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nSupport Vector Machines\nCase Studies"
+    "text": "Slides\n\nSupport Vector Machines\nCase Studies\nMulticlass Classification"
   },
   {
     "objectID": "slides-06-01.html",
@@ -1460,6 +1460,104 @@
     "href": "slides-06-02.html#decision-trees",
     "title": "Case Studies",
     "section": "Decision Trees",
+    "text": "Decision Trees\n\nsupervised learning\na non-parametric algorithm – no specific functional form/pattern to fit, no distribution assumptions\nfor both classification and regression\ndivide and conquer strategy\nhierarchical, tree structure – root node, branches, internal nodes, leaf nodes"
+  },
+  {
+    "objectID": "slides-06-02.html#decision-trees-1",
+    "href": "slides-06-02.html#decision-trees-1",
+    "title": "Case Studies",
+    "section": "Decision Trees",
     "text": "Decision Trees\nDocumentation for Decision Trees\nExample of an import statement:\n\nfrom sklearn.tree import DecisionTreeClassifier\n\nAnd then:\n\nmodel = DecisionTreeClassifier()"
+  },
+  {
+    "objectID": "slides-06-02.html#random-forests",
+    "href": "slides-06-02.html#random-forests",
+    "title": "Case Studies",
+    "section": "Random Forests",
+    "text": "Random Forests\n\nCollection of decision trees\nEnsemble (voting) algorithm\nTrees work together to make more accurate and stable predictions\n\n\nfrom sklearn.ensemble import RandomForestClassifier"
+  },
+  {
+    "objectID": "slides-06-02.html#confusion-matrix",
+    "href": "slides-06-02.html#confusion-matrix",
+    "title": "Case Studies",
+    "section": "Confusion Matrix",
+    "text": "Confusion Matrix\n\nfrom sklearn.metrics import confusion_matrix\nprint(pd.DataFrame(confusion_matrix(y_test, y_pred)))"
+  },
+  {
+    "objectID": "slides-06-02.html#roc-auc",
+    "href": "slides-06-02.html#roc-auc",
+    "title": "Case Studies",
+    "section": "ROC AUC",
+    "text": "ROC AUC\n\nROC AUC (Receiver Operating Characteristic – Area Under the Curve)\ncomprehensive way to measure a model’s performance across different classification thresholds\nAUC (Area Under the Curve) – the probability that a model will correctly rank a randomly chosen positive example higher than a randomly chosen negative example\nscore from 0 to 1 – a higher AUC == better model performance"
+  },
+  {
+    "objectID": "slides-06-02.html#roc-auc-1",
+    "href": "slides-06-02.html#roc-auc-1",
+    "title": "Case Studies",
+    "section": "ROC AUC",
+    "text": "ROC AUC\n\ntrade-off between correctly identified positive cases (True Positives) and incorrectly identified negative cases (False Negative)"
+  },
+  {
+    "objectID": "slides-06-02.html#roc-auc-2",
+    "href": "slides-06-02.html#roc-auc-2",
+    "title": "Case Studies",
+    "section": "ROC AUC",
+    "text": "ROC AUC\nCurve/plot:\n\ndefine multiple classification thresholds, and thencalculate:\n\nTrue Positive Rate (TPR)\nFalse Positive Rate (FPR)\n\nPlot points on the ROC curve\nCalculate the area under this curve"
+  },
+  {
+    "objectID": "slides-06-02.html#roc-auc-3",
+    "href": "slides-06-02.html#roc-auc-3",
+    "title": "Case Studies",
+    "section": "ROC AUC",
+    "text": "ROC AUC\nImport statement:\n\nfrom sklearn.metrics import roc_auc_score, roc_curve\n\nUse:\n\nprint(roc_auc_score(y_test, y_pred))\n\nfpr, tpr, thresholds = roc_curve(y_test, y_pred)\n\nauc_df = pd.DataFrame({\"fpr\" : fpr, \"tpr\" : tpr})\nsns.lineplot(data = auc_df, x = \"fpr\", y = \"tpr\")\nplt.show()"
+  },
+  {
+    "objectID": "slides-06-03.html#classification-of-targets-with-more-than-two-labels",
+    "href": "slides-06-03.html#classification-of-targets-with-more-than-two-labels",
+    "title": "Multiclass Classification",
+    "section": "Classification of targets with more than two labels",
+    "text": "Classification of targets with more than two labels\n\nSVC handles multiclass classification\nKNeighborsClassifier also handles multiple classes\nLogisticRegression does handle multiple classes as well"
+  },
+  {
+    "objectID": "slides-06-03.html#case-study",
+    "href": "slides-06-03.html#case-study",
+    "title": "Multiclass Classification",
+    "section": "Case study",
+    "text": "Case study\nDownload this dermatology data and fit SVC to it"
+  },
+  {
+    "objectID": "slides-06-03.html#classification-metrics",
+    "href": "slides-06-03.html#classification-metrics",
+    "title": "Multiclass Classification",
+    "section": "Classification Metrics",
+    "text": "Classification Metrics\nFor precision, recall, and F1 score we have three options:\n\nmacro – arithmetic/unweighted mean\nmicro – global, sums True Positives (TP), False Negatives (FN), and False Positives (FP)\nweighted – weighted mean, considering the number of occurrences for each class\n\n\nprint(f1_score(y_test, y_pred, average='macro'))"
+  },
+  {
+    "objectID": "slides-06-03.html#classification-report",
+    "href": "slides-06-03.html#classification-report",
+    "title": "Multiclass Classification",
+    "section": "Classification Report",
+    "text": "Classification Report\n\nfrom sklearn.metrics import classification_report\nclassification_report(y_test, y_pred)"
+  },
+  {
+    "objectID": "slides-06-03.html#classification-metrics-1",
+    "href": "slides-06-03.html#classification-metrics-1",
+    "title": "Multiclass Classification",
+    "section": "Classification Metrics",
+    "text": "Classification Metrics\n\nzero-one loss function – fraction of misclassifications – loss of 0 if the prediction is correct and 1 for incorrect\nreturns the fraction of misclassifications by default\nset normalize=False for count of missclassification cases\n\n\nfrom sklearn.metrics import zero_one_loss\nzero_one_loss(y_test, y_pred)"
+  },
+  {
+    "objectID": "slides-06-02.html",
+    "href": "slides-06-02.html",
+    "title": "Case Studies",
+    "section": "",
+    "text": "Download the cupcake vs. muffin data.\n\nQuestion: Are cupcakes and muffins the same thing?\n\nChallenge: Classify recipes as cupcakes or muffins. When given a new recipe, determine if it’s a cupcake or muffin.\nSubmit your my_predictions.csv file to gradescope – make sure you have a column named prediction"
+  },
+  {
+    "objectID": "slides-06-02.html#classification-metrics",
+    "href": "slides-06-02.html#classification-metrics",
+    "title": "Case Studies",
+    "section": "Classification Metrics",
+    "text": "Classification Metrics\n\nAccuracy – proportion of correctly classified instances among all instances\nPrecision – proportion of correctly classified positive instances among all instances predicted as positive (including false positives)\nRecall – proportion of correctly classified positive instances among all actual positive instances (including false negatives).\nF1-score – harmonic mean of precision and recall\nROC AUC – trade-off between correctly identified positive cases (true positives) and incorrectly identified negative cases (false negative)"
   }
 ]

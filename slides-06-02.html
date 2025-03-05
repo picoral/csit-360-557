@@ -206,21 +206,104 @@
 <p>Challenge: Classify recipes as cupcakes or muffins. When given a new recipe, determine if it’s a cupcake or muffin.</p>
 <p>Submit your <code>my_predictions.csv</code> file to gradescope – make sure you have a column named <code>prediction</code></p>
 </section>
-<section id="pumpkin-seeds" class="slide level2">
-<h2>Pumpkin Seeds</h2>
-<p><a href="https://www.kaggle.com/datasets/muratkokludataset/pumpkin-seeds-dataset/data">Download and clean this pumpkin seeds data set</a></p>
-</section>
 <section id="decision-trees" class="slide level2">
+<h2>Decision Trees</h2>
+<ul>
+<li>supervised learning</li>
+<li>a non-parametric algorithm – no specific functional form/pattern to fit, no distribution assumptions</li>
+<li>for both classification and regression</li>
+<li>divide and conquer strategy</li>
+<li>hierarchical, tree structure – root node, branches, internal nodes, leaf nodes</li>
+</ul>
+</section>
+<section id="decision-trees-1" class="slide level2">
 <h2>Decision Trees</h2>
 <p><a href="https://scikit-learn.org/stable/modules/tree.html">Documentation for Decision Trees</a></p>
 <p>Example of an import statement:</p>
-<div id="9cee6530" class="cell" data-execution_count="1">
+<div id="e915086c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">from</span> sklearn.tree <span class="im">import</span> DecisionTreeClassifier</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>And then:</p>
-<div id="f93ac924" class="cell" data-execution_count="2">
+<div id="2cb81a6c" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>model <span class="op">=</span> DecisionTreeClassifier()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="random-forests" class="slide level2">
+<h2>Random Forests</h2>
+<ul>
+<li>Collection of decision trees</li>
+<li>Ensemble (voting) algorithm</li>
+<li>Trees work together to make more accurate and stable predictions</li>
+</ul>
+<div id="f3d83be0" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="confusion-matrix" class="slide level2">
+<h2>Confusion Matrix</h2>
+<div id="7aee36ab" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix</span>
+<span id="cb4-2"><a></a><span class="bu">print</span>(pd.DataFrame(confusion_matrix(y_test, y_pred)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="classification-metrics" class="slide level2">
+<h2>Classification Metrics</h2>
+<ul>
+<li><strong>Accuracy</strong> – proportion of correctly classified instances among all instances</li>
+<li><strong>Precision</strong> – proportion of correctly classified positive instances among all instances predicted as positive (including false positives)</li>
+<li><strong>Recall</strong> – proportion of correctly classified positive instances among all actual positive instances (including false negatives).</li>
+<li><strong>F1-score</strong> – harmonic mean of precision and recall</li>
+<li><strong>ROC AUC</strong> – trade-off between correctly identified positive cases (true positives) and incorrectly identified negative cases (false negative)</li>
+</ul>
+</section>
+<section id="roc-auc" class="slide level2">
+<h2>ROC AUC</h2>
+<ul>
+<li>ROC AUC (Receiver Operating Characteristic – Area Under the Curve)</li>
+<li>comprehensive way to measure a model’s performance across different classification thresholds</li>
+<li>AUC (Area Under the Curve) – the probability that a model will correctly rank a randomly chosen positive example higher than a randomly chosen negative example</li>
+<li>score from 0 to 1 – a higher AUC == better model performance</li>
+</ul>
+</section>
+<section id="roc-auc-1" class="slide level2">
+<h2>ROC AUC</h2>
+<ul>
+<li>trade-off between correctly identified positive cases (True Positives) and incorrectly identified negative cases (False Negative)</li>
+</ul>
+</section>
+<section id="roc-auc-2" class="slide level2">
+<h2>ROC AUC</h2>
+<p>Curve/plot:</p>
+<ul>
+<li>define multiple classification thresholds, and thencalculate:
+<ul>
+<li>True Positive Rate (TPR)</li>
+<li>False Positive Rate (FPR)</li>
+</ul></li>
+<li>Plot points on the ROC curve</li>
+<li>Calculate the area under this curve</li>
+</ul>
+</section>
+<section id="roc-auc-3" class="slide level2">
+<h2>ROC AUC</h2>
+<p>Import statement:</p>
+<div id="20cc2af9" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> roc_auc_score, roc_curve</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Use:</p>
+<div id="4ee34c01" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="bu">print</span>(roc_auc_score(y_test, y_pred))</span>
+<span id="cb6-2"><a></a></span>
+<span id="cb6-3"><a></a>fpr, tpr, thresholds <span class="op">=</span> roc_curve(y_test, y_pred)</span>
+<span id="cb6-4"><a></a></span>
+<span id="cb6-5"><a></a>auc_df <span class="op">=</span> pd.DataFrame({<span class="st">"fpr"</span> : fpr, <span class="st">"tpr"</span> : tpr})</span>
+<span id="cb6-6"><a></a>sns.lineplot(data <span class="op">=</span> auc_df, x <span class="op">=</span> <span class="st">"fpr"</span>, y <span class="op">=</span> <span class="st">"tpr"</span>)</span>
+<span id="cb6-7"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="pumpkin-seeds" class="slide level2">
+<h2>Pumpkin Seeds</h2>
+<p><a href="https://www.kaggle.com/datasets/muratkokludataset/pumpkin-seeds-dataset/data">Download and clean this pumpkin seeds data set</a></p>
 
 
 </section>
