@@ -74,7 +74,7 @@
     "href": "index.html",
     "title": "CSIT-360-557 Syllabus",
     "section": "",
-    "text": "Course Information\n\nMonday and Wednesday, 12:00 – 1:25pm\nMode: in-person, at School of Business 011\n\n\n\nCourse Description\nThis course provides the advanced techniques in Data Science. After learning data manipulating, processing, cleaning, and visualization, the major goals of this course are to learn how to make data-driven inferences and decisions by using fundamental techniques in machine learning, in Python language.\n\n\nInstructor\n\nAdriana Picoral, PhD\nOffice: Schmitt 374\nemail: picorala@montclair.edu\nOffice Hours (open door/drop in):\n\nTuesdays and Thursdays, 1:45pm to 3:30pm\n\n\n\n\nCourse Outcomes\nUpon completion of the course, students should be able to:\n\nCO1: understand the concepts and various phases of Data Science\nCO2: understand how to use Python data science libraries to demonstrate the data science skills and visualize data\nCO3: understand the concepts of fundamental techniques in machine learning and neural networks\nCO4: implement techniques of machine learning algorithms on data analysis using advanced libraries such as sci-kit learn and TensorFlow in Python\nCO5: apply data science concepts and skills to solve problems with real-world data sets\n\n\n\nCourse Schedule\n\n\n\n\n\n\nWeek\nStart Date\nTopic\n\n\n\n\n01\nJanuary 22\nIntroduction\n\n\n02\nJanuary 29\nPython Review\n\n\n03\nFeb 05\nNumpy & Pandas\n\n\n04\nFebruary 12\nData Wrangling\n\n\n05\nFebruary 19\nSupervised Learning\n\n\n06\nFebruary 26\nSupervised Learning\n\n\n07\nMarch 05\nSupervised Learning\n\n\n08\nMarch 17\nSupervised Learning\n\n\n09\nMarch 24\nSupervised Learning\n\n\n10\nMarch 31\nUnsupervised Learning\n\n\n11\nApril 07\nUnsupervised Learning\n\n\n12\nApril 14\nUnsupervised Learning\n\n\n13\nApril 21\nOther Advanced Techniques\n\n\n14\nApril 28\nFinal Project Presentations\n\n\n\n\n\n\n\n\nGrading Breakdown\n\n\n\nAssessment Element\nPercentage of Final Grade\n\n\n\n\nIn-class Activities\n10%\n\n\nProjects\n30%\n\n\nQuizzes (5)\n30%\n\n\nGroup Project\n20%\n\n\nProject Presentation\n10%\n\n\n\n\n\nLate Work Policy\nStudents are expected to complete work on schedule. The late policy for all assignments is as follows:\n\n20% points off if submitted within 24 hours after the due date\n30% off if submitted 24-48 hours after the due date\nNo credit if submitted two days or more days after the due date unless prior arrangements are made with the instructor with acceptable reasons.\n\nNote: This is a firm policy and it will be automatically applied\n\n\nAttendance Policy\nAttendance is mandatory. All students must sign an attendance sheet at the beginning of class. Excused absences include illness or a serious personal crisis (a letter from the Dean of students is required). If you are missing class and have a reasonable excuse, contact me before lecture if you want to make up missed assessments.\n\n\nGrading Scale\n\n\n\nLetter Grade\nGrade Percentage\n\n\n\n\nA\n94-100%\n\n\nA-\n90-93%\n\n\nB+\n87-89%\n\n\nB\n84-86%\n\n\nB-\n80-83%\n\n\nC+\n77-79%\n\n\nC\n74-76%\n\n\nC-\n70-73%\n\n\nD+ (undergraduate only)\n67-69%\n\n\nD (undergraduate only)\n64-66%\n\n\nD- (undergraduate only)\n60-63%\n\n\nF\n0-59%\n\n\n\n\n\nAcademic Honesty and Integrity\nAcademic Honesty is a core University value. Take time to understand the University’s policy. Your questions about academic honesty are always welcome.\nAll work you submit for grading in this course must be your own. Submitting work that includes (minor and/or major) components that are not your own work is considered plagiarism. I recommend that when talking with others about the assignment, do not write anything down.\nKeep in mind that all assignments and practice problems provided in this course are meant to help you practice the skills that you will need to do well in all assessments (including on paper quizzes), so it is generally in your best interest to avoid taking shortcuts even on practice problems (which are ungraded).\nSharing your code with others (in addition to copying code from others) is considered a break of the academic integrity code (unauthorized assistance) as well.\n\n\nLand Acknowledgement\nWe respectfully acknowledge that Montclair State University occupies land in Lenapehoking, the traditional and expropriated territory of the Lenape. As a state institution, we recognize and support the sovereignty of New Jersey’s three state-recognized tribes: the Ramapough Lenape, Nanticoke Lenni-Lenape, and Powhatan Renape nations.\nWe recognize the sovereign nations of the Lenape diaspora elsewhere in North America, as well as other Indigenous individuals and communities now residing in New Jersey. By offering this land acknowledgement, we commit to addressing the historical legacies of Indigenous dispossession and dismantling practices of erasure that persist today. We recognize the resilience and persistence of contemporary Indigenous communities and their role in educating all of us about justice, equity, and the stewardship of the land throughout the generations.\n\n\nSubject to Change\nChanges may be made to this syllabus as needed to support student learning. Any updates will be announced in class or through course materials with advance notice."
+    "text": "Course Information\n\nMonday and Wednesday, 12:00 – 1:25pm\nMode: in-person, at School of Business 011\n\n\n\nCourse Description\nThis course provides the advanced techniques in Data Science. After learning data manipulating, processing, cleaning, and visualization, the major goals of this course are to learn how to make data-driven inferences and decisions by using fundamental techniques in machine learning, in Python language.\n\n\nInstructor\n\nAdriana Picoral, PhD\nOffice: Schmitt 374\nemail: picorala@montclair.edu\nOffice Hours (open door/drop in):\n\nTuesdays and Thursdays, 1:45pm to 3:30pm\n\n\n\n\nCourse Outcomes\nUpon completion of the course, students should be able to:\n\nCO1: understand the concepts and various phases of Data Science\nCO2: understand how to use Python data science libraries to demonstrate the data science skills and visualize data\nCO3: understand the concepts of fundamental techniques in machine learning and neural networks\nCO4: implement techniques of machine learning algorithms on data analysis using advanced libraries such as sci-kit learn and TensorFlow in Python\nCO5: apply data science concepts and skills to solve problems with real-world data sets\n\n\n\nCourse Schedule\n\n\n\n\n\n\nWeek\nStart Date\nTopic\n\n\n\n\n01\nJanuary 22\nIntroduction\n\n\n02\nJanuary 29\nPython Review\n\n\n03\nFeb 05\nNumpy & Pandas\n\n\n04\nFebruary 12\nData Wrangling\n\n\n05\nFebruary 19\nSupervised Learning\n\n\n06\nFebruary 26\nSupervised Learning\n\n\n07\nMarch 05\nSupervised Learning\n\n\n08\nMarch 17\nUnsupervised Learning\n\n\n09\nMarch 24\nUnsupervised Learning\n\n\n10\nMarch 31\nUnsupervised Learning\n\n\n11\nApril 07\nUnsupervised Learning\n\n\n12\nApril 14\nOther Advanced Techniques\n\n\n13\nApril 21\nOther Advanced Techniques\n\n\n14\nApril 28\nFinal Project Presentations\n\n\n\n\n\n\n\n\nGrading Breakdown\n\n\n\nAssessment Element\nPercentage of Final Grade\n\n\n\n\nIn-class Activities\n10%\n\n\nProjects\n30%\n\n\nQuizzes (5)\n30%\n\n\nGroup Project\n20%\n\n\nProject Presentation\n10%\n\n\n\n\n\nLate Work Policy\nStudents are expected to complete work on schedule. The late policy for all assignments is as follows:\n\n20% points off if submitted within 24 hours after the due date\n30% off if submitted 24-48 hours after the due date\nNo credit if submitted two days or more days after the due date unless prior arrangements are made with the instructor with acceptable reasons.\n\nNote: This is a firm policy and it will be automatically applied\n\n\nAttendance Policy\nAttendance is mandatory. All students must sign an attendance sheet at the beginning of class. Excused absences include illness or a serious personal crisis (a letter from the Dean of students is required). If you are missing class and have a reasonable excuse, contact me before lecture if you want to make up missed assessments.\n\n\nGrading Scale\n\n\n\nLetter Grade\nGrade Percentage\n\n\n\n\nA\n94-100%\n\n\nA-\n90-93%\n\n\nB+\n87-89%\n\n\nB\n84-86%\n\n\nB-\n80-83%\n\n\nC+\n77-79%\n\n\nC\n74-76%\n\n\nC-\n70-73%\n\n\nD+ (undergraduate only)\n67-69%\n\n\nD (undergraduate only)\n64-66%\n\n\nD- (undergraduate only)\n60-63%\n\n\nF\n0-59%\n\n\n\n\n\nAcademic Honesty and Integrity\nAcademic Honesty is a core University value. Take time to understand the University’s policy. Your questions about academic honesty are always welcome.\nAll work you submit for grading in this course must be your own. Submitting work that includes (minor and/or major) components that are not your own work is considered plagiarism. I recommend that when talking with others about the assignment, do not write anything down.\nKeep in mind that all assignments and practice problems provided in this course are meant to help you practice the skills that you will need to do well in all assessments (including on paper quizzes), so it is generally in your best interest to avoid taking shortcuts even on practice problems (which are ungraded).\nSharing your code with others (in addition to copying code from others) is considered a break of the academic integrity code (unauthorized assistance) as well.\n\n\nLand Acknowledgement\nWe respectfully acknowledge that Montclair State University occupies land in Lenapehoking, the traditional and expropriated territory of the Lenape. As a state institution, we recognize and support the sovereignty of New Jersey’s three state-recognized tribes: the Ramapough Lenape, Nanticoke Lenni-Lenape, and Powhatan Renape nations.\nWe recognize the sovereign nations of the Lenape diaspora elsewhere in North America, as well as other Indigenous individuals and communities now residing in New Jersey. By offering this land acknowledgement, we commit to addressing the historical legacies of Indigenous dispossession and dismantling practices of erasure that persist today. We recognize the resilience and persistence of contemporary Indigenous communities and their role in educating all of us about justice, equity, and the stewardship of the land throughout the generations.\n\n\nSubject to Change\nChanges may be made to this syllabus as needed to support student learning. Any updates will be announced in class or through course materials with advance notice."
   },
   {
     "objectID": "environment.html",
@@ -1559,5 +1559,145 @@
     "title": "Case Studies",
     "section": "Classification Metrics",
     "text": "Classification Metrics\n\nAccuracy – proportion of correctly classified instances among all instances\nPrecision – proportion of correctly classified positive instances among all instances predicted as positive (including false positives)\nRecall – proportion of correctly classified positive instances among all actual positive instances (including false negatives).\nF1-score – harmonic mean of precision and recall\nROC AUC – trade-off between correctly identified positive cases (true positives) and incorrectly identified negative cases (false negative)"
+  },
+  {
+    "objectID": "slides-07-01.html#recap-supervised-vs.-unsupervised-learning",
+    "href": "slides-07-01.html#recap-supervised-vs.-unsupervised-learning",
+    "title": "Clustering",
+    "section": "Recap: Supervised vs. Unsupervised Learning",
+    "text": "Recap: Supervised vs. Unsupervised Learning\n\nSupervised Learning\n\nData: both the features, x, and a target, y, for each item in the dataset\nGoal: ‘learn’ how to predict the target from the features, y = f(x)\nExample: Regression and Classification"
+  },
+  {
+    "objectID": "slides-07-01.html#recap-supervised-vs.-unsupervised-learning-1",
+    "href": "slides-07-01.html#recap-supervised-vs.-unsupervised-learning-1",
+    "title": "Clustering",
+    "section": "Recap: Supervised vs. Unsupervised Learning",
+    "text": "Recap: Supervised vs. Unsupervised Learning\n\nUnsupervised Learning\n\nData: Only the features, x, for each item in the dataset\nGoal: discover ‘interesting’ things about the dataset\nExample: Clustering, Dimensionality reduction, Principal Component Analysis (PCA)"
+  },
+  {
+    "objectID": "slides-07-01.html#clustering",
+    "href": "slides-07-01.html#clustering",
+    "title": "Clustering",
+    "section": "Clustering",
+    "text": "Clustering\n\nClustering is the task of discovering unknown subgroups in data, or clusters\nThe goal is to partition the dataset into clusters where ‘similar’ items are in the same cluster and ‘dissimilar’ items are in different clusters\nExample:\n\nSocial Network Analysis: Clustering can be used to find communities\nHandwritten digits where the digits are unknown"
+  },
+  {
+    "objectID": "slides-07-01.html#clustering-1",
+    "href": "slides-07-01.html#clustering-1",
+    "title": "Clustering",
+    "section": "Clustering",
+    "text": "Clustering\n\nPartition data into groups (clusters)\nPoints within a cluster should be “similar”\nPoints in different cluster should be “different”"
+  },
+  {
+    "objectID": "slides-07-01.html#goal-of-clustering",
+    "href": "slides-07-01.html#goal-of-clustering",
+    "title": "Clustering",
+    "section": "Goal of Clustering",
+    "text": "Goal of Clustering\n\nData Exploration\n\nAre there coherent groups ?\nHow many groups are there ?\n\nData Partitioning\n\nDivide data by group before further processing"
+  },
+  {
+    "objectID": "slides-07-01.html#formulation-of-k-means-clustering-method",
+    "href": "slides-07-01.html#formulation-of-k-means-clustering-method",
+    "title": "Clustering",
+    "section": "Formulation of K-means Clustering Method",
+    "text": "Formulation of K-means Clustering Method\n\nData: A collection of points \\(x_i\\), for i = 1,…,n\nFind k centers, assign each point x to a cluster as to minimize the total intra-cluster distance\nThe total intra-cluster distance is the total squared Euclidean distance from each point to the center of its cluster\nIt’s a measure of the variance or internal coherence of the cluster"
+  },
+  {
+    "objectID": "slides-07-01.html#k-means-algorithm",
+    "href": "slides-07-01.html#k-means-algorithm",
+    "title": "Clustering",
+    "section": "K-Means Algorithm",
+    "text": "K-Means Algorithm\n\nPick number of clusters k\nPick k random points as “cluster center” (or centroid)\nWhile cluster centers change:\n\nAssign each data point to its closest cluster center\nRecompute cluster centers as the mean of the assigned points"
+  },
+  {
+    "objectID": "slides-07-01.html#k-means-algorithm-1",
+    "href": "slides-07-01.html#k-means-algorithm-1",
+    "title": "Clustering",
+    "section": "K-Means Algorithm",
+    "text": "K-Means Algorithm"
+  },
+  {
+    "objectID": "slides-07-01.html#k-means-algorithm-2",
+    "href": "slides-07-01.html#k-means-algorithm-2",
+    "title": "Clustering",
+    "section": "K-Means Algorithm",
+    "text": "K-Means Algorithm\n\nThe K-means clustering algorithm on Airbnb rentals in NYC.\nfrom Clustering With K-Means"
+  },
+  {
+    "objectID": "slides-07-01.html#limitations-of-k-means",
+    "href": "slides-07-01.html#limitations-of-k-means",
+    "title": "Clustering",
+    "section": "Limitations of K-Means",
+    "text": "Limitations of K-Means\n\nRestriction to cluster shapes\nRestriction to distance of points to centers"
+  },
+  {
+    "objectID": "slides-07-01.html#overview-of-clustering-methods",
+    "href": "slides-07-01.html#overview-of-clustering-methods",
+    "title": "Clustering",
+    "section": "Overview of clustering methods",
+    "text": "Overview of clustering methods\n\nfrom sklearn clustering documentation"
+  },
+  {
+    "objectID": "slides-07-02.html#data",
+    "href": "slides-07-02.html#data",
+    "title": "Case Study",
+    "section": "Data",
+    "text": "Data\nDownload the data\nSet up your coding environment, clean the data"
+  },
+  {
+    "objectID": "slides-07-02.html#data-cleaning-.apply",
+    "href": "slides-07-02.html#data-cleaning-.apply",
+    "title": "Case Study",
+    "section": "Data Cleaning – .apply()",
+    "text": "Data Cleaning – .apply()\nTo keep things organized, we can write functions to deal with individual values.\n\ndef live_alone(string):\n    if string in [\"Married\", \"Together\"]:\n        return 0\n    return 1\n\nThen you can use .apply() with the function we wrote:\n\ndata[\"Live_Alone\"] = data[\"Marital_Status\"].apply(live_alone)"
+  },
+  {
+    "objectID": "slides-07-02.html#numpy-where",
+    "href": "slides-07-02.html#numpy-where",
+    "title": "Case Study",
+    "section": "Numpy where()",
+    "text": "Numpy where()\n\ndata[\"Parent\"] = np.where(data[\"Kidhome\"] + data[\"Teenhome\"]  &gt; 0, 1, 0)"
+  },
+  {
+    "objectID": "slides-07-02.html#modeling",
+    "href": "slides-07-02.html#modeling",
+    "title": "Case Study",
+    "section": "Modeling",
+    "text": "Modeling\nLet’s start with KMeans\n\nfrom sklearn.cluster import KMeans\n\nWe can set the seed with np.random.seed()\n\nkmeans = KMeans(n_clusters = 6)\nX[\"Cluster\"] = kmeans.fit_predict(X)"
+  },
+  {
+    "objectID": "slides-07-02.html#visualization",
+    "href": "slides-07-02.html#visualization",
+    "title": "Case Study",
+    "section": "Visualization",
+    "text": "Visualization\nImport both seaborn and matplotlib.pyplot\nVisualize clusters\n\nsns.scatterplot(x = \"Income\", y = \"Age\", data = X, hue = \"Cluster\")\nplt.show()"
+  },
+  {
+    "objectID": "slides-07-01.html#dimensionality-reduction",
+    "href": "slides-07-01.html#dimensionality-reduction",
+    "title": "Clustering",
+    "section": "Dimensionality Reduction",
+    "text": "Dimensionality Reduction\n\nIt is often beneficial to reduce number of dimensions before running K-means\nSimplification of the data – it makes it easier to find clusters\n\nCurse of Dimensionality\nAs the number of dimensions (features) in a dataset increases, the chances of two data points being close to each other become increasingly rare"
+  },
+  {
+    "objectID": "slides-07-02.html#exploratory-visualization",
+    "href": "slides-07-02.html#exploratory-visualization",
+    "title": "Case Study",
+    "section": "Exploratory Visualization",
+    "text": "Exploratory Visualization\n\nsns.scatterplot(x = \"Income\", y = \"Recency\", hue = \"Parent\", data = data)"
+  },
+  {
+    "objectID": "slides-07-02.html#preprocessing",
+    "href": "slides-07-02.html#preprocessing",
+    "title": "Case Study",
+    "section": "Preprocessing",
+    "text": "Preprocessing\n\nScaling\nDimensionality Reduction"
+  },
+  {
+    "objectID": "modules.html#slides-6",
+    "href": "modules.html#slides-6",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nClustering\nCase Study"
   }
 ]
