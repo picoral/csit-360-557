@@ -204,17 +204,17 @@
 <section id="opening-images-in-python" class="slide level2">
 <h2>Opening images in Python</h2>
 <p>We will be using the <code>Image</code> module from PIL</p>
-<div id="1f8dd6db" class="cell" data-execution_count="1">
+<div id="e12c5f48" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">from</span> PIL <span class="im">import</span> Image</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you need to install PIL, you can run:</p>
 <pre><code>python3 -m pip install --upgrade Pillow</code></pre>
 <p>Then you can open an image:</p>
-<div id="8e4e1180" class="cell" data-execution_count="2">
+<div id="28b65d9b" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>image <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">"data/image.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Using images in Python:</p>
-<div id="a0ce725f" class="cell" data-execution_count="3">
+<div id="20a8bc70" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>image.show()</span>
 <span id="cb4-2"><a></a>image_array <span class="op">=</span> np.array(image)</span>
 <span id="cb4-3"><a></a>image.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -223,11 +223,14 @@
 <section id="dealing-with-multiple-files" class="slide level2">
 <h2>Dealing with multiple files</h2>
 <p>We will use the <code>os</code> module:</p>
+<div id="1ce2fa31" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">import</span> os</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Then we can iterate over the list of files in a folder:</p>
-<div id="af2d1824" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="cf">for</span> filename <span class="kw">in</span> os.listdir(<span class="st">"data"</span>):</span>
-<span id="cb5-2"><a></a>  <span class="cf">if</span> <span class="st">".png"</span> <span class="kw">in</span> filename:</span>
-<span id="cb5-3"><a></a>    <span class="bu">print</span>(filename)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="f5713471" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="cf">for</span> filename <span class="kw">in</span> os.listdir(<span class="st">"data"</span>):</span>
+<span id="cb6-2"><a></a>  <span class="cf">if</span> <span class="st">".png"</span> <span class="kw">in</span> filename:</span>
+<span id="cb6-3"><a></a>    <span class="bu">print</span>(filename)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="how-to-transform-images-into-data" class="slide level2">
@@ -237,82 +240,82 @@
 </section>
 <section id="how-to-transform-images-into-data-1" class="slide level2">
 <h2>How to transform images into data?</h2>
-<div id="d1b64289" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>image <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">"data/image.png"</span>)</span>
-<span id="cb6-2"><a></a>image_array <span class="op">=</span> np.array(image)</span>
-<span id="cb6-3"><a></a></span>
-<span id="cb6-4"><a></a><span class="cf">for</span> line <span class="kw">in</span> image_array:</span>
-<span id="cb6-5"><a></a>  <span class="cf">for</span> pixel <span class="kw">in</span> line:</span>
-<span id="cb6-6"><a></a>    pixels.append(pixel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="9ba7b671" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>image <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">"data/image.png"</span>)</span>
+<span id="cb7-2"><a></a>image_array <span class="op">=</span> np.array(image)</span>
+<span id="cb7-3"><a></a></span>
+<span id="cb7-4"><a></a><span class="cf">for</span> line <span class="kw">in</span> image_array:</span>
+<span id="cb7-5"><a></a>  <span class="cf">for</span> pixel <span class="kw">in</span> line:</span>
+<span id="cb7-6"><a></a>    pixels.append(pixel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="function-to-deal-with-individual-image" class="slide level2">
 <h2>Function to deal with individual image</h2>
-<div id="fd7dc73b" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="kw">def</span> get_pixels(image_array):</span>
-<span id="cb7-2"><a></a>    pixels <span class="op">=</span> []</span>
-<span id="cb7-3"><a></a>    <span class="cf">for</span> line <span class="kw">in</span> image_array:</span>
-<span id="cb7-4"><a></a>        <span class="cf">for</span> pixel <span class="kw">in</span> line:</span>
-<span id="cb7-5"><a></a>            pixels.append(pixel)</span>
-<span id="cb7-6"><a></a>    <span class="cf">return</span> pixels</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="40507622" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="kw">def</span> get_pixels(image_array):</span>
+<span id="cb8-2"><a></a>    pixels <span class="op">=</span> []</span>
+<span id="cb8-3"><a></a>    <span class="cf">for</span> line <span class="kw">in</span> image_array:</span>
+<span id="cb8-4"><a></a>        <span class="cf">for</span> pixel <span class="kw">in</span> line:</span>
+<span id="cb8-5"><a></a>            pixels.append(pixel)</span>
+<span id="cb8-6"><a></a>    <span class="cf">return</span> pixels</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="creating-the-data-frame" class="slide level2">
 <h2>Creating the data frame</h2>
 <p>First we create an empty data frame (there are 123 pixels in each image):</p>
-<div id="bdca1d95" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>data <span class="op">=</span> pd.DataFrame({<span class="st">"index"</span> : <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">123</span>))})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="59688dd9" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>data <span class="op">=</span> pd.DataFrame({<span class="st">"index"</span> : <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">123</span>))})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then for each image, we create an individual data frame, calling the function we wrote previously:</p>
-<div id="5046434e" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>these_data <span class="op">=</span> pd.DataFrame({filename : get_pixels(image_array)})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="6c84fe7b" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>these_data <span class="op">=</span> pd.DataFrame({filename : get_pixels(image_array)})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then we concatenate the columns:</p>
-<div id="e3273d92" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>data <span class="op">=</span> pd.concat([data, these_data], axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="7cc61530" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>data <span class="op">=</span> pd.concat([data, these_data], axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="creating-the-data-frame-1" class="slide level2">
 <h2>Creating the data frame</h2>
 <p>When we are done going over all images, and our data is complete, we transpose the data frame to make each column a row.</p>
-<div id="1d1e3244" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>data_final <span class="op">=</span> data.transpose()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="a816adc2" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>data_final <span class="op">=</span> data.transpose()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="modeling" class="slide level2">
 <h2>Modeling</h2>
 <p>Now we can cluster our data into 10 clusters.</p>
-<div id="c59376d8" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
-<span id="cb12-2"><a></a></span>
-<span id="cb12-3"><a></a><span class="co"># read data in</span></span>
-<span id="cb12-4"><a></a>data <span class="op">=</span> pd.read_csv(<span class="st">"all_pixels.csv"</span>)</span>
-<span id="cb12-5"><a></a></span>
-<span id="cb12-6"><a></a><span class="co"># run KMeans with 10 clusters</span></span>
-<span id="cb12-7"><a></a>model <span class="op">=</span> KMeans(n_clusters<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb12-8"><a></a>data[<span class="st">"cluster"</span>]  <span class="op">=</span> model.fit_predict(data)</span>
-<span id="cb12-9"><a></a></span>
-<span id="cb12-10"><a></a><span class="co"># save results</span></span>
-<span id="cb12-11"><a></a>data.to_csv(<span class="st">"digits.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cf74d75f" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
+<span id="cb13-2"><a></a></span>
+<span id="cb13-3"><a></a><span class="co"># read data in</span></span>
+<span id="cb13-4"><a></a>data <span class="op">=</span> pd.read_csv(<span class="st">"all_pixels.csv"</span>)</span>
+<span id="cb13-5"><a></a></span>
+<span id="cb13-6"><a></a><span class="co"># run KMeans with 10 clusters</span></span>
+<span id="cb13-7"><a></a>model <span class="op">=</span> KMeans(n_clusters<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb13-8"><a></a>data[<span class="st">"cluster"</span>]  <span class="op">=</span> model.fit_predict(data)</span>
+<span id="cb13-9"><a></a></span>
+<span id="cb13-10"><a></a><span class="co"># save results</span></span>
+<span id="cb13-11"><a></a>data.to_csv(<span class="st">"digits.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="inspect-results" class="slide level2">
 <h2>Inspect results</h2>
-<div id="08cf998e" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb13-2"><a></a></span>
-<span id="cb13-3"><a></a><span class="im">from</span> PIL <span class="im">import</span> Image</span>
-<span id="cb13-4"><a></a></span>
-<span id="cb13-5"><a></a><span class="kw">def</span> main():</span>
-<span id="cb13-6"><a></a>    data <span class="op">=</span> pd.read_csv(<span class="st">"digits.csv"</span>)</span>
-<span id="cb13-7"><a></a></span>
-<span id="cb13-8"><a></a>    <span class="bu">print</span>(data[<span class="st">"cluster"</span>].value_counts())</span>
-<span id="cb13-9"><a></a></span>
-<span id="cb13-10"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb13-11"><a></a>        Image.<span class="bu">open</span>(<span class="st">"data/"</span> <span class="op">+</span> data.iloc[i][<span class="st">"filename"</span>] ).show()</span>
-<span id="cb13-12"><a></a>        <span class="bu">print</span>(data.iloc[i][<span class="st">"cluster"</span>])</span>
-<span id="cb13-13"><a></a></span>
-<span id="cb13-14"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="20be46fd" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb14-2"><a></a></span>
+<span id="cb14-3"><a></a><span class="im">from</span> PIL <span class="im">import</span> Image</span>
+<span id="cb14-4"><a></a></span>
+<span id="cb14-5"><a></a><span class="kw">def</span> main():</span>
+<span id="cb14-6"><a></a>    data <span class="op">=</span> pd.read_csv(<span class="st">"digits.csv"</span>)</span>
+<span id="cb14-7"><a></a></span>
+<span id="cb14-8"><a></a>    <span class="bu">print</span>(data[<span class="st">"cluster"</span>].value_counts())</span>
+<span id="cb14-9"><a></a></span>
+<span id="cb14-10"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb14-11"><a></a>        Image.<span class="bu">open</span>(<span class="st">"data/"</span> <span class="op">+</span> data.iloc[i][<span class="st">"filename"</span>] ).show()</span>
+<span id="cb14-12"><a></a>        <span class="bu">print</span>(data.iloc[i][<span class="st">"cluster"</span>])</span>
+<span id="cb14-13"><a></a></span>
+<span id="cb14-14"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="performance-metrics" class="slide level2">
@@ -356,11 +359,11 @@
 <section id="silhouette-score-2" class="slide level2">
 <h2>Silhouette Score</h2>
 <p>Here’s how to use <code>silhouette_score</code> from <code>sklearn.metrics</code></p>
-<div id="9b8bf91c" class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> silhouette_score</span>
-<span id="cb14-2"><a></a></span>
-<span id="cb14-3"><a></a><span class="co"># calculate shilhouette score based on features and cluster labels</span></span>
-<span id="cb14-4"><a></a><span class="bu">print</span>(silhouette_score(X, data[<span class="st">"cluster"</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="f0fe4ed2" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> silhouette_score</span>
+<span id="cb15-2"><a></a></span>
+<span id="cb15-3"><a></a><span class="co"># calculate shilhouette score based on features and cluster labels</span></span>
+<span id="cb15-4"><a></a><span class="bu">print</span>(silhouette_score(X, data[<span class="st">"cluster"</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Close to zero: points are on or very close to the decision boundary between clusters</p>
 

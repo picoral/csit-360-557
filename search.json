@@ -1768,7 +1768,7 @@
     "href": "slides-07-03.html#dealing-with-multiple-files",
     "title": "Clustering Images",
     "section": "Dealing with multiple files",
-    "text": "Dealing with multiple files\nWe will use the os module:\nThen we can iterate over the list of files in a folder:\n\nfor filename in os.listdir(\"data\"):\n  if \".png\" in filename:\n    print(filename)"
+    "text": "Dealing with multiple files\nWe will use the os module:\n\nimport os\n\nThen we can iterate over the list of files in a folder:\n\nfor filename in os.listdir(\"data\"):\n  if \".png\" in filename:\n    print(filename)"
   },
   {
     "objectID": "slides-07-03.html#how-to-transform-images-into-data",
