@@ -1866,7 +1866,7 @@
     "href": "slides-07-02.html#principal-component-analysis-pca",
     "title": "Case Study",
     "section": "Principal Component Analysis (PCA)",
-    "text": "Principal Component Analysis (PCA)\n\nReduces the number of features in a dataset\nRetains most of the information\nIdentifis patterns and relationships between variables\nRemoves noise and redundancy from data\nUsed to preprocess data before using it for machine learning algorithms"
+    "text": "Principal Component Analysis (PCA)\n\nReduces the number of features in a dataset\nRetains most of the information\nIdentifies patterns and relationships between variables\nRemoves noise and redundancy from data\nUsed to preprocess data before using it for machine learning algorithms"
   },
   {
     "objectID": "slides-07-02.html#principal-component-analysis-pca-in-sklearn",
