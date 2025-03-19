@@ -1698,7 +1698,7 @@
     "href": "modules.html#slides-6",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nClustering\nCase Study"
+    "text": "Slides\n\nClustering\nCase Study\nClustering Images"
   },
   {
     "objectID": "final-project.html",
@@ -1734,5 +1734,124 @@
     "title": "Modules",
     "section": "Assignment",
     "text": "Assignment\n\nProject 03 – due Monday, March 24, 11:59pm"
+  },
+  {
+    "objectID": "slides-07-03.html",
+    "href": "slides-07-03.html",
+    "title": "Clustering Images",
+    "section": "",
+    "text": "Download the digit images and set up your working environment."
+  },
+  {
+    "objectID": "slides-07-03.html#data",
+    "href": "slides-07-03.html#data",
+    "title": "Clustering Images",
+    "section": "Data",
+    "text": "Data\nDownload the digit images and set up your working environment."
+  },
+  {
+    "objectID": "slides-07-03.html#opening-images-in-python",
+    "href": "slides-07-03.html#opening-images-in-python",
+    "title": "Clustering Images",
+    "section": "Opening images in Python",
+    "text": "Opening images in Python\nWe will be using the Image module from PIL\n\nfrom PIL import Image\n\nIf you need to install PIL, you can run:\npython3 -m pip install --upgrade Pillow\nThen you can open an image:\n\nimage = Image.open(\"data/image.png\")\n\nUsing images in Python:\n\nimage.show()\nimage_array = np.array(image)\nimage.close()"
+  },
+  {
+    "objectID": "slides-07-03.html#using-images-in-python",
+    "href": "slides-07-03.html#using-images-in-python",
+    "title": "Clustering Images",
+    "section": "Using images in Python",
+    "text": "Using images in Python\n\nimage = Image.open(path)\nimage_array = np.array(image)"
+  },
+  {
+    "objectID": "slides-07-03.html#dealing-with-multiple-files",
+    "href": "slides-07-03.html#dealing-with-multiple-files",
+    "title": "Clustering Images",
+    "section": "Dealing with multiple files",
+    "text": "Dealing with multiple files\nWe will use the os module:\nThen we can iterate over the list of files in a folder:\n\nfor filename in os.listdir(\"data\"):\n  if \".png\" in filename:\n    print(filename)"
+  },
+  {
+    "objectID": "slides-07-03.html#how-to-transform-images-into-data",
+    "href": "slides-07-03.html#how-to-transform-images-into-data",
+    "title": "Clustering Images",
+    "section": "How to transform images into data?",
+    "text": "How to transform images into data?\nWe can get the values of individual pixels from each image.\nHow do we combine all images into one .csv file?"
+  },
+  {
+    "objectID": "slides-07-03.html#how-to-transform-images-into-data-1",
+    "href": "slides-07-03.html#how-to-transform-images-into-data-1",
+    "title": "Clustering Images",
+    "section": "How to transform images into data?",
+    "text": "How to transform images into data?\n\nimage = Image.open(\"data/image.png\")\nimage_array = np.array(image)\n\nfor line in image_array:\n  for pixel in line:\n    pixels.append(pixel)"
+  },
+  {
+    "objectID": "slides-07-03.html#function-to-deal-with-individual-image",
+    "href": "slides-07-03.html#function-to-deal-with-individual-image",
+    "title": "Clustering Images",
+    "section": "Function to deal with individual image",
+    "text": "Function to deal with individual image\n\ndef get_pixels(image_array):\n    pixels = []\n    for line in image_array:\n        for pixel in line:\n            pixels.append(pixel)\n    return pixels"
+  },
+  {
+    "objectID": "slides-07-03.html#creating-the-data-frame",
+    "href": "slides-07-03.html#creating-the-data-frame",
+    "title": "Clustering Images",
+    "section": "Creating the data frame",
+    "text": "Creating the data frame\nFirst we create an empty data frame (there are 123 pixels in each image):\n\ndata = pd.DataFrame({\"index\" : list(range(123))})\n\nThen for each image, we create an individual data frame, calling the function we wrote previously:\n\nthese_data = pd.DataFrame({filename : get_pixels(image_array)})\n\nThen we concatenate the columns:\n\ndata = pd.concat([data, these_data], axis=1)"
+  },
+  {
+    "objectID": "slides-07-03.html#creating-the-data-frame-1",
+    "href": "slides-07-03.html#creating-the-data-frame-1",
+    "title": "Clustering Images",
+    "section": "Creating the data frame",
+    "text": "Creating the data frame\nWhen we are done going over all images, and our data is complete, we transpose the data frame to make each column a row.\n\ndata_final = data.transpose()"
+  },
+  {
+    "objectID": "slides-07-03.html#modeling",
+    "href": "slides-07-03.html#modeling",
+    "title": "Clustering Images",
+    "section": "Modeling",
+    "text": "Modeling\nNow we can cluster our data into 10 clusters.\n\nfrom sklearn.cluster import KMeans\n\n# read data in\ndata = pd.read_csv(\"all_pixels.csv\")\n\n# run KMeans with 10 clusters\nmodel = KMeans(n_clusters=10)\ndata[\"cluster\"]  = model.fit_predict(data)\n\n# save results\ndata.to_csv(\"digits.csv\", index=False)"
+  },
+  {
+    "objectID": "slides-07-03.html#inspect-results",
+    "href": "slides-07-03.html#inspect-results",
+    "title": "Clustering Images",
+    "section": "Inspect results",
+    "text": "Inspect results\n\nimport pandas as pd\n\nfrom PIL import Image\n\ndef main():\n    data = pd.read_csv(\"digits.csv\")\n\n    print(data[\"cluster\"].value_counts())\n\n    for i in range(5):\n        Image.open(\"data/\" + data.iloc[i][\"filename\"] ).show()\n        print(data.iloc[i][\"cluster\"])\n\nmain()"
+  },
+  {
+    "objectID": "slides-07-03.html#performance-metrics",
+    "href": "slides-07-03.html#performance-metrics",
+    "title": "Clustering Images",
+    "section": "Performance metrics",
+    "text": "Performance metrics\n\nHow do we measure performance without the ground truth?\n\nSilhouette Score\n\n-1 to 1 score (higher value indicates better clustering)\nMeasure of how similar data points are to their own cluster compared to other clusters"
+  },
+  {
+    "objectID": "slides-07-03.html#silhouette-score",
+    "href": "slides-07-03.html#silhouette-score",
+    "title": "Clustering Images",
+    "section": "Silhouette Score",
+    "text": "Silhouette Score\n\nCombination of two factors:\n\nCohesion: How close a point is to other points in its cluster\nSeparation: How far a point is from points in other clusters"
+  },
+  {
+    "objectID": "slides-07-03.html#silhouette-score-1",
+    "href": "slides-07-03.html#silhouette-score-1",
+    "title": "Clustering Images",
+    "section": "Silhouette Score",
+    "text": "Silhouette Score\nFor each data point:\n\nCalculate average distance to all other points in the same cluster (Cohesion)\nCalculate minimum average distance to points in any other cluster (Separation)\nThe silhouette value is (Separation - Cohesion) / max(Cohesion, Separation)\n\nThe overall Silhouette Score is the sum of the sillhouette values for all data points divided by the number of data points."
+  },
+  {
+    "objectID": "slides-07-03.html#silhouette-score-limitations",
+    "href": "slides-07-03.html#silhouette-score-limitations",
+    "title": "Clustering Images",
+    "section": "Silhouette Score – Limitations",
+    "text": "Silhouette Score – Limitations\n\nComputationally intensive (especiall so for large datasets)\nFavors models with fewer clusters – Curse of Dimensionality"
+  },
+  {
+    "objectID": "slides-07-03.html#silhouette-score-2",
+    "href": "slides-07-03.html#silhouette-score-2",
+    "title": "Clustering Images",
+    "section": "Silhouette Score",
+    "text": "Silhouette Score\nHere’s how to use silhouette_score from sklearn.metrics\n\nfrom sklearn.metrics import silhouette_score\n\n# calculate shilhouette score based on features and cluster labels\nprint(silhouette_score(X, data[\"cluster\"]))\n\nClose to zero: points are on or very close to the decision boundary between clusters"
   }
 ]
