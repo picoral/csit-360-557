@@ -1853,5 +1853,33 @@
     "title": "Clustering Images",
     "section": "Silhouette Score",
     "text": "Silhouette Score\nHere’s how to use silhouette_score from sklearn.metrics\n\nfrom sklearn.metrics import silhouette_score\n\n# calculate shilhouette score based on features and cluster labels\nprint(silhouette_score(X, data[\"cluster\"]))\n\nClose to zero: points are on or very close to the decision boundary between clusters"
+  },
+  {
+    "objectID": "slides-07-02.html#dimensionality-reduction-pca",
+    "href": "slides-07-02.html#dimensionality-reduction-pca",
+    "title": "Case Study",
+    "section": "Dimensionality Reduction – PCA",
+    "text": "Dimensionality Reduction – PCA\nPrincipal Component Analysis (PCA):\n\na dimensionality reduction technique widely used in statistics, machine learning, and data science\nPCA transforms a dataset with potentially correlated variables into a set of linearly uncorrelated variables called principal components"
+  },
+  {
+    "objectID": "slides-07-02.html#principal-component-analysis-pca",
+    "href": "slides-07-02.html#principal-component-analysis-pca",
+    "title": "Case Study",
+    "section": "Principal Component Analysis (PCA)",
+    "text": "Principal Component Analysis (PCA)\n\nReduces the number of features in a dataset\nRetains most of the information\nIdentifis patterns and relationships between variables\nRemoves noise and redundancy from data\nUsed to preprocess data before using it for machine learning algorithms"
+  },
+  {
+    "objectID": "slides-07-02.html#principal-component-analysis-pca-in-sklearn",
+    "href": "slides-07-02.html#principal-component-analysis-pca-in-sklearn",
+    "title": "Case Study",
+    "section": "Principal Component Analysis (PCA) in sklearn",
+    "text": "Principal Component Analysis (PCA) in sklearn\nHere’s the import statement:\n\nfrom sklearn.decomposition import PCA\n\nThen we can run it:\n\npca = PCA(n_components = 2)\n# fit the data\npca.fit(data)\n# get transformed data\nreduced_data = pd.DataFrame(pca.transform(data))"
+  },
+  {
+    "objectID": "slides-07-02.html#visualize-results",
+    "href": "slides-07-02.html#visualize-results",
+    "title": "Case Study",
+    "section": "Visualize results",
+    "text": "Visualize results\n\nkmeans = KMeans(n_clusters = 6)\nreduced_data[\"Cluster\"] = kmeans.fit_predict(reduced_data)\n\nsns.scatterplot(x = 0, y = 1, data = reduced_data, hue = \"Cluster\")\nplt.show()"
   }
 ]
