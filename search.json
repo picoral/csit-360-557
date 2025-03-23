@@ -74,7 +74,7 @@
     "href": "index.html",
     "title": "CSIT-360-557 Syllabus",
     "section": "",
-    "text": "Course Information\n\nMonday and Wednesday, 12:00 – 1:25pm\nMode: in-person, at School of Business 011\n\n\n\nCourse Description\nThis course provides the advanced techniques in Data Science. After learning data manipulating, processing, cleaning, and visualization, the major goals of this course are to learn how to make data-driven inferences and decisions by using fundamental techniques in machine learning, in Python language.\n\n\nInstructor\n\nAdriana Picoral, PhD\nOffice: Schmitt 374\nemail: picorala@montclair.edu\nOffice Hours (open door/drop in):\n\nTuesdays and Thursdays, 1:45pm to 3:30pm\n\n\n\n\nCourse Outcomes\nUpon completion of the course, students should be able to:\n\nCO1: understand the concepts and various phases of Data Science\nCO2: understand how to use Python data science libraries to demonstrate the data science skills and visualize data\nCO3: understand the concepts of fundamental techniques in machine learning and neural networks\nCO4: implement techniques of machine learning algorithms on data analysis using advanced libraries such as sci-kit learn and TensorFlow in Python\nCO5: apply data science concepts and skills to solve problems with real-world data sets\n\n\n\nCourse Schedule\n\n\n\n\n\n\nWeek\nStart Date\nTopic\n\n\n\n\n01\nJanuary 22\nIntroduction\n\n\n02\nJanuary 29\nPython Review\n\n\n03\nFeb 05\nNumpy & Pandas\n\n\n04\nFebruary 12\nData Wrangling\n\n\n05\nFebruary 19\nSupervised Learning\n\n\n06\nFebruary 26\nSupervised Learning\n\n\n07\nMarch 05\nSupervised Learning\n\n\n08\nMarch 17\nUnsupervised Learning\n\n\n09\nMarch 24\nUnsupervised Learning\n\n\n10\nMarch 31\nUnsupervised Learning\n\n\n11\nApril 07\nUnsupervised Learning\n\n\n12\nApril 14\nOther Advanced Techniques\n\n\n13\nApril 21\nOther Advanced Techniques\n\n\n14\nApril 28\nFinal Project Presentations\n\n\n\n\n\n\n\n\nGrading Breakdown\n\n\n\nAssessment Element\nPercentage of Final Grade\n\n\n\n\nIn-class Activities\n10%\n\n\nProjects\n30%\n\n\nQuizzes (5)\n30%\n\n\nGroup Project\n20%\n\n\nProject Presentation\n10%\n\n\n\n\n\nLate Work Policy\nStudents are expected to complete work on schedule. The late policy for all assignments is as follows:\n\n20% points off if submitted within 24 hours after the due date\n30% off if submitted 24-48 hours after the due date\nNo credit if submitted two days or more days after the due date unless prior arrangements are made with the instructor with acceptable reasons.\n\nNote: This is a firm policy and it will be automatically applied\n\n\nAttendance Policy\nAttendance is mandatory. All students must sign an attendance sheet at the beginning of class. Excused absences include illness or a serious personal crisis (a letter from the Dean of students is required). If you are missing class and have a reasonable excuse, contact me before lecture if you want to make up missed assessments.\n\n\nGrading Scale\n\n\n\nLetter Grade\nGrade Percentage\n\n\n\n\nA\n94-100%\n\n\nA-\n90-93%\n\n\nB+\n87-89%\n\n\nB\n84-86%\n\n\nB-\n80-83%\n\n\nC+\n77-79%\n\n\nC\n74-76%\n\n\nC-\n70-73%\n\n\nD+ (undergraduate only)\n67-69%\n\n\nD (undergraduate only)\n64-66%\n\n\nD- (undergraduate only)\n60-63%\n\n\nF\n0-59%\n\n\n\n\n\nAcademic Honesty and Integrity\nAcademic Honesty is a core University value. Take time to understand the University’s policy. Your questions about academic honesty are always welcome.\nAll work you submit for grading in this course must be your own. Submitting work that includes (minor and/or major) components that are not your own work is considered plagiarism. I recommend that when talking with others about the assignment, do not write anything down.\nKeep in mind that all assignments and practice problems provided in this course are meant to help you practice the skills that you will need to do well in all assessments (including on paper quizzes), so it is generally in your best interest to avoid taking shortcuts even on practice problems (which are ungraded).\nSharing your code with others (in addition to copying code from others) is considered a break of the academic integrity code (unauthorized assistance) as well.\n\n\nLand Acknowledgement\nWe respectfully acknowledge that Montclair State University occupies land in Lenapehoking, the traditional and expropriated territory of the Lenape. As a state institution, we recognize and support the sovereignty of New Jersey’s three state-recognized tribes: the Ramapough Lenape, Nanticoke Lenni-Lenape, and Powhatan Renape nations.\nWe recognize the sovereign nations of the Lenape diaspora elsewhere in North America, as well as other Indigenous individuals and communities now residing in New Jersey. By offering this land acknowledgement, we commit to addressing the historical legacies of Indigenous dispossession and dismantling practices of erasure that persist today. We recognize the resilience and persistence of contemporary Indigenous communities and their role in educating all of us about justice, equity, and the stewardship of the land throughout the generations.\n\n\nSubject to Change\nChanges may be made to this syllabus as needed to support student learning. Any updates will be announced in class or through course materials with advance notice."
+    "text": "Course Information\n\nMonday and Wednesday, 12:00 – 1:25pm\nMode: in-person, at School of Business 011\n\n\n\nCourse Description\nThis course provides the advanced techniques in Data Science. After learning data manipulating, processing, cleaning, and visualization, the major goals of this course are to learn how to make data-driven inferences and decisions by using fundamental techniques in machine learning, in Python language.\n\n\nInstructor\n\nAdriana Picoral, PhD\nOffice: Schmitt 374\nemail: picorala@montclair.edu\nOffice Hours (open door/drop in):\n\nTuesdays and Thursdays, 1:45pm to 3:30pm\n\n\n\n\nCourse Outcomes\nUpon completion of the course, students should be able to:\n\nCO1: understand the concepts and various phases of Data Science\nCO2: understand how to use Python data science libraries to demonstrate the data science skills and visualize data\nCO3: understand the concepts of fundamental techniques in machine learning and neural networks\nCO4: implement techniques of machine learning algorithms on data analysis using advanced libraries such as sci-kit learn and TensorFlow in Python\nCO5: apply data science concepts and skills to solve problems with real-world data sets\n\n\n\nCourse Schedule\n\n\n\n\n\n\n\n\n\n\n\nWeek\nStart Date\nTopic\n\n\n\n\n01\nJanuary 22\nIntroduction\n\n\n02\nJanuary 29\nPython Review\n\n\n03\nFeb 05\nNumpy & Pandas\n\n\n04\nFebruary 12\nData Wrangling\n\n\n05\nFebruary 19\nSupervised Learning – Linear Regression vs. Logistic Regression (statsmodels)\n\n\n06\nFebruary 26\nSupervised Learning – Regression and Classification with sklearn\n\n\n07\nMarch 05\nSupervised Learning – Suport Vector Machines, and multiclass classification\n\n\n08\nMarch 17\nUnsupervised Learning – clustering (Kmeans)\n\n\n09\nMarch 24\nIntroduction to Neural Networks\n\n\n10\nMarch 31\nUnsupervised Learning\n\n\n11\nApril 07\nUnsupervised Learning\n\n\n12\nApril 14\nOther Advanced Techniques\n\n\n13\nApril 21\nOther Advanced Techniques\n\n\n14\nApril 28\nFinal Project Presentations\n\n\n\n\n\n\n\n\nGrading Breakdown\n\n\n\nAssessment Element\nPercentage of Final Grade\n\n\n\n\nIn-class Activities\n10%\n\n\nProjects\n30%\n\n\nQuizzes (5)\n30%\n\n\nGroup Project\n20%\n\n\nProject Presentation\n10%\n\n\n\n\n\nLate Work Policy\nStudents are expected to complete work on schedule. The late policy for all assignments is as follows:\n\n20% points off if submitted within 24 hours after the due date\n30% off if submitted 24-48 hours after the due date\nNo credit if submitted two days or more days after the due date unless prior arrangements are made with the instructor with acceptable reasons.\n\nNote: This is a firm policy and it will be automatically applied\n\n\nAttendance Policy\nAttendance is mandatory. All students must sign an attendance sheet at the beginning of class. Excused absences include illness or a serious personal crisis (a letter from the Dean of students is required). If you are missing class and have a reasonable excuse, contact me before lecture if you want to make up missed assessments.\n\n\nGrading Scale\n\n\n\nLetter Grade\nGrade Percentage\n\n\n\n\nA\n94-100%\n\n\nA-\n90-93%\n\n\nB+\n87-89%\n\n\nB\n84-86%\n\n\nB-\n80-83%\n\n\nC+\n77-79%\n\n\nC\n74-76%\n\n\nC-\n70-73%\n\n\nD+ (undergraduate only)\n67-69%\n\n\nD (undergraduate only)\n64-66%\n\n\nD- (undergraduate only)\n60-63%\n\n\nF\n0-59%\n\n\n\n\n\nAcademic Honesty and Integrity\nAcademic Honesty is a core University value. Take time to understand the University’s policy. Your questions about academic honesty are always welcome.\nAll work you submit for grading in this course must be your own. Submitting work that includes (minor and/or major) components that are not your own work is considered plagiarism. I recommend that when talking with others about the assignment, do not write anything down.\nKeep in mind that all assignments and practice problems provided in this course are meant to help you practice the skills that you will need to do well in all assessments (including on paper quizzes), so it is generally in your best interest to avoid taking shortcuts even on practice problems (which are ungraded).\nSharing your code with others (in addition to copying code from others) is considered a break of the academic integrity code (unauthorized assistance) as well.\n\n\nLand Acknowledgement\nWe respectfully acknowledge that Montclair State University occupies land in Lenapehoking, the traditional and expropriated territory of the Lenape. As a state institution, we recognize and support the sovereignty of New Jersey’s three state-recognized tribes: the Ramapough Lenape, Nanticoke Lenni-Lenape, and Powhatan Renape nations.\nWe recognize the sovereign nations of the Lenape diaspora elsewhere in North America, as well as other Indigenous individuals and communities now residing in New Jersey. By offering this land acknowledgement, we commit to addressing the historical legacies of Indigenous dispossession and dismantling practices of erasure that persist today. We recognize the resilience and persistence of contemporary Indigenous communities and their role in educating all of us about justice, equity, and the stewardship of the land throughout the generations.\n\n\nSubject to Change\nChanges may be made to this syllabus as needed to support student learning. Any updates will be announced in class or through course materials with advance notice."
   },
   {
     "objectID": "environment.html",
@@ -1881,5 +1881,138 @@
     "title": "Case Study",
     "section": "Visualize results",
     "text": "Visualize results\n\nkmeans = KMeans(n_clusters = 6)\nreduced_data[\"Cluster\"] = kmeans.fit_predict(reduced_data)\n\nsns.scatterplot(x = 0, y = 1, data = reduced_data, hue = \"Cluster\")\nplt.show()"
+  },
+  {
+    "objectID": "slides-08-01.html#neural-networks",
+    "href": "slides-08-01.html#neural-networks",
+    "title": "Introduction to Neural Networks",
+    "section": "Neural Networks",
+    "text": "Neural Networks\n\ncomputational models inspired by the human brain’s structure and function\ninterconnected nodes (neurons) organized in layers that process and transform input data to produce outputs\nStructure: an input layer, one or more hidden layers, and an output layer\nEach node receives inputs, applies weights, adds a bias, and passes the result through an activation function"
+  },
+  {
+    "objectID": "slides-08-01.html#neural-networks-learning-process",
+    "href": "slides-08-01.html#neural-networks-learning-process",
+    "title": "Introduction to Neural Networks",
+    "section": "Neural Networks – Learning Process",
+    "text": "Neural Networks – Learning Process\n\nForward propagation: Input data flows through the network, generating predictions\nLoss calculation: The difference between predictions and actual values is measured\nBackpropagation: Errors are propagated backward to adjust weights\nGradient descent: Weights are updated to minimize the loss"
+  },
+  {
+    "objectID": "slides-08-01.html#neural-networks-advantages",
+    "href": "slides-08-01.html#neural-networks-advantages",
+    "title": "Introduction to Neural Networks",
+    "section": "Neural Networks – advantages",
+    "text": "Neural Networks – advantages\n\nCan model complex non-linear relationships through multiple layers and activation functions\nCan model complex decision boundaries\nLearn feature representations automatically; work well with unstructured data like images and text\nPerform better as dataset size increases (many traditional algorithms plateau in performance)"
+  },
+  {
+    "objectID": "slides-08-01.html#neural-networks-disadvantages",
+    "href": "slides-08-01.html#neural-networks-disadvantages",
+    "title": "Introduction to Neural Networks",
+    "section": "Neural Networks – disadvantages",
+    "text": "Neural Networks – disadvantages\n\nTraining neural networks typically requires significantly more computational resources\nNeural networks generally need large amounts of training data to perform well and avoid overfitting\nFinding optimal architectures and hyperparameter settings can be time-consuming and resource-intensive"
+  },
+  {
+    "objectID": "modules.html#slides-7",
+    "href": "modules.html#slides-7",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nIntroduction to Neural Networks"
+  },
+  {
+    "objectID": "slides-08-01.html#tensorflow",
+    "href": "slides-08-01.html#tensorflow",
+    "title": "Introduction to Neural Networks",
+    "section": "Tensorflow",
+    "text": "Tensorflow\nTo pip install tensorflow\n/path/to/python3 -m pip install tensorflow\nYou might need to downgrade numpy:\n/path/to/python3 -m pip install --upgrade numpy==1.26.4"
+  },
+  {
+    "objectID": "slides-08-01.html#mnist-dataset",
+    "href": "slides-08-01.html#mnist-dataset",
+    "title": "Introduction to Neural Networks",
+    "section": "MNIST dataset",
+    "text": "MNIST dataset\n\n70,000 grayscale images of handwritten digits (0-9)\n60,000 data points for training\n10,000 for testing\ndataset from the National Institute of Standards and Technology (NIST)\nEach image is 28x28 pixels, representing a grayscale image with pixel values ranging from 0 (black) to 255 (white)\nEach image in the dataset is associated with a label representing the digit it depicts (0-9)"
+  },
+  {
+    "objectID": "slides-08-01.html#mnist-dataset-1",
+    "href": "slides-08-01.html#mnist-dataset-1",
+    "title": "Introduction to Neural Networks",
+    "section": "MNIST dataset",
+    "text": "MNIST dataset\nWe will be using TensorFlow’s Keras API\n\n(x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()\n\nMac users: go to your Applications folder, find the python folder and double click on Install Certificates.command"
+  },
+  {
+    "objectID": "slides-08-01.html#neural-networks-in-sklearn",
+    "href": "slides-08-01.html#neural-networks-in-sklearn",
+    "title": "Introduction to Neural Networks",
+    "section": "Neural Networks in sklearn",
+    "text": "Neural Networks in sklearn\nNeural Networks in sklearn"
+  },
+  {
+    "objectID": "slides-08-01.html#neural-networks-some-terminology",
+    "href": "slides-08-01.html#neural-networks-some-terminology",
+    "title": "Introduction to Neural Networks",
+    "section": "Neural Networks – Some terminology",
+    "text": "Neural Networks – Some terminology\n\nReLU (Rectified Linear Unit) – activation function defined as f(x) = max(0, x), meaning it outputs x when x is positive and 0 when x is negative or zero. Helps prevent the vanishing gradient problem."
+  },
+  {
+    "objectID": "slides-08-01.html#neural-networks-some-terminology-1",
+    "href": "slides-08-01.html#neural-networks-some-terminology-1",
+    "title": "Introduction to Neural Networks",
+    "section": "Neural Networks – Some terminology",
+    "text": "Neural Networks – Some terminology\n\nAdam (Adaptive Moment Estimation) – popular optimization algorithm for training neural networks, combines concepts from two other optimizers:\n\nMomentum: Accelerates learning in relevant directions by accumulating past gradients\nRMSprop: Adapts learning rates based on recent gradient magnitudes"
+  },
+  {
+    "objectID": "slides-08-01.html#neural-networks-some-terminology-2",
+    "href": "slides-08-01.html#neural-networks-some-terminology-2",
+    "title": "Introduction to Neural Networks",
+    "section": "Neural Networks – Some terminology",
+    "text": "Neural Networks – Some terminology\n\nSoftmax function – exponentiates each output and then normalizes them so they can be interpreted as probabilities (values between 0 and 1 that sum to 1). This makes the model’s predictions more interpretable - each output value now represents the probability that the input belongs to the corresponding class."
+  },
+  {
+    "objectID": "slides-08-01.html#neural-network",
+    "href": "slides-08-01.html#neural-network",
+    "title": "Introduction to Neural Networks",
+    "section": "Neural Network",
+    "text": "Neural Network\nWe will create a Sequential model, or a linear stack of layers using tf.keras.models.Sequential\n\nmodel = tf.keras.models.Sequential([\n  # transform the input from a 2D array of 28×28 pixels into a 1D array of 784 pixels\n  tf.keras.layers.Flatten(input_shape=(28, 28)),\n  \n  # fully connected (Dense) layer with 128 neurons using 'relu' activation function\n  tf.keras.layers.Dense(128, activation='relu'),\n  \n  # a Dropout layer -- randomly sets 20% of the inputs to 0 during training\n  # helps prevent overfitting  (forces the network not to rely too heavily \n  # on any particular neuron)\n  tf.keras.layers.Dropout(0.2),\n  \n  # Dense layer with 10 neurons, corresponding to the output classes (digits 0-9)\n  tf.keras.layers.Dense(10)\n  ])"
+  },
+  {
+    "objectID": "slides-08-01.html#neural-network-keras",
+    "href": "slides-08-01.html#neural-network-keras",
+    "title": "Introduction to Neural Networks",
+    "section": "Neural Network – keras",
+    "text": "Neural Network – keras\nWe will create a Sequential model, or a linear stack of layers using tf.keras.models.Sequential\n\nmodel = tf.keras.models.Sequential([\n  # transform the input from a 2D array of 28×28 pixels into a 1D array of 784 pixels\n  tf.keras.layers.Flatten(input_shape=(28, 28)),\n  \n  # fully connected (Dense) layer with 128 neurons using 'relu' activation function\n  tf.keras.layers.Dense(128, activation='relu'),\n  \n  # a Dropout layer -- randomly sets 20% of the inputs to 0 during training\n  # helps prevent overfitting  (forces the network not to rely too heavily \n  # on any particular neuron)\n  tf.keras.layers.Dropout(0.2),\n  \n  # Dense layer with 10 neurons, corresponding to the output classes (digits 0-9)\n  tf.keras.layers.Dense(10)\n  ])"
+  },
+  {
+    "objectID": "slides-08-01.html#neural-network-keras-1",
+    "href": "slides-08-01.html#neural-network-keras-1",
+    "title": "Introduction to Neural Networks",
+    "section": "Neural Network – keras",
+    "text": "Neural Network – keras\nWe now can compile our model. We will define an optimizer (adam is a good choice), and a loss function (Sparse Categorical Crossentropy for integer labels)\n\nloss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)\n\nmodel.compile(optimizer=\"adam\",\nloss=loss_fn,\nmetrics=[\"accuracy\"])"
+  },
+  {
+    "objectID": "slides-08-01.html#neural-network-keras-2",
+    "href": "slides-08-01.html#neural-network-keras-2",
+    "title": "Introduction to Neural Networks",
+    "section": "Neural Network – keras",
+    "text": "Neural Network – keras\nWe will fit the model with the training data with 10 epochs.\n\nmodel.fit(x_train, y_train, epochs=10)\n\nWe evaluate the model with the test data (verbose: 0 – nothing, 1 – progress bar, 2 – one line per epoch)\n\nmodel.evaluate(x_test,  y_test, verbose=2)"
+  },
+  {
+    "objectID": "slides-08-01.html#neural-network-keras-3",
+    "href": "slides-08-01.html#neural-network-keras-3",
+    "title": "Introduction to Neural Networks",
+    "section": "Neural Network – keras",
+    "text": "Neural Network – keras\nWe will create a new model that builds upon the previously defined neural network by adding an additional Softmax activation function as a new final layer to the model. This added a Softmax layer converts the outputs to probabilities that sum to 1 across all classes.\n\nprobability_model = tf.keras.Sequential([\n  model,\n  tf.keras.layers.Softmax()\n  ])\n\n# get labels for first 5 test data points\nprint(probability_model(x_test[:5]))"
+  },
+  {
+    "objectID": "slides-08-01.html#neural-networks-some-terminology-3",
+    "href": "slides-08-01.html#neural-networks-some-terminology-3",
+    "title": "Introduction to Neural Networks",
+    "section": "Neural Networks – Some terminology",
+    "text": "Neural Networks – Some terminology\n\nEpochs – one complete pass through the entire training dataset; multiple epochs are typically needed for a network to learn effectively. Too few epochs == underfitting; too many == overfitting."
+  },
+  {
+    "objectID": "slides-08-01.html#another-case-study",
+    "href": "slides-08-01.html#another-case-study",
+    "title": "Introduction to Neural Networks",
+    "section": "Another case study",
+    "text": "Another case study\nFashion-MNIST\n\n(x_train, y_train), (x_test, y_test) = tf.keras.datasets.fashion_mnist.load_data()"
   }
 ]
