@@ -1915,7 +1915,7 @@
     "href": "modules.html#slides-7",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nIntroduction to Neural Networks"
+    "text": "Slides\n\nIntroduction to Neural Networks\nANNs, CNNs, RNNs"
   },
   {
     "objectID": "slides-08-01.html#tensorflow",
@@ -2014,5 +2014,117 @@
     "title": "Introduction to Neural Networks",
     "section": "Another case study",
     "text": "Another case study\nFashion-MNIST\n\n(x_train, y_train), (x_test, y_test) = tf.keras.datasets.fashion_mnist.load_data()"
+  },
+  {
+    "objectID": "slides-08-02.html#neural-networks",
+    "href": "slides-08-02.html#neural-networks",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "Neural Networks",
+    "text": "Neural Networks\nDifferent types of neural networks, for specific tasks:\n\nArtificial Neural Networks (ANNs) – general purpose\nConvolutional Neural Networks (CNNs) – spatial, image data\nRecurrent Neural Networks (RNNs) – sequential data (text, audio, time series)"
+  },
+  {
+    "objectID": "slides-08-02.html#node-or-neuron",
+    "href": "slides-08-02.html#node-or-neuron",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "Node (or Neuron)",
+    "text": "Node (or Neuron)\nA node is like a simple decision-making unit that:\n\ntakes multiple inputs\nassigns importance to those inputs through weights\ndecides whether to “activate” or not based on those weighted inputs\n\neach input gets a value proportional to its weight, and if the total values cross a certain threshold the node “fires” or produces an output"
+  },
+  {
+    "objectID": "slides-08-02.html#anns-layers-in-tensorflow",
+    "href": "slides-08-02.html#anns-layers-in-tensorflow",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "ANNs layers in tensorflow",
+    "text": "ANNs layers in tensorflow\nDense layer:\n\ntf.keras.layers.Dense(units=10)\n\nWe can add an activation to a Dense layer:\n\ntf.keras.layers.Dense(128, activation=\"relu\")"
+  },
+  {
+    "objectID": "slides-08-02.html#anns-layers-in-tensorflow-1",
+    "href": "slides-08-02.html#anns-layers-in-tensorflow-1",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "ANNs layers in tensorflow",
+    "text": "ANNs layers in tensorflow\nStand alone activation layers:\n\ntf.keras.layers.ReLU()\ntf.keras.layers.Sigmoid()\ntf.keras.layers.Tanh()\ntf.keras.layers.LeakyReLU(alpha=0.1)"
+  },
+  {
+    "objectID": "slides-08-02.html#anns-layers-in-tensorflow-2",
+    "href": "slides-08-02.html#anns-layers-in-tensorflow-2",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "ANNs layers in tensorflow",
+    "text": "ANNs layers in tensorflow\nDropout layer:\n\n# randomly drops 50% of inputs during training\ntf.keras.layers.Dropout(rate=0.5)  \n\nNormalization layer (to stabilize and speed up training):\n\n# normalizes the inputs of each layer\ntf.keras.layers.LayerNormalization()"
+  },
+  {
+    "objectID": "slides-08-02.html#anns-layers-in-tensorflow-3",
+    "href": "slides-08-02.html#anns-layers-in-tensorflow-3",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "ANNs layers in tensorflow",
+    "text": "ANNs layers in tensorflow\nRegularization Layers (L1 and L2), control model complexity.\nL1 (Lasso) regularization – adds the absolute value of the coefficients as penalty, promoting sparsity. It sets some coefficients to zero, which results in feature selection.\n\ntf.keras.layers.Dense(units=64, \n    kernel_regularizer=tf.keras.regularizers.l1(0.01)\n)\n\nL2 (Ridge) regularization – adds the squared value of the coefficients as penalty. It shrinks coefficients towards zero.\n\ntf.keras.layers.Dense(units=64, \n    kernel_regularizer=tf.keras.regularizers.l2(0.001)\n)"
+  },
+  {
+    "objectID": "slides-08-02.html#anns-layers-in-tensorflow-4",
+    "href": "slides-08-02.html#anns-layers-in-tensorflow-4",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "ANNs layers in tensorflow",
+    "text": "ANNs layers in tensorflow\nRegularization Layers (L1 and L2), control model complexity.\nL1 (Lasso) regularization – adds the absolute value of the coefficients as penalty, promoting sparsity. It sets some coefficients to zero, which results in feature selection.\n\ntf.keras.layers.Dense(units=64, \n    kernel_regularizer=tf.keras.regularizers.l1(0.01)\n)\n\nL2 (Ridge) regularization – adds the squared value of the coefficients as penalty. It shrinks coefficients towards zero.\n\ntf.keras.layers.Dense(units=64, \n    kernel_regularizer=tf.keras.regularizers.l2(0.001)\n)"
+  },
+  {
+    "objectID": "slides-08-02.html#anns-layers",
+    "href": "slides-08-02.html#anns-layers",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "ANNs layers",
+    "text": "ANNs layers\n\nDense Layers form the core of most neural networks, each node is connected to every node in the previous layer\nActivation Layers activates non-linear transformations, can be used separately or within dense layers\nDropout and Normalization Layers help improve model performance and generalization by for example randomly setting input units to 0 during training – this prevents overfitting, makes models more generalizable"
+  },
+  {
+    "objectID": "slides-08-02.html#cnns-layers",
+    "href": "slides-08-02.html#cnns-layers",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "CNNs layers",
+    "text": "CNNs layers\nIn addition to normalization layers (to stabilize training) and dropout layers (to prevent overfitting), here are the layers we use in CNNs:\n\nConvolutional Layers – to extract spacial features\nPooling – to reduce spatial dimensions"
+  },
+  {
+    "objectID": "slides-08-02.html#cnns-layers-in-tensorflow",
+    "href": "slides-08-02.html#cnns-layers-in-tensorflow",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "CNNs layers in tensorflow",
+    "text": "CNNs layers in tensorflow\nConvolutional Layers, 1D:\n\ntf.keras.layers.Conv1D(filters=64, kernel_size=3, activation='relu')\n\nConvolutional Layers, 2D:\n\ntf.keras.layers.Conv2D(filters=64, kernel_size=(3, 3), activation='relu')\n\nConvolutional Layers, 3D:\n\ntf.keras.layers.Conv3D(filters=64, kernel_size=(3, 3, 3), activation='relu')"
+  },
+  {
+    "objectID": "slides-08-02.html#cnns-layers-in-tensorflow-1",
+    "href": "slides-08-02.html#cnns-layers-in-tensorflow-1",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "CNNs layers in tensorflow",
+    "text": "CNNs layers in tensorflow\nPooling (max):\n\ntf.keras.layers.MaxPooling2D()"
+  },
+  {
+    "objectID": "slides-08-02.html#case-study-flower-image-classification",
+    "href": "slides-08-02.html#case-study-flower-image-classification",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "Case Study – Flower image classification",
+    "text": "Case Study – Flower image classification\n\nDownload the images and set them up in a project folder\nCreate a new python script file\nImport tensorflow\n\n\nimport tensorflow as tf"
+  },
+  {
+    "objectID": "slides-08-02.html#reading-images-in",
+    "href": "slides-08-02.html#reading-images-in",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "Reading images in",
+    "text": "Reading images in\nKeras has a handy image_dataset_from_directory() method. We have to speficy batch size, image height and width (the method will resize all images for us):\n\nimg_height = 180\nimg_width = 180\n\ntrain_ds = tf.keras.utils.image_dataset_from_directory(\n      \"flower_photos\",\n      validation_split=0.2,\n      subset=\"training\",\n      seed=123,\n      image_size=(img_height, img_width),\n      batch_size=32\n  )\n\nWe can get the class names from the data:\n\nclass_names = train_ds.class_names\nprint(class_names)"
+  },
+  {
+    "objectID": "slides-08-02.html#model-creation",
+    "href": "slides-08-02.html#model-creation",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "Model creation",
+    "text": "Model creation\nLet’s rescale the pixel values, and include Conv2D and tf.keras.layers.MaxPooling2D layers to process the 2D data. Then we include a Dropout layer. Flatten and Dense are layers we have used for the digits problem. Then our final Dense has 5 nodes because we have 5 classes.\n\nmodel = tf.keras.Sequential([\n        tf.keras.layers.Rescaling(1./255, input_shape=(img_height, img_width, 3)),\n        tf.keras.layers.Conv2D(16, 3, padding='same', activation='relu'),\n        tf.keras.layers.MaxPooling2D(),\n        tf.keras.layers.Dropout(0.2),\n        tf.keras.layers.Flatten(),\n        tf.keras.layers.Dense(128, activation='relu'),\n        tf.keras.layers.Dense(num_classes)\n    ])"
+  },
+  {
+    "objectID": "slides-08-02.html#compile-model",
+    "href": "slides-08-02.html#compile-model",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "Compile model",
+    "text": "Compile model\nWe will compile our model like you did before:\n\nmodel.compile(optimizer='adam',\n              loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),\n              metrics=['accuracy'])\n\nAnd then fit our training data:\n\nmodel.fit(train_ds, epochs=10)"
+  },
+  {
+    "objectID": "slides-08-02.html#test-the-model",
+    "href": "slides-08-02.html#test-the-model",
+    "title": "ANNs, CNNs, RNNs",
+    "section": "Test the model",
+    "text": "Test the model\nHere’s the code to test the model with a new image:\n\nimg = tf.keras.utils.load_img(\"test_flowers/tulips.jpeg\", \n                               target_size=(img_height, img_width))\n\nimg_array = tf.keras.utils.img_to_array(img)\nimg_array = tf.expand_dims(img_array, 0) # create a batch\n\npredictions = model.predict(img_array)\nscore = tf.nn.softmax(predictions[0])\n\nprint(\n  \"This image most likely belongs to {} with a {:.2f} percent confidence.\"\n  .format(class_names[np.argmax(score)], 100 * np.max(score))\n  )"
   }
 ]
