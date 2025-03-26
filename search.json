@@ -1992,7 +1992,7 @@
     "href": "slides-08-01.html#neural-network-keras-2",
     "title": "Introduction to Neural Networks",
     "section": "Neural Network – keras",
-    "text": "Neural Network – keras\nWe will fit the model with the training data with 10 epochs.\n\nmodel.fit(x_train, y_train, epochs=10)\n\nWe evaluate the model with the test data (verbose: 0 – nothing, 1 – progress bar, 2 – one line per epoch)\n\nmodel.evaluate(x_test,  y_test, verbose=2)"
+    "text": "Neural Network – keras\nWe will fit the model with the training data with 10 epochs.\n\nmodel.fit(x_train, y_train, epochs=10)\n\nWe evaluate the model with the test data:\n\nmodel.evaluate(x_test,  y_test)"
   },
   {
     "objectID": "slides-08-01.html#neural-network-keras-3",
