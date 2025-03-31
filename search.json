@@ -2244,7 +2244,7 @@
     "href": "slides-09-02.html#word-embeddings",
     "title": "LLMs",
     "section": "Word Embeddings",
-    "text": "Word Embeddings\n\nLLMs make use of word embeddings, which are numerical vectors used to represent meaning of words\nWords with similar meanings are located closer together in the vector space"
+    "text": "Word Embeddings\n\nLLMs make use of word embeddings, which are numerical vectors used to represent meaning of words\nWords with similar meanings are located closer together in the vector space\n\nInteractive word embedding demonstration"
   },
   {
     "objectID": "slides-09-02.html#using-llms-in-data-science-1",
@@ -2252,5 +2252,12 @@
     "title": "LLMs",
     "section": "Using LLMs in data science",
     "text": "Using LLMs in data science\nThe best way to make use of a LLMs is through their APIs\nDemonstration: anthropic python module\ntemperature"
+  },
+  {
+    "objectID": "slides-09-02.html#challenge",
+    "href": "slides-09-02.html#challenge",
+    "title": "LLMs",
+    "section": "Challenge",
+    "text": "Challenge\nWe want to determine what differentiates a muffin from a cupcake\n\nHow would you set up your text file?\nWhat prompt would you write?"
   }
 ]
