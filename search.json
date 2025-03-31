@@ -2132,7 +2132,7 @@
     "href": "project-04.html",
     "title": "Project 4",
     "section": "",
-    "text": "In this project, you will modeling and predicting dog breed data.\n\nDownload the data files and set up your coding environment\nRun a CNN using tensorflow on the images found in the dogs folder\nThe test images are found in the test_dogs folder (the code to use the test images in found below, this to your modeling.py file and call it with your model in your main() function)\nSubmit your modeling.py file to Gradescope\nGradescope is going to call your main() function and check the standard output\n\nLink to Gradescope assignment\nTest function (include this in your modeling.py file, call it in your main() function):\n\ndef test_model(img_height, img_width, class_names, model):\n  print(\"********* Predicting dog breed for test images *********\")\n  for filename in os.listdir(\"test_dogs\"):\n    if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp', '.tiff')):\n      print(filename)\n      img = tf.keras.utils.load_img(\"test_dogs/\" + filename, \n      target_size=(img_height, img_width))\n      \n      img_array = tf.keras.utils.img_to_array(img)\n      img_array = tf.expand_dims(img_array, 0) # create a batch\n      \n      predictions = model.predict(img_array)\n      score = tf.nn.softmax(predictions[0])\n      \n      print(\n        \"This image most likely belongs to {} with a {:.2f} percent confidence.\"\n        .format(class_names[np.argmax(score)], 100 * np.max(score))\n        )"
+    "text": "In this project, you will modeling and predicting dog breed data.\n\nDownload the data files and set up your coding environment\nRun a CNN using tensorflow on the images found in the dogs folder\nSave your model at the end of your code using model.save(\"model.keras\")\nThe test images are found in the test_dogs file folder, test these images with the model.keras\nThe code to use the test images with is found below\nSubmit your model.keras file to Gradescope\nGradescope is going to load your model.keras file\n\nLink to Gradescope assignment\nTest function:\n\nimport os\nimport numpy as np\nimport tensorflow as tf \n\n\ndef test_model(img_height, img_width, class_names, model):\n    print(\"********* Predicting dog breed for test images *********\")\n    for filename in os.listdir(\"test_dogs\"):\n        if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp', '.tiff')):\n                print(filename)\n                img = tf.keras.utils.load_img(\"test_dogs/\" + filename, \n                                        target_size=(img_height, img_width))\n\n                img_array = tf.keras.utils.img_to_array(img)\n                img_array = tf.expand_dims(img_array, 0) # create a batch\n\n                predictions = model.predict(img_array)\n                score = tf.nn.softmax(predictions[0])\n\n                print(\n                \"This image most likely belongs to {} with a {:.2f} percent confidence.\"\n                .format(class_names[np.argmax(score)], 100 * np.max(score))\n                )\n\ndef main():\n    img_height = 180\n    img_width = 180\n    class_names = ['Basset Hound', 'Boxer', 'Chihuahua', 'English Cocker Spaniel', 'Great Pyrenees', 'Japanese Chin', 'Shiba Inu', 'Yorkshire Terrier']\n\n    model = tf.keras.models.load_model('model.keras')\n\n    # test the model\n    test_model(img_height, img_width, class_names, model)\n\nmain()"
   },
   {
     "objectID": "slides-09-01.html#recurrent-neural-networks-rnns",
@@ -2259,5 +2259,12 @@
     "title": "LLMs",
     "section": "Challenge",
     "text": "Challenge\nWe want to determine what differentiates a muffin from a cupcake\n\nHow would you set up your text file?\nWhat prompt would you write?"
+  },
+  {
+    "objectID": "modules.html#assignment-3",
+    "href": "modules.html#assignment-3",
+    "title": "Modules",
+    "section": "Assignment",
+    "text": "Assignment\n\nProject 04 – due Monday, April 4, 11:59pm"
   }
 ]
