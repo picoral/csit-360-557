@@ -2230,7 +2230,7 @@
     "href": "modules.html#slides-8",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nRNNs\nLLMs"
+    "text": "Slides\n\nRNNs\nLLMs\nNLP"
   },
   {
     "objectID": "slides-08-02.html",
@@ -2266,5 +2266,320 @@
     "title": "Modules",
     "section": "Assignment",
     "text": "Assignment\n\nProject 04 – due Monday, April 4, 11:59pm"
+  },
+  {
+    "objectID": "slides-09-03.html#reinforcement-learning",
+    "href": "slides-09-03.html#reinforcement-learning",
+    "title": "Reinforcement Learning",
+    "section": "Reinforcement learning",
+    "text": "Reinforcement learning\n\nMachine learning with an agent that learns to make decisions by taking actions in an environment to maximize some notion of cumulative reward\nThe agent follows a policy (strategy) to decide which actions to take in different states\nThrough trial and error, it learns which actions yield the highest rewards in specific situations *Reinforcement learning is applied in domains including robotics, recommendation systems, and autonomous vehicles"
+  },
+  {
+    "objectID": "slides-09-03.html#reinforcement-learning-1",
+    "href": "slides-09-03.html#reinforcement-learning-1",
+    "title": "Reinforcement Learning",
+    "section": "Reinforcement learning",
+    "text": "Reinforcement learning\n\nAgent: The learner or decision-maker\nEnvironment: The world with which the agent interacts\nState: The current situation of the agent in the environment\nAction: What the agent can do in each state\nReward: Feedback from the environment indicating the desirability of an action"
+  },
+  {
+    "objectID": "slides-09-03.html#rf-with-gymnasium",
+    "href": "slides-09-03.html#rf-with-gymnasium",
+    "title": "Reinforcement Learning",
+    "section": "RF with gymnasium",
+    "text": "RF with gymnasium\nYou need c++ installed in your computer – for macs, install Xcode; for windows machines use VS code\nhttps://gymnasium.farama.org/\n/path/to/bin/python3 -m pip install gymnasium  \n/path/to/bin/python3 -m pip install \"gymnasium[box2d]\"   \n/path/to/bin/python3 -m pip install swig   \ncart-pole problem"
+  },
+  {
+    "objectID": "slides-09-03.html#reinforcement-learning-2",
+    "href": "slides-09-03.html#reinforcement-learning-2",
+    "title": "Reinforcement Learning",
+    "section": "Reinforcement learning",
+    "text": "Reinforcement learning\n\nhttps://gymnasium.farama.org/introduction/basic_usage/"
+  },
+  {
+    "objectID": "slides-09-03.html#cart-pole-balancing-problem",
+    "href": "slides-09-03.html#cart-pole-balancing-problem",
+    "title": "Reinforcement Learning",
+    "section": "Cart-pole balancing problem",
+    "text": "Cart-pole balancing problem\n\nYour’re trying to keep a pole standing up straight. The pole is connected to a cart with a joint that can move freely (no motor). The cart slides along a smooth track with no friction. At the start, the pole is standing straight up. The goal is to stop it from falling over by making the cart go left and right, faster or slower."
+  },
+  {
+    "objectID": "slides-09-03.html#cart-pole-balancing-problem-1",
+    "href": "slides-09-03.html#cart-pole-balancing-problem-1",
+    "title": "Reinforcement Learning",
+    "section": "Cart-pole balancing problem",
+    "text": "Cart-pole balancing problem\n\nObjective: keep a pole upright on a cart by applying forces to the cart\nEnvironment: The pole is attached to a cart that moves along a frictionless track\nState: the cart’s position and velocity, and the pole’s angle and angular velocity\nActions: move the cart either left or right\nReward: pole remains upright\n\nThe episode ends when the pole falls too far or the cart moves too far from the center"
+  },
+  {
+    "objectID": "slides-09-03.html#reinforcement-learning-approaches",
+    "href": "slides-09-03.html#reinforcement-learning-approaches",
+    "title": "Reinforcement Learning",
+    "section": "Reinforcement Learning approaches",
+    "text": "Reinforcement Learning approaches\nWe want to find the policy that can maximize the reward –find the optimal policy for each possible state\n\nQ-Learning: the agent learns a Q-table, which maps states and actions to their expected rewards\nDeep Q-Networks (DQN): a neural network is used to approximate the Q-function"
+  },
+  {
+    "objectID": "slides-09-03.html#natural-language-processing-nlp",
+    "href": "slides-09-03.html#natural-language-processing-nlp",
+    "title": "Natural Language Processing (NLP)",
+    "section": "Natural Language Processing (NLP)",
+    "text": "Natural Language Processing (NLP)\n\nIntersection of computer science, machine learning, and linguistics\nFocus on computational understanding, interpretation, and generation of human language"
+  },
+  {
+    "objectID": "slides-09-03.html#natural-language-processing-nlp-1",
+    "href": "slides-09-03.html#natural-language-processing-nlp-1",
+    "title": "Natural Language Processing (NLP)",
+    "section": "Natural Language Processing (NLP)",
+    "text": "Natural Language Processing (NLP)\nKey aspects of NLP include:\n\nText analysis and understanding\nLanguage generation\nMachine translation\nSentiment analysis\nSpeech recognition\nQuestion answering systems\nText summarization\nNamed entity recognition"
+  },
+  {
+    "objectID": "slides-09-03.html#installing-spacy",
+    "href": "slides-09-03.html#installing-spacy",
+    "title": "Natural Language Processing (NLP)",
+    "section": "Installing spacy",
+    "text": "Installing spacy\n/path/to/bin/python3 -m pip install -U pip setuptools wheel\n/path/to/bin/python3 -m pip install -U spacy\n/path/to/bin/python3 -m spacy download en_core_web_sm"
+  },
+  {
+    "objectID": "slides-09-03.html#example-code-for-spacy",
+    "href": "slides-09-03.html#example-code-for-spacy",
+    "title": "Natural Language Processing (NLP)",
+    "section": "Example code for spacy",
+    "text": "Example code for spacy\n\nimport spacy\n\ndef main():\n    nlp = spacy.load(\"en_core_web_sm\")\n    text = \"This is a test sentence so that we can see the parts of speech and dependencies\"\n    doc = nlp(text)\n\n    for token in doc:\n        print(token.text, token.pos_, token.dep_)\n\nmain()"
+  },
+  {
+    "objectID": "slides-09-03.html#challenge",
+    "href": "slides-09-03.html#challenge",
+    "title": "Natural Language Processing (NLP)",
+    "section": "Challenge",
+    "text": "Challenge\nWhat is the most frequent noun in a movie script of your choice?\nChoose a movie script to work on, tag the script with part of speech labels, and count the nouns. Which is the most frequent noun in the script you chose?\nHow do you visualize your results?"
+  },
+  {
+    "objectID": "slides-09-03-reinforcement.html",
+    "href": "slides-09-03-reinforcement.html",
+    "title": "Reinforcement Learning",
+    "section": "",
+    "text": "Machine learning with an agent that learns to make decisions by taking actions in an environment to maximize some notion of cumulative reward\nThe agent follows a policy (strategy) to decide which actions to take in different states\nThrough trial and error, it learns which actions yield the highest rewards in specific situations *Reinforcement learning is applied in domains including robotics, recommendation systems, and autonomous vehicles"
+  },
+  {
+    "objectID": "slides-09-03-reinforcement.html#reinforcement-learning",
+    "href": "slides-09-03-reinforcement.html#reinforcement-learning",
+    "title": "Reinforcement Learning",
+    "section": "",
+    "text": "Machine learning with an agent that learns to make decisions by taking actions in an environment to maximize some notion of cumulative reward\nThe agent follows a policy (strategy) to decide which actions to take in different states\nThrough trial and error, it learns which actions yield the highest rewards in specific situations *Reinforcement learning is applied in domains including robotics, recommendation systems, and autonomous vehicles"
+  },
+  {
+    "objectID": "slides-09-03-reinforcement.html#reinforcement-learning-1",
+    "href": "slides-09-03-reinforcement.html#reinforcement-learning-1",
+    "title": "Reinforcement Learning",
+    "section": "Reinforcement learning",
+    "text": "Reinforcement learning\n\nAgent: The learner or decision-maker\nEnvironment: The world with which the agent interacts\nState: The current situation of the agent in the environment\nAction: What the agent can do in each state\nReward: Feedback from the environment indicating the desirability of an action"
+  },
+  {
+    "objectID": "slides-09-03-reinforcement.html#reinforcement-learning-2",
+    "href": "slides-09-03-reinforcement.html#reinforcement-learning-2",
+    "title": "Reinforcement Learning",
+    "section": "Reinforcement learning",
+    "text": "Reinforcement learning\n\nhttps://gymnasium.farama.org/introduction/basic_usage/"
+  },
+  {
+    "objectID": "slides-09-03-reinforcement.html#cart-pole-balancing-problem",
+    "href": "slides-09-03-reinforcement.html#cart-pole-balancing-problem",
+    "title": "Reinforcement Learning",
+    "section": "Cart-pole balancing problem",
+    "text": "Cart-pole balancing problem\n\nYour’re trying to keep a pole standing up straight. The pole is connected to a cart with a joint that can move freely (no motor). The cart slides along a smooth track with no friction. At the start, the pole is standing straight up. The goal is to stop it from falling over by making the cart go left and right, faster or slower."
+  },
+  {
+    "objectID": "slides-09-03-reinforcement.html#cart-pole-balancing-problem-1",
+    "href": "slides-09-03-reinforcement.html#cart-pole-balancing-problem-1",
+    "title": "Reinforcement Learning",
+    "section": "Cart-pole balancing problem",
+    "text": "Cart-pole balancing problem\n\nObjective: keep a pole upright on a cart by applying forces to the cart\nEnvironment: The pole is attached to a cart that moves along a frictionless track\nState: the cart’s position and velocity, and the pole’s angle and angular velocity\nActions: move the cart either left or right\nReward: pole remains upright\n\nThe episode ends when the pole falls too far or the cart moves too far from the center"
+  },
+  {
+    "objectID": "slides-09-03-reinforcement.html#reinforcement-learning-approaches",
+    "href": "slides-09-03-reinforcement.html#reinforcement-learning-approaches",
+    "title": "Reinforcement Learning",
+    "section": "Reinforcement Learning approaches",
+    "text": "Reinforcement Learning approaches\nWe want to find the policy that can maximize the reward –find the optimal policy for each possible state\n\nQ-Learning: the agent learns a Q-table, which maps states and actions to their expected rewards\nDeep Q-Networks (DQN): a neural network is used to approximate the Q-function"
+  },
+  {
+    "objectID": "slides-09-03-reinforcement.html#rf-with-gymnasium",
+    "href": "slides-09-03-reinforcement.html#rf-with-gymnasium",
+    "title": "Reinforcement Learning",
+    "section": "RF with gymnasium",
+    "text": "RF with gymnasium\nYou need c++ installed in your computer – for macs, install Xcode; for windows machines use VS code\nhttps://gymnasium.farama.org/\n/path/to/bin/python3 -m pip install gymnasium  \n/path/to/bin/python3 -m pip install \"gymnasium[box2d]\"   \n/path/to/bin/python3 -m pip install swig   \ncart-pole problem"
+  },
+  {
+    "objectID": "slides-10-01.html#why-is-data-visualization-important",
+    "href": "slides-10-01.html#why-is-data-visualization-important",
+    "title": "Principles of Data Visualization",
+    "section": "Why is data visualization important?",
+    "text": "Why is data visualization important?\nAnscombe’s quartet highlights the importance of data visualization and warns against relying solely on summary statistics for data analysis.\n\nIn a Python notebook (or not), read the data in.\nWhat’s the mean and sd for x and y for each group?\nPlot a scatter plot of x and y for each group"
+  },
+  {
+    "objectID": "slides-10-01.html#anscombes-quartet",
+    "href": "slides-10-01.html#anscombes-quartet",
+    "title": "Principles of Data Visualization",
+    "section": "Anscombe’s quartet",
+    "text": "Anscombe’s quartet\n\nimport pandas as pd\nimport seaborn as sns\nanscombe = pd.read_csv(\"data/anscombe.csv\")\nanscombe\n\n   experiment  group   x      y\n0           A      1  10   8.04\n1           A      2  10   9.14\n2           A      3  10   7.46\n3           A      4   8   6.58\n4           B      1   8   6.95\n5           B      2   8   8.14\n6           B      3   8   6.77\n7           B      4   8   5.76\n8           C      1  13   7.58\n9           C      2  13   8.74\n10          C      3  13  12.74\n11          C      4   8   7.71\n12          D      1   9   8.81\n13          D      2   9   8.77\n14          D      3   9   7.11\n15          D      4   8   8.84\n16          E      1  11   8.33\n17          E      2  11   9.26\n18          E      3  11   7.81\n19          E      4   8   8.47\n20          F      1  14   9.96\n21          F      2  14   8.10\n22          F      3  14   8.84\n23          F      4   8   7.04\n24          G      1   6   7.24\n25          G      2   6   6.13\n26          G      3   6   6.08\n27          G      4   8   5.25\n28          H      1   4   4.26\n29          H      2   4   3.10\n30          H      3   4   5.39\n31          H      4  19  12.50\n32          I      1  12  10.84\n33          I      2  12   9.13\n34          I      3  12   8.15\n35          I      4   8   5.56\n36          J      1   7   4.82\n37          J      2   7   7.26\n38          J      3   7   6.42\n39          J      4   8   7.91\n40          K      1   5   5.68\n41          K      2   5   4.74\n42          K      3   5   5.73\n43          K      4   8   6.89"
+  },
+  {
+    "objectID": "slides-10-01.html#mean-and-sd-per-group",
+    "href": "slides-10-01.html#mean-and-sd-per-group",
+    "title": "Principles of Data Visualization",
+    "section": "Mean and sd per group",
+    "text": "Mean and sd per group\n\nanscombe.groupby('group').agg(\n    mean_x=('x', 'mean'),\n    sd_x=('x', 'std'),\n    mean_y=('y', 'mean'),\n    sd_y=('y', 'std')\n).reset_index()\n\n   group  mean_x      sd_x    mean_y      sd_y\n0      1     9.0  3.316625  7.500909  2.031568\n1      2     9.0  3.316625  7.500909  2.031657\n2      3     9.0  3.316625  7.500000  2.030424\n3      4     9.0  3.316625  7.500909  2.030579"
+  },
+  {
+    "objectID": "slides-10-01.html#plots-per-group",
+    "href": "slides-10-01.html#plots-per-group",
+    "title": "Principles of Data Visualization",
+    "section": "Plots per group",
+    "text": "Plots per group\n\nsns.FacetGrid(\n    anscombe, col=\"group\", col_wrap=2, height=4\n    ).map(sns.scatterplot, \"x\", \"y\", s=100)"
+  },
+  {
+    "objectID": "slides-10-01.html#edges-contrasts-and-colors",
+    "href": "slides-10-01.html#edges-contrasts-and-colors",
+    "title": "Principles of Data Visualization",
+    "section": "Edges, contrasts, and colors",
+    "text": "Edges, contrasts, and colors\n\nOur visual system (i.e., all the visual processing models from our eyes to our brain) re-constructs what we are looking at\nOur visual system uses relative differences instead of absolute values for brightness and colors\nThis relativization of brightness is demonstrated in the image in the next slide, in which we perceive darker blobs where grid lines meet at the edge of our visual field"
+  },
+  {
+    "objectID": "slides-10-01.html#herman-grid-effect",
+    "href": "slides-10-01.html#herman-grid-effect",
+    "title": "Principles of Data Visualization",
+    "section": "Herman grid effect",
+    "text": "Herman grid effect"
+  },
+  {
+    "objectID": "slides-10-01.html#herman-grid-effect-1",
+    "href": "slides-10-01.html#herman-grid-effect-1",
+    "title": "Principles of Data Visualization",
+    "section": "Herman grid effect",
+    "text": "Herman grid effect\n\nAt the very center of the visual field, we see the lines as they are (just white).\nThe center is where our vision is really good\nOur ability to distinguish details decreases at the edges of our visual field (Ware, 2008)\nVisual illusions (like the image in the previous slide) are side effects of our visual system processing."
+  },
+  {
+    "objectID": "slides-10-01.html#contrast",
+    "href": "slides-10-01.html#contrast",
+    "title": "Principles of Data Visualization",
+    "section": "Contrast",
+    "text": "Contrast\n\nAnother side effect of our visual system processing is perceiving the same shade as lighter or darker depending on the background behind shade\nIn the image on the next slide, the smaller squares are all the exact shade of gray\nWe perceive the gray to be lighter in darker backgrounds and darker in lighter backgrounds"
+  },
+  {
+    "objectID": "slides-10-01.html#contrast-1",
+    "href": "slides-10-01.html#contrast-1",
+    "title": "Principles of Data Visualization",
+    "section": "Contrast",
+    "text": "Contrast"
+  },
+  {
+    "objectID": "slides-10-01.html#color",
+    "href": "slides-10-01.html#color",
+    "title": "Principles of Data Visualization",
+    "section": "Color",
+    "text": "Color\nLet’s start with some definitions regarding color. “Color” refers to three components:\n\nHue refers to the dominant wavelength of the color (e.g., red, blue, purple)\nChroma refers to how intense of vivid the color is\nLuminance refers how bright a color is"
+  },
+  {
+    "objectID": "slides-10-01.html#color-1",
+    "href": "slides-10-01.html#color-1",
+    "title": "Principles of Data Visualization",
+    "section": "Color",
+    "text": "Color\n\nColor schemes need to represent accurately differences in our data.\nFor example, changes from one level to next need to be perceive as having the same magnitude\nWe should be careful when picking colors for our variables in our data visualizations"
+  },
+  {
+    "objectID": "slides-10-01.html#color-2",
+    "href": "slides-10-01.html#color-2",
+    "title": "Principles of Data Visualization",
+    "section": "Color",
+    "text": "Color\n\nGradients should be used as sequential scales from low to high to represent numeric continuous/ordered variables (e.g., population size). Light colors should represent low values, and dark colors high values."
+  },
+  {
+    "objectID": "slides-10-01.html#color-3",
+    "href": "slides-10-01.html#color-3",
+    "title": "Principles of Data Visualization",
+    "section": "Color",
+    "text": "Color\n\nDiverging scales should be used where there is a neutral midpoint and then there is variance in ether direction from that neutral point (e.g., temperatures can be positive and negative)."
+  },
+  {
+    "objectID": "slides-10-01.html#color-4",
+    "href": "slides-10-01.html#color-4",
+    "title": "Principles of Data Visualization",
+    "section": "Color",
+    "text": "Color\n\nQualitative palettes where each color has the same valence (i.e., no color dominates the other) should be used for unordered categorical variables (e.g., political parties, countries). Different colors in the palette should not imply differences in magnitude."
+  },
+  {
+    "objectID": "slides-10-01.html#color-5",
+    "href": "slides-10-01.html#color-5",
+    "title": "Principles of Data Visualization",
+    "section": "Color",
+    "text": "Color\n\nWe also need to take into account people who are color-blind, and how they perceive colors"
+  },
+  {
+    "objectID": "slides-10-01.html#shape",
+    "href": "slides-10-01.html#shape",
+    "title": "Principles of Data Visualization",
+    "section": "Shape",
+    "text": "Shape\n\nWe can also use shape as a channel to encode information\nThe color channel, however, is more salient, and shape can be used as a secondary channel."
+  },
+  {
+    "objectID": "slides-10-01.html#visual-search-and-pop-out-effect",
+    "href": "slides-10-01.html#visual-search-and-pop-out-effect",
+    "title": "Principles of Data Visualization",
+    "section": "Visual Search and Pop-out Effect",
+    "text": "Visual Search and Pop-out Effect\nTry to find the type B data point in the three plots in the next slides"
+  },
+  {
+    "objectID": "slides-10-01.html#visual-search-and-pop-out-effect-1",
+    "href": "slides-10-01.html#visual-search-and-pop-out-effect-1",
+    "title": "Principles of Data Visualization",
+    "section": "Visual Search and Pop-out Effect",
+    "text": "Visual Search and Pop-out Effect\nTry to find the type B"
+  },
+  {
+    "objectID": "slides-10-01.html#visual-search-and-pop-out-effect-2",
+    "href": "slides-10-01.html#visual-search-and-pop-out-effect-2",
+    "title": "Principles of Data Visualization",
+    "section": "Visual Search and Pop-out Effect",
+    "text": "Visual Search and Pop-out Effect\nTry to find the type B"
+  },
+  {
+    "objectID": "slides-10-01.html#visual-search-and-pop-out-effect-3",
+    "href": "slides-10-01.html#visual-search-and-pop-out-effect-3",
+    "title": "Principles of Data Visualization",
+    "section": "Visual Search and Pop-out Effect",
+    "text": "Visual Search and Pop-out Effect\nTry to find the type B"
+  },
+  {
+    "objectID": "slides-10-01.html#color-and-shape",
+    "href": "slides-10-01.html#color-and-shape",
+    "title": "Principles of Data Visualization",
+    "section": "Color and shape",
+    "text": "Color and shape\n\nThe type B data point should have been easier to find in the first and last plots, and harder in the middle plot.\nColor is a channel that is easier to process than shape\nCombining both shape and color is at times a good strategy."
+  },
+  {
+    "objectID": "slides-10-01.html#color-and-shape-1",
+    "href": "slides-10-01.html#color-and-shape-1",
+    "title": "Principles of Data Visualization",
+    "section": "Color and shape",
+    "text": "Color and shape\n\nEncoding multiple channels in the same visualization can overtax the viewer when the multiple channels are not highlighting some structure in the data\n\nsee the two plots on the next slides"
+  },
+  {
+    "objectID": "slides-10-01.html#color-and-shape-overtaxing",
+    "href": "slides-10-01.html#color-and-shape-overtaxing",
+    "title": "Principles of Data Visualization",
+    "section": "Color and shape – overtaxing",
+    "text": "Color and shape – overtaxing"
+  },
+  {
+    "objectID": "slides-10-01.html#color-and-shape-overtaxing-1",
+    "href": "slides-10-01.html#color-and-shape-overtaxing-1",
+    "title": "Principles of Data Visualization",
+    "section": "Color and shape – overtaxing",
+    "text": "Color and shape – overtaxing"
+  },
+  {
+    "objectID": "modules.html#slides-9",
+    "href": "modules.html#slides-9",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nPrinciples"
   }
 ]

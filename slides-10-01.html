@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>CSIT 360/557 Advanced Techniques in Data Science – Natural Language Processing (NLP)</title>
+  <title>CSIT 360/557 Advanced Techniques in Data Science – Principles of Data Visualization</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -185,69 +185,267 @@
       margin-right: 0; 
     }
   </style>
+  <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+  <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Natural Language Processing (NLP)</h1>
+  <h1 class="title">Principles of Data Visualization</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="natural-language-processing-nlp" class="slide level2">
-<h2>Natural Language Processing (NLP)</h2>
-<ul>
-<li>Intersection of computer science, machine learning, and linguistics</li>
-<li>Focus on computational understanding, interpretation, and generation of human language</li>
-</ul>
+<section id="why-is-data-visualization-important" class="slide level2">
+<h2>Why is data visualization important?</h2>
+<p><a href="data/anscombe.csv">Anscombe’s quartet</a> highlights the importance of data visualization and warns against relying solely on summary statistics for data analysis.</p>
+<ol type="1">
+<li>In a Python notebook (or not), read the data in.</li>
+<li>What’s the mean and sd for x and y for each group?</li>
+<li>Plot a scatter plot of x and y for each group</li>
+</ol>
 </section>
-<section id="natural-language-processing-nlp-1" class="slide level2">
-<h2>Natural Language Processing (NLP)</h2>
-<p>Key aspects of NLP include:</p>
-<ul>
-<li>Text analysis and understanding</li>
-<li>Language generation</li>
-<li>Machine translation</li>
-<li>Sentiment analysis</li>
-<li>Speech recognition</li>
-<li>Question answering systems</li>
-<li>Text summarization</li>
-<li>Named entity recognition</li>
-</ul>
-</section>
-<section id="installing-spacy" class="slide level2">
-<h2>Installing spacy</h2>
-<pre><code>/path/to/bin/python3 -m pip install -U pip setuptools wheel
-/path/to/bin/python3 -m pip install -U spacy
-/path/to/bin/python3 -m spacy download en_core_web_sm</code></pre>
-</section>
-<section id="example-code-for-spacy" class="slide level2">
-<h2>Example code for spacy</h2>
-<div id="5d9b090d" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> spacy</span>
-<span id="cb2-2"><a></a></span>
-<span id="cb2-3"><a></a><span class="kw">def</span> main():</span>
-<span id="cb2-4"><a></a>    nlp <span class="op">=</span> spacy.load(<span class="st">"en_core_web_sm"</span>)</span>
-<span id="cb2-5"><a></a>    text <span class="op">=</span> <span class="st">"This is a test sentence so that we can see the parts of speech and dependencies"</span></span>
-<span id="cb2-6"><a></a>    doc <span class="op">=</span> nlp(text)</span>
-<span id="cb2-7"><a></a></span>
-<span id="cb2-8"><a></a>    <span class="cf">for</span> token <span class="kw">in</span> doc:</span>
-<span id="cb2-9"><a></a>        <span class="bu">print</span>(token.text, token.pos_, token.dep_)</span>
-<span id="cb2-10"><a></a></span>
-<span id="cb2-11"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="anscombes-quartet" class="slide level2">
+<h2>Anscombe’s quartet</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-3"><a></a>anscombe <span class="op">=</span> pd.read_csv(<span class="st">"data/anscombe.csv"</span>)</span>
+<span id="cb1-4"><a></a>anscombe</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   experiment  group   x      y
+0           A      1  10   8.04
+1           A      2  10   9.14
+2           A      3  10   7.46
+3           A      4   8   6.58
+4           B      1   8   6.95
+5           B      2   8   8.14
+6           B      3   8   6.77
+7           B      4   8   5.76
+8           C      1  13   7.58
+9           C      2  13   8.74
+10          C      3  13  12.74
+11          C      4   8   7.71
+12          D      1   9   8.81
+13          D      2   9   8.77
+14          D      3   9   7.11
+15          D      4   8   8.84
+16          E      1  11   8.33
+17          E      2  11   9.26
+18          E      3  11   7.81
+19          E      4   8   8.47
+20          F      1  14   9.96
+21          F      2  14   8.10
+22          F      3  14   8.84
+23          F      4   8   7.04
+24          G      1   6   7.24
+25          G      2   6   6.13
+26          G      3   6   6.08
+27          G      4   8   5.25
+28          H      1   4   4.26
+29          H      2   4   3.10
+30          H      3   4   5.39
+31          H      4  19  12.50
+32          I      1  12  10.84
+33          I      2  12   9.13
+34          I      3  12   8.15
+35          I      4   8   5.56
+36          J      1   7   4.82
+37          J      2   7   7.26
+38          J      3   7   6.42
+39          J      4   8   7.91
+40          K      1   5   5.68
+41          K      2   5   4.74
+42          K      3   5   5.73
+43          K      4   8   6.89</code></pre>
+</div>
 </div>
 </section>
-<section id="challenge" class="slide level2">
-<h2>Challenge</h2>
-<p>What is the most frequent noun in a movie script of your choice?</p>
-<p>Choose <a href="https://imsdb.com/">a movie script to work on</a>, tag the script with part of speech labels, and count the nouns. Which is the most frequent noun in the script you chose?</p>
-<p>How do you visualize your results?</p>
-
+<section id="mean-and-sd-per-group" class="slide level2">
+<h2>Mean and sd per group</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>anscombe.groupby(<span class="st">'group'</span>).agg(</span>
+<span id="cb3-2"><a></a>    mean_x<span class="op">=</span>(<span class="st">'x'</span>, <span class="st">'mean'</span>),</span>
+<span id="cb3-3"><a></a>    sd_x<span class="op">=</span>(<span class="st">'x'</span>, <span class="st">'std'</span>),</span>
+<span id="cb3-4"><a></a>    mean_y<span class="op">=</span>(<span class="st">'y'</span>, <span class="st">'mean'</span>),</span>
+<span id="cb3-5"><a></a>    sd_y<span class="op">=</span>(<span class="st">'y'</span>, <span class="st">'std'</span>)</span>
+<span id="cb3-6"><a></a>).reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   group  mean_x      sd_x    mean_y      sd_y
+0      1     9.0  3.316625  7.500909  2.031568
+1      2     9.0  3.316625  7.500909  2.031657
+2      3     9.0  3.316625  7.500000  2.030424
+3      4     9.0  3.316625  7.500909  2.030579</code></pre>
+</div>
+</div>
+</section>
+<section id="plots-per-group" class="slide level2">
+<h2>Plots per group</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>sns.FacetGrid(</span>
+<span id="cb5-2"><a></a>    anscombe, col<span class="op">=</span><span class="st">"group"</span>, col_wrap<span class="op">=</span><span class="dv">2</span>, height<span class="op">=</span><span class="dv">4</span></span>
+<span id="cb5-3"><a></a>    ).<span class="bu">map</span>(sns.scatterplot, <span class="st">"x"</span>, <span class="st">"y"</span>, s<span class="op">=</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-3-1.png" width="395"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-3-2.png" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section>
+<section id="visual-perception" class="title-slide slide level1 center">
+<h1>Visual Perception</h1>
 
 </section>
+<section id="edges-contrasts-and-colors" class="slide level2">
+<h2>Edges, contrasts, and colors</h2>
+<ul>
+<li>Our visual system (i.e., all the visual processing models from our eyes to our brain) re-constructs what we are looking at</li>
+<li>Our visual system uses relative differences instead of absolute values for brightness and colors</li>
+<li>This relativization of brightness is demonstrated in the image in the next slide, in which we perceive darker blobs where grid lines meet at the edge of our visual field</li>
+</ul>
+</section>
+<section id="herman-grid-effect" class="slide level2">
+<h2>Herman grid effect</h2>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-4-5.png" width="480" class="r-stretch"></section>
+<section id="herman-grid-effect-1" class="slide level2">
+<h2>Herman grid effect</h2>
+<ul>
+<li>At the very center of the visual field, we see the lines as they are (just white).</li>
+<li>The center is where our vision is really good</li>
+<li>Our ability to distinguish details decreases at the edges of our visual field (Ware, 2008)</li>
+<li>Visual illusions (like the image in the previous slide) are side effects of our visual system processing.</li>
+</ul>
+</section>
+<section id="contrast" class="slide level2">
+<h2>Contrast</h2>
+<ul>
+<li>Another side effect of our visual system processing is perceiving the same shade as lighter or darker depending on the background behind shade</li>
+<li>In the image on the next slide, the smaller squares are all the exact shade of gray</li>
+<li>We perceive the gray to be lighter in darker backgrounds and darker in lighter backgrounds</li>
+</ul>
+</section>
+<section id="contrast-1" class="slide level2">
+<h2>Contrast</h2>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-5-1.png" width="480" class="r-stretch"></section></section>
+<section>
+<section id="edges-colors-and-contrasts" class="title-slide slide level1 center">
+<h1>Edges, colors, and contrasts</h1>
+<ul>
+<li>Our visual system is not a physical light meter, what we perceive is different from actual values for colors and brightness</li>
+<li>Humans are better at seeing edge contrasts for monochrome images</li>
+<li>We are also better at distinguishing dark shades (compared to light shades)</li>
+</ul>
+</section>
+<section id="color" class="slide level2">
+<h2>Color</h2>
+<p>Let’s start with some definitions regarding color. “Color” refers to three components:</p>
+<ul>
+<li><em>Hue</em> refers to the dominant wavelength of the color (e.g., red, blue, purple)</li>
+<li><em>Chroma</em> refers to how intense of vivid the color is</li>
+<li><em>Luminance</em> refers how bright a color is</li>
+</ul>
+</section>
+<section id="color-1" class="slide level2">
+<h2>Color</h2>
+<ul>
+<li>Color schemes need to represent accurately differences in our data.</li>
+<li>For example, <strong>changes from one level to next need to be perceive as having the same magnitude</strong></li>
+<li>We should be careful when picking colors for our variables in our data visualizations</li>
+</ul>
+</section>
+<section id="color-2" class="slide level2">
+<h2>Color</h2>
+<ul>
+<li><strong>Gradients</strong> should be used as sequential scales from low to high to represent numeric continuous/ordered variables (e.g., population size). Light colors should represent low values, and dark colors high values.</li>
+</ul>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="color-3" class="slide level2">
+<h2>Color</h2>
+<ul>
+<li><strong>Diverging scales</strong> should be used where there is a neutral midpoint and then there is variance in ether direction from that neutral point (e.g., temperatures can be positive and negative).</li>
+</ul>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="color-4" class="slide level2">
+<h2>Color</h2>
+<ul>
+<li><strong>Qualitative palettes</strong> where each color has the same valence (i.e., no color dominates the other) should be used for unordered categorical variables (e.g., political parties, countries). Different colors in the palette should <strong>not</strong> imply differences in magnitude.</li>
+</ul>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="color-5" class="slide level2">
+<h2>Color</h2>
+<ul>
+<li>We also need to take into account people who are color-blind, and how they perceive colors</li>
+</ul>
+</section>
+<section id="shape" class="slide level2">
+<h2>Shape</h2>
+<ul>
+<li>We can also use <strong>shape</strong> as a channel to encode information</li>
+<li>The color channel, however, is more salient, and shape can be used as a secondary channel.</li>
+</ul>
+</section>
+<section id="visual-search-and-pop-out-effect" class="slide level2">
+<h2>Visual Search and Pop-out Effect</h2>
+<p>Try to find the <code>type B</code> data point in the three plots in the next slides</p>
+</section>
+<section id="visual-search-and-pop-out-effect-1" class="slide level2">
+<h2>Visual Search and Pop-out Effect</h2>
+<p>Try to find the <code>type B</code></p>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="visual-search-and-pop-out-effect-2" class="slide level2">
+<h2>Visual Search and Pop-out Effect</h2>
+<p>Try to find the <code>type B</code></p>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<section id="visual-search-and-pop-out-effect-3" class="slide level2">
+<h2>Visual Search and Pop-out Effect</h2>
+<p>Try to find the <code>type B</code></p>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
+<section id="color-and-shape" class="slide level2">
+<h2>Color and shape</h2>
+<ul>
+<li>The <code>type B</code> data point should have been easier to find in the first and last plots, and harder in the middle plot.</li>
+<li>Color is a channel that is easier to process than shape</li>
+<li>Combining both shape and color is at times a good strategy.</li>
+</ul>
+</section>
+<section id="color-and-shape-1" class="slide level2">
+<h2>Color and shape</h2>
+<ul>
+<li>Encoding multiple channels in the same visualization can overtax the viewer when the multiple channels are not highlighting some structure in the data</li>
+</ul>
+<p>see the two plots on the next slides</p>
+</section>
+<section id="color-and-shape-overtaxing" class="slide level2">
+<h2>Color and shape – overtaxing</h2>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
+<section id="color-and-shape-overtaxing-1" class="slide level2">
+<h2>Color and shape – overtaxing</h2>
+
+
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -463,6 +661,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
