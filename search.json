@@ -2580,6 +2580,195 @@
     "href": "modules.html#slides-9",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nPrinciples"
+    "text": "Slides\n\nPrinciples\nPolars + Altair"
+  },
+  {
+    "objectID": "slides-10-01.html#hsl",
+    "href": "slides-10-01.html#hsl",
+    "title": "Principles of Data Visualization",
+    "section": "HSL",
+    "text": "HSL"
+  },
+  {
+    "objectID": "slides-10-01.html#order-these-colors",
+    "href": "slides-10-01.html#order-these-colors",
+    "title": "Principles of Data Visualization",
+    "section": "Order these colors",
+    "text": "Order these colors"
+  },
+  {
+    "objectID": "slides-10-01.html#order-these-colors-1",
+    "href": "slides-10-01.html#order-these-colors-1",
+    "title": "Principles of Data Visualization",
+    "section": "Order these colors",
+    "text": "Order these colors"
+  },
+  {
+    "objectID": "slides-10-01.html#encoding-channels",
+    "href": "slides-10-01.html#encoding-channels",
+    "title": "Principles of Data Visualization",
+    "section": "Encoding channels",
+    "text": "Encoding channels\nOther encoding channels that are even less easily processed than shape are:\n\nsize\nelongation\nangle\nmovement"
+  },
+  {
+    "objectID": "slides-10-01.html#gestalt-principles",
+    "href": "slides-10-01.html#gestalt-principles",
+    "title": "Principles of Data Visualization",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\n\nhumans are extremely good at finding patterns, even when no pattern exists\nthe ability to perceive different shapes and lines as a unified image rather than just a bunch of elements that are not related to each other follow what we call Gestalt principles (Healy, 2018)."
+  },
+  {
+    "objectID": "slides-10-01.html#gestalt-principles-1",
+    "href": "slides-10-01.html#gestalt-principles-1",
+    "title": "Principles of Data Visualization",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\nVisual elements are perceived as being related to each other when these elements are close to each other – i.e., Proximity principle:"
+  },
+  {
+    "objectID": "slides-10-01.html#gestalt-principles-2",
+    "href": "slides-10-01.html#gestalt-principles-2",
+    "title": "Principles of Data Visualization",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\nVisual elements are perceived as being related to each other when these elements are similar in shape, color and size – i.e., Similarity principle:"
+  },
+  {
+    "objectID": "slides-10-01.html#gestalt-principles-3",
+    "href": "slides-10-01.html#gestalt-principles-3",
+    "title": "Principles of Data Visualization",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\nVisual elements are perceived as being related to each other when these elements are similar in shape, color and size – i.e., Similarity principle:"
+  },
+  {
+    "objectID": "slides-10-01.html#gestalt-principles-4",
+    "href": "slides-10-01.html#gestalt-principles-4",
+    "title": "Principles of Data Visualization",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\nVisual elements are perceived as being related to each other when these elements are visually tied – i.e., Connection principle:"
+  },
+  {
+    "objectID": "slides-10-01.html#gestalt-principles-5",
+    "href": "slides-10-01.html#gestalt-principles-5",
+    "title": "Principles of Data Visualization",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\nVisual elements are perceived as being related to each other when these elements are perceived as being part paths, lines, curves, even when some elements are “hidden” – i.e., Continuity principle:"
+  },
+  {
+    "objectID": "slides-10-01.html#gestalt-principles-6",
+    "href": "slides-10-01.html#gestalt-principles-6",
+    "title": "Principles of Data Visualization",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\n\nnot complete; we construct the incomplete form into familiar shapes – i.e., Closure principle"
+  },
+  {
+    "objectID": "slides-10-02.html#altair-package",
+    "href": "slides-10-02.html#altair-package",
+    "title": "Dashboards with Altair",
+    "section": "Altair package",
+    "text": "Altair package\n\nA declarative visualization library for Python\nBuilt on top of Vega-Lite grammar\n\n/path/to/bin/python3 -m pip install \"altair[all]\""
+  },
+  {
+    "objectID": "slides-10-02.html#data",
+    "href": "slides-10-02.html#data",
+    "title": "Dashboards with Altair",
+    "section": "Data",
+    "text": "Data\nWe will be working with Gapminder data\nMore specifically, we will be workign with car deaths per 100000 people and cars trucks and buses per 1000 persons\nWe also need geo country entity data to get country names"
+  },
+  {
+    "objectID": "slides-10-02.html#polars",
+    "href": "slides-10-02.html#polars",
+    "title": "Dashboards with Altair",
+    "section": "Polars",
+    "text": "Polars\nPolars API reference\n\nHigh-performance DataFrame library\nDesigned to provide fast and efficient data processing capabilities\n\n/path/to/bin/python3 -m pip install polars\n/path/to/bin/python3 -m pip install \"pyarrow&gt;=11.0.0\"\nOnce installed, you can import polars:\n\nimport polars as pl"
+  },
+  {
+    "objectID": "slides-10-02.html#reading-data-in",
+    "href": "slides-10-02.html#reading-data-in",
+    "title": "Dashboards with Altair",
+    "section": "Reading data in",
+    "text": "Reading data in\nWe use .read_csv() to read data in:\n\ncar_deaths = pl.read_csv(\"data/car_deaths.csv\")\nprint(car_deaths.schema)\n\nSchema([('geo', String), ('time', Int64), ('car_deaths_per_100000_people', Float64)])\n\n\nWe also need the two other data sets:\n\ncar_trucks_buses = pl.read_csv(\"data/cars_trucks_and_buses.csv\")\ncountries = pl.read_csv(\"data/entities-geo-country.csv\")"
+  },
+  {
+    "objectID": "slides-10-02.html#looking-at-data",
+    "href": "slides-10-02.html#looking-at-data",
+    "title": "Dashboards with Altair",
+    "section": "Looking at data",
+    "text": "Looking at data\n\nprint(car_deaths.head())\n\nshape: (5, 3)\n┌─────┬──────┬──────────────────────────────┐\n│ geo ┆ time ┆ car_deaths_per_100000_people │\n│ --- ┆ ---  ┆ ---                          │\n│ str ┆ i64  ┆ f64                          │\n╞═════╪══════╪══════════════════════════════╡\n│ alb ┆ 2006 ┆ 5.978                        │\n│ ant ┆ 1988 ┆ 3.299                        │\n│ ant ┆ 1989 ┆ 7.132                        │\n│ ant ┆ 1990 ┆ 5.636                        │\n│ ant ┆ 1991 ┆ 13.15                        │\n└─────┴──────┴──────────────────────────────┘"
+  },
+  {
+    "objectID": "slides-10-02.html#joining-dataframes",
+    "href": "slides-10-02.html#joining-dataframes",
+    "title": "Dashboards with Altair",
+    "section": "Joining dataframes",
+    "text": "Joining dataframes\nWe will use .join() to join the data frames\n\ndf = car_deaths.join(car_trucks_buses, on=[\"geo\", \"time\"])\ndf = df.join(countries, left_on = \"geo\", right_on = \"country\", how=\"left\")"
+  },
+  {
+    "objectID": "slides-10-02.html#check-results",
+    "href": "slides-10-02.html#check-results",
+    "title": "Dashboards with Altair",
+    "section": "Check results",
+    "text": "Check results\n\nprint(df.select([\"geo\", \"name\", \"car_deaths_per_100000_people\", \"cars_trucks_and_buses_per_1000_persons\"]).head())\n\nshape: (5, 4)\n┌─────┬───────────┬──────────────────────────────┬─────────────────────────────────┐\n│ geo ┆ name      ┆ car_deaths_per_100000_people ┆ cars_trucks_and_buses_per_1000… │\n│ --- ┆ ---       ┆ ---                          ┆ ---                             │\n│ str ┆ str       ┆ f64                          ┆ f64                             │\n╞═════╪═══════════╪══════════════════════════════╪═════════════════════════════════╡\n│ alb ┆ Albania   ┆ 5.978                        ┆ 97.32                           │\n│ are ┆ UAE       ┆ 31.85                        ┆ 313.1                           │\n│ arg ┆ Argentina ┆ 8.682                        ┆ 313.9                           │\n│ arm ┆ Armenia   ┆ 7.899                        ┆ 104.8                           │\n│ aus ┆ Australia ┆ 5.972                        ┆ 644.0                           │\n└─────┴───────────┴──────────────────────────────┴─────────────────────────────────┘"
+  },
+  {
+    "objectID": "slides-10-02.html#rename-columns",
+    "href": "slides-10-02.html#rename-columns",
+    "title": "Dashboards with Altair",
+    "section": "Rename columns",
+    "text": "Rename columns\n\ndf = df.rename({\"cars_trucks_and_buses_per_1000_persons\": \"vehicles_per_1000_persons\"})\nprint(df.select([\"geo\", \"name\", \"car_deaths_per_100000_people\", \"vehicles_per_1000_persons\"]).head())\n\nshape: (5, 4)\n┌─────┬───────────┬──────────────────────────────┬───────────────────────────┐\n│ geo ┆ name      ┆ car_deaths_per_100000_people ┆ vehicles_per_1000_persons │\n│ --- ┆ ---       ┆ ---                          ┆ ---                       │\n│ str ┆ str       ┆ f64                          ┆ f64                       │\n╞═════╪═══════════╪══════════════════════════════╪═══════════════════════════╡\n│ alb ┆ Albania   ┆ 5.978                        ┆ 97.32                     │\n│ are ┆ UAE       ┆ 31.85                        ┆ 313.1                     │\n│ arg ┆ Argentina ┆ 8.682                        ┆ 313.9                     │\n│ arm ┆ Armenia   ┆ 7.899                        ┆ 104.8                     │\n│ aus ┆ Australia ┆ 5.972                        ┆ 644.0                     │\n└─────┴───────────┴──────────────────────────────┴───────────────────────────┘"
+  },
+  {
+    "objectID": "slides-10-02.html#scatterplot",
+    "href": "slides-10-02.html#scatterplot",
+    "title": "Dashboards with Altair",
+    "section": "Scatterplot",
+    "text": "Scatterplot\nFirst we need to import altair:\n\nimport altair as alt\n\nThen we can plot a scatterplot (point chart):\n\nalt.Chart(df).mark_point().encode(\n    x = \"car_deaths_per_100000_people\",\n    y = \"vehicles_per_1000_persons\"\n)"
+  },
+  {
+    "objectID": "slides-10-02.html#add-categorical-variable",
+    "href": "slides-10-02.html#add-categorical-variable",
+    "title": "Dashboards with Altair",
+    "section": "Add categorical variable",
+    "text": "Add categorical variable\n\nalt.Chart(df).mark_point().encode(\n    x = \"car_deaths_per_100000_people\",\n    y = \"vehicles_per_1000_persons\",\n    color = \"income_groups\"\n)"
+  },
+  {
+    "objectID": "slides-10-02.html#add-interaction",
+    "href": "slides-10-02.html#add-interaction",
+    "title": "Dashboards with Altair",
+    "section": "Add interaction",
+    "text": "Add interaction\nA few steps are needed to add legend interaction – we define a selection object that binds to the legend:\n\nselection = alt.selection_point(fields=[\"income_groups\"], bind=\"legend\")"
+  },
+  {
+    "objectID": "slides-10-02.html#add-interaction-1",
+    "href": "slides-10-02.html#add-interaction-1",
+    "title": "Dashboards with Altair",
+    "section": "Add interaction",
+    "text": "Add interaction\nThen we change the color in the chart, and add our selection object as a param:\n\nalt.Chart(df).mark_point().encode(\n    x = \"car_deaths_per_100000_people\",\n    y = \"vehicles_per_1000_persons\",\n    color = alt.condition(selection, \"income_groups\", alt.value(\"lightgray\")),\n    tooltip = \"name\"\n).add_params(\n    selection\n).interactive()"
+  },
+  {
+    "objectID": "slides-10-02.html#add-interaction-2",
+    "href": "slides-10-02.html#add-interaction-2",
+    "title": "Dashboards with Altair",
+    "section": "Add interaction",
+    "text": "Add interaction"
+  },
+  {
+    "objectID": "slides-10-02.html#add-interaction-hovering",
+    "href": "slides-10-02.html#add-interaction-hovering",
+    "title": "Dashboards with Altair",
+    "section": "Add interaction – hovering",
+    "text": "Add interaction – hovering\nWe can map name of the country to tooltip:\n\nalt.Chart(df).mark_point().encode(\n    x = \"car_deaths_per_100000_people\",\n    y = \"vehicles_per_1000_persons\",\n    color = \"income_groups\",\n    tooltip = \"name\"\n)"
+  },
+  {
+    "objectID": "slides-10-02.html#add-interaction-zooming",
+    "href": "slides-10-02.html#add-interaction-zooming",
+    "title": "Dashboards with Altair",
+    "section": "Add interaction – zooming",
+    "text": "Add interaction – zooming\n\nalt.Chart(df).mark_point().encode(\n    x = \"car_deaths_per_100000_people\",\n    y = \"vehicles_per_1000_persons\",\n    color = \"income_groups\",\n    tooltip = \"name\"\n).interactive()"
+  },
+  {
+    "objectID": "slides-10-02.html#add-multiple-charts",
+    "href": "slides-10-02.html#add-multiple-charts",
+    "title": "Dashboards with Altair",
+    "section": "Add multiple charts",
+    "text": "Add multiple charts"
   }
 ]
