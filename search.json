@@ -2713,7 +2713,7 @@
     "href": "slides-10-02.html#rename-columns",
     "title": "Dashboards with Altair",
     "section": "Rename columns",
-    "text": "Rename columns\n\ndf = df.rename({\"cars_trucks_and_buses_per_1000_persons\": \"vehicles_per_1000_persons\"})\nprint(df.select([\"geo\", \"name\", \"car_deaths_per_100000_people\", \"vehicles_per_1000_persons\"]).head())\n\nshape: (5, 4)\n┌─────┬───────────┬──────────────────────────────┬───────────────────────────┐\n│ geo ┆ name      ┆ car_deaths_per_100000_people ┆ vehicles_per_1000_persons │\n│ --- ┆ ---       ┆ ---                          ┆ ---                       │\n│ str ┆ str       ┆ f64                          ┆ f64                       │\n╞═════╪═══════════╪══════════════════════════════╪═══════════════════════════╡\n│ alb ┆ Albania   ┆ 5.978                        ┆ 97.32                     │\n│ are ┆ UAE       ┆ 31.85                        ┆ 313.1                     │\n│ arg ┆ Argentina ┆ 8.682                        ┆ 313.9                     │\n│ arm ┆ Armenia   ┆ 7.899                        ┆ 104.8                     │\n│ aus ┆ Australia ┆ 5.972                        ┆ 644.0                     │\n└─────┴───────────┴──────────────────────────────┴───────────────────────────┘"
+    "text": "Rename columns\n\ndf = df.rename({\"cars_trucks_and_buses_per_1000_persons\": \"vehicles_per_1000_persons\"})\nprint(df.select([\"geo\",\"time\", \"name\", \"car_deaths_per_100000_people\", \"vehicles_per_1000_persons\"]).head())\n\nshape: (5, 5)\n┌─────┬──────┬───────────┬──────────────────────────────┬───────────────────────────┐\n│ geo ┆ time ┆ name      ┆ car_deaths_per_100000_people ┆ vehicles_per_1000_persons │\n│ --- ┆ ---  ┆ ---       ┆ ---                          ┆ ---                       │\n│ str ┆ i64  ┆ str       ┆ f64                          ┆ f64                       │\n╞═════╪══════╪═══════════╪══════════════════════════════╪═══════════════════════════╡\n│ alb ┆ 2006 ┆ Albania   ┆ 5.978                        ┆ 97.32                     │\n│ are ┆ 2007 ┆ UAE       ┆ 31.85                        ┆ 313.1                     │\n│ arg ┆ 2007 ┆ Argentina ┆ 8.682                        ┆ 313.9                     │\n│ arm ┆ 2007 ┆ Armenia   ┆ 7.899                        ┆ 104.8                     │\n│ aus ┆ 2003 ┆ Australia ┆ 5.972                        ┆ 644.0                     │\n└─────┴──────┴───────────┴──────────────────────────────┴───────────────────────────┘"
   },
   {
     "objectID": "slides-10-02.html#scatterplot",
@@ -2769,6 +2769,34 @@
     "href": "slides-10-02.html#add-multiple-charts",
     "title": "Dashboards with Altair",
     "section": "Add multiple charts",
-    "text": "Add multiple charts"
+    "text": "Add multiple charts\n\nchart = alt.Chart(df).mark_point().encode(\n    x = \"car_deaths_per_100000_people\",\n    y = \"vehicles_per_1000_persons\",\n    color = alt.condition(selection, \"income_groups\", alt.value(\"lightgray\")),\n    tooltip = \"name\"\n).add_params(\n    selection\n).interactive()\n\nchart | chart.encode(x = alt.X(\"time:T\"))"
+  },
+  {
+    "objectID": "slides-10-02.html#selection-for-multiple-charts",
+    "href": "slides-10-02.html#selection-for-multiple-charts",
+    "title": "Dashboards with Altair",
+    "section": "Selection for multiple charts",
+    "text": "Selection for multiple charts\n\nbrush = alt.selection_interval()\n\nchart = alt.Chart(df).mark_point().encode(\n    x = \"car_deaths_per_100000_people\",\n    y = \"vehicles_per_1000_persons\",\n    color=alt.condition(brush, \"income_groups\",alt.value(\"lightgray\")),\n    tooltip = \"name\"\n).add_params(\n    selection,\n    brush\n)\n\nchart & chart.encode(x = alt.X(\"time:T\"))"
+  },
+  {
+    "objectID": "slides-10-02.html#selection-for-multiple-charts-1",
+    "href": "slides-10-02.html#selection-for-multiple-charts-1",
+    "title": "Dashboards with Altair",
+    "section": "Selection for multiple charts",
+    "text": "Selection for multiple charts"
+  },
+  {
+    "objectID": "slides-10-02.html#add-bar-chart-for-selection",
+    "href": "slides-10-02.html#add-bar-chart-for-selection",
+    "title": "Dashboards with Altair",
+    "section": "Add bar chart for selection",
+    "text": "Add bar chart for selection\n\nbrush = alt.selection_interval()\n\nchart = alt.Chart(df).mark_point().encode(\n    x = \"car_deaths_per_100000_people\",\n    y = \"vehicles_per_1000_persons\",\n    color=alt.condition(brush, \"income_groups\",alt.value(\"lightgray\")),\n    tooltip = \"name\"\n).add_params(\n    selection,\n    brush\n)\n\nbars = alt.Chart(df).mark_bar().encode(\n    x='car_deaths_per_100000_people',\n    y='name',\n    color='name'\n).transform_filter(\n    brush\n)\n\nchart | chart.encode(x = alt.X(\"time:T\")) & bars"
+  },
+  {
+    "objectID": "slides-10-02.html#add-bar-chart-for-selection-1",
+    "href": "slides-10-02.html#add-bar-chart-for-selection-1",
+    "title": "Dashboards with Altair",
+    "section": "Add bar chart for selection",
+    "text": "Add bar chart for selection"
   }
 ]
