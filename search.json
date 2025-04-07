@@ -2671,7 +2671,7 @@
     "href": "slides-10-02.html#data",
     "title": "Dashboards with Altair",
     "section": "Data",
-    "text": "Data\nWe will be working with Gapminder data\nMore specifically, we will be workign with car deaths per 100000 people and cars trucks and buses per 1000 persons\nWe also need geo country entity data to get country names"
+    "text": "Data\nWe will be working with Gapminder data\nMore specifically, we will be working with car deaths per 100000 people and cars trucks and buses per 1000 persons\nWe also need geo country entity data to get country names"
   },
   {
     "objectID": "slides-10-02.html#polars",
@@ -2798,5 +2798,12 @@
     "title": "Dashboards with Altair",
     "section": "Add bar chart for selection",
     "text": "Add bar chart for selection"
+  },
+  {
+    "objectID": "slides-10-02.html#plotly",
+    "href": "slides-10-02.html#plotly",
+    "title": "Dashboards with Altair",
+    "section": "Plotly",
+    "text": "Plotly\nYou can also use plotly for dashboards"
   }
 ]
