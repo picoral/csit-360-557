@@ -2805,5 +2805,19 @@
     "title": "Dashboards with Altair",
     "section": "Plotly",
     "text": "Plotly\nYou can also use plotly for dashboards"
+  },
+  {
+    "objectID": "slides-10-02.html#add-filter-slider",
+    "href": "slides-10-02.html#add-filter-slider",
+    "title": "Dashboards with Altair",
+    "section": "Add filter slider",
+    "text": "Add filter slider\nWe first create need to create a user input (in this case a slider, or range) and then a variable for it.\n\nslider = alt.binding_range(min=0, max=35, step=0.05,\n                           name='car_deaths_per_100000_people:')\nfilter_var = alt.param(value=35, bind=slider)\n\nWe can then use the new filter_var to filter our data, we also need to make sure we add it as a param.\n\nalt.Chart(df).mark_point().encode(\n    x = \"car_deaths_per_100000_people\",\n    y = \"vehicles_per_1000_persons\",\n    color = alt.condition(selection, \"income_groups\", alt.value(\"lightgray\")),\n    tooltip = \"name\"\n).transform_filter(\n    alt.datum[\"car_deaths_per_100000_people\"] &lt;= filter_var\n).add_params(\n    selection,\n    filter_var\n).interactive()"
+  },
+  {
+    "objectID": "slides-10-02.html#add-filter-slider-1",
+    "href": "slides-10-02.html#add-filter-slider-1",
+    "title": "Dashboards with Altair",
+    "section": "Add filter slider",
+    "text": "Add filter slider"
   }
 ]
