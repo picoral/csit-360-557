@@ -2580,7 +2580,7 @@
     "href": "modules.html#slides-9",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nPrinciples\nPolars + Altair"
+    "text": "Slides\n\nData Visualization Principles\nPolars + Altair\nRecommender Systems"
   },
   {
     "objectID": "slides-10-01.html#hsl",
@@ -2819,5 +2819,68 @@
     "title": "Dashboards with Altair",
     "section": "Add filter slider",
     "text": "Add filter slider"
+  },
+  {
+    "objectID": "slides-10-03.html#recommender-systems",
+    "href": "slides-10-03.html#recommender-systems",
+    "title": "Recommender Systems",
+    "section": "Recommender Systems",
+    "text": "Recommender Systems\n\nInformation filtering system that predicts and suggests items that a user might be interested in based on:\n\ntheir preferences\npast behavior\nsimilarities to other users"
+  },
+  {
+    "objectID": "slides-10-03.html#recommender-systems-1",
+    "href": "slides-10-03.html#recommender-systems-1",
+    "title": "Recommender Systems",
+    "section": "Recommender Systems",
+    "text": "Recommender Systems\n\nCollaborative filtering: makes recommendations based on the user’s interests and information collected from many other users (collaborating)\n\nUser-based: “Users similar to you enjoyed these items”\nItem-based: “Users who liked this item also liked these others”\n\n\nWhat type of data would we need for this?\nWhat algorithms could we use?"
+  },
+  {
+    "objectID": "slides-10-03.html#recommender-systems-history",
+    "href": "slides-10-03.html#recommender-systems-history",
+    "title": "Recommender Systems",
+    "section": "Recommender Systems – history",
+    "text": "Recommender Systems – history\nElaine Rich (1979) – Grundy\n\nUsers answered specific questions about their book preferences\nSystem classified users into classes of preferences, or “stereotypes”,\nSystem provided recommendations for books users might like based on their stereotype membership"
+  },
+  {
+    "objectID": "slides-10-03.html#recommender-systems-history-1",
+    "href": "slides-10-03.html#recommender-systems-history-1",
+    "title": "Recommender Systems",
+    "section": "Recommender Systems – history",
+    "text": "Recommender Systems – history\nNetflix Prize (2006-2009)\n\nTraining data set of 100,480,507 ratings that 480,189 users gave to 17,770 movies\nuser (integer id), movie (integer id), date of grade, grade (integer 1 to 5)"
+  },
+  {
+    "objectID": "slides-10-03.html#recommender-systems-2",
+    "href": "slides-10-03.html#recommender-systems-2",
+    "title": "Recommender Systems",
+    "section": "Recommender Systems",
+    "text": "Recommender Systems\n\nContent-based filtering: Uses implicit knowledge about user preferences, recommends items with similar attributes to what the user has previously liked\nKnowledge-based systems: Uses explicit knowledge about user preferences and item properties\nHybrid approaches: Combines multiple recommendation techniques"
+  },
+  {
+    "objectID": "slides-10-03.html#data",
+    "href": "slides-10-03.html#data",
+    "title": "Recommender Systems",
+    "section": "Data",
+    "text": "Data\nExplicit data collection, where users:\n\nRate items on a sliding scale\nRank a collection of items from favorite to least favorite\nChoose which of two items is better\nCreate a list of items they like"
+  },
+  {
+    "objectID": "slides-10-03.html#data-1",
+    "href": "slides-10-03.html#data-1",
+    "title": "Recommender Systems",
+    "section": "Data",
+    "text": "Data\nImplicit data collection: history of items viewed/purchased/clicked on by users (if social media, history of friends/connections)"
+  },
+  {
+    "objectID": "slides-10-03.html#case-study",
+    "href": "slides-10-03.html#case-study",
+    "title": "Recommender Systems",
+    "section": "Case Study",
+    "text": "Case Study\nDownload the Preprocessed_data.csv file from this collection of book ratings and set up your working environment.\n\nWhat algorithms can we run on this data set?\nWhat data wrangling do we need to do?"
+  },
+  {
+    "objectID": "slides-10-03.html",
+    "href": "slides-10-03.html",
+    "title": "Recommender Systems",
+    "section": "",
+    "text": "Information filtering system that predicts and suggests items that a user might be interested in based on:\n\ntheir preferences\npast behavior\nsimilarities to other users"
   }
 ]
