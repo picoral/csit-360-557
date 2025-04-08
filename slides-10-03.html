@@ -165,7 +165,7 @@
 <ul>
 <li>Collaborative filtering: makes recommendations based on the user’s interests and information collected from many other users (collaborating)
 <ul>
-<li>User-based: “Users similar to you enjoyed these items”</li>
+<li>User-based: “Users similar to you enjoyed these items” (e.g.&nbsp;demographic-based)</li>
 <li>Item-based: “Users who liked this item also liked these others”</li>
 </ul></li>
 </ul>
@@ -194,6 +194,26 @@
 <h2>Data</h2>
 <p><strong>Implicit</strong> data collection: history of items viewed/purchased/clicked on by users (if social media, history of friends/connections)</p>
 </section>
+<section id="possible-algorithms" class="slide level2">
+<h2>Possible Algorithms</h2>
+<ul>
+<li>Unsupervised learning: cluster users or items</li>
+<li>Regression: builds a model to predict ratings</li>
+<li>Reinforcement learning: get input from user on whether recommendation is good, adjust model (good for cold starts)</li>
+<li>Recurrent Neural Networks (RNNs): processes sequential user history</li>
+<li>Convolutional Neural Networks (CNNs): extracts features from images</li>
+</ul>
+</section>
+<section id="steps" class="slide level2">
+<h2>Steps</h2>
+<ul>
+<li>Data Collection: gather user data, item data, and/or interaction data</li>
+<li>Preprocessing: wrangle the data for analysis</li>
+<li>Model Training: train a machine learning model on the data</li>
+<li>Evaluation: evaluate the performance of the model</li>
+<li>Prediction: use the model to make recommendations</li>
+</ul>
+</section>
 <section id="case-study" class="slide level2">
 <h2>Case Study</h2>
 <p><a href="https://www.kaggle.com/datasets/ruchi798/bookcrossing-dataset">Download the Preprocessed_data.csv file from this collection of book ratings</a> and set up your working environment.</p>
@@ -201,6 +221,10 @@
 <li>What algorithms can we run on this data set?</li>
 <li>What data wrangling do we need to do?</li>
 </ul>
+</section>
+<section id="more-resources" class="slide level2">
+<h2>More resources</h2>
+<p><a href="https://www.tensorflow.org/recommenders">TensorFlow Recommenders</a></p>
 
 
 </section>

@@ -2832,7 +2832,7 @@
     "href": "slides-10-03.html#recommender-systems-1",
     "title": "Recommender Systems",
     "section": "Recommender Systems",
-    "text": "Recommender Systems\n\nCollaborative filtering: makes recommendations based on the user’s interests and information collected from many other users (collaborating)\n\nUser-based: “Users similar to you enjoyed these items”\nItem-based: “Users who liked this item also liked these others”\n\n\nWhat type of data would we need for this?\nWhat algorithms could we use?"
+    "text": "Recommender Systems\n\nCollaborative filtering: makes recommendations based on the user’s interests and information collected from many other users (collaborating)\n\nUser-based: “Users similar to you enjoyed these items” (e.g. demographic-based)\nItem-based: “Users who liked this item also liked these others”\n\n\nWhat type of data would we need for this?\nWhat algorithms could we use?"
   },
   {
     "objectID": "slides-10-03.html#recommender-systems-history",
@@ -2882,5 +2882,26 @@
     "title": "Recommender Systems",
     "section": "",
     "text": "Information filtering system that predicts and suggests items that a user might be interested in based on:\n\ntheir preferences\npast behavior\nsimilarities to other users"
+  },
+  {
+    "objectID": "slides-10-03.html#possible-algorithms",
+    "href": "slides-10-03.html#possible-algorithms",
+    "title": "Recommender Systems",
+    "section": "Possible Algorithms",
+    "text": "Possible Algorithms\n\nUnsupervised learning: cluster users or items\nRegression: builds a model to predict ratings\nReinforcement learning: get input from user on whether recommendation is good, adjust model (good for cold starts)\nRecurrent Neural Networks (RNNs): processes sequential user history\nConvolutional Neural Networks (CNNs): extracts features from images"
+  },
+  {
+    "objectID": "slides-10-03.html#steps",
+    "href": "slides-10-03.html#steps",
+    "title": "Recommender Systems",
+    "section": "Steps",
+    "text": "Steps\n\nData Collection: gather user data, item data, and/or interaction data\nPreprocessing: wrangle the data for analysis\nModel Training: train a machine learning model on the data\nEvaluation: evaluate the performance of the model\nPrediction: use the model to make recommendations"
+  },
+  {
+    "objectID": "slides-10-03.html#more-resources",
+    "href": "slides-10-03.html#more-resources",
+    "title": "Recommender Systems",
+    "section": "More resources",
+    "text": "More resources\nTensorFlow Recommenders"
   }
 ]
