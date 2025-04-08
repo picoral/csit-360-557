@@ -2888,7 +2888,7 @@
     "href": "slides-10-03.html#possible-algorithms",
     "title": "Recommender Systems",
     "section": "Possible Algorithms",
-    "text": "Possible Algorithms\n\nUnsupervised learning: cluster users or items\nRegression: builds a model to predict ratings\nReinforcement learning: get input from user on whether recommendation is good, adjust model (good for cold starts)\nRecurrent Neural Networks (RNNs): processes sequential user history\nConvolutional Neural Networks (CNNs): extracts features from images"
+    "text": "Possible Algorithms\n\nUnsupervised learning: cluster users or items\nRegression: build a model to predict ratings\nReinforcement learning: get input from user on whether recommendation is good, adjust model (good for cold starts)\nRecurrent Neural Networks (RNNs): process sequential user history\nConvolutional Neural Networks (CNNs): extract features from images"
   },
   {
     "objectID": "slides-10-03.html#steps",
