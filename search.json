@@ -2903,5 +2903,138 @@
     "title": "Recommender Systems",
     "section": "More resources",
     "text": "More resources\nTensorFlow Recommenders"
+  },
+  {
+    "objectID": "slides-11-01.html#reinforcement-learning",
+    "href": "slides-11-01.html#reinforcement-learning",
+    "title": "Reinforcement Learning",
+    "section": "Reinforcement learning",
+    "text": "Reinforcement learning\n\nMachine learning with an agent that learns to make decisions by taking actions in an environment to maximize some notion of cumulative reward\nThe agent follows a policy (strategy) to decide which actions to take in different states\nThrough trial and error, it learns which actions yield the highest rewards in specific situations *Reinforcement learning is applied in domains including robotics, recommendation systems, and autonomous vehicles"
+  },
+  {
+    "objectID": "slides-11-01.html#reinforcement-learning-1",
+    "href": "slides-11-01.html#reinforcement-learning-1",
+    "title": "Reinforcement Learning",
+    "section": "Reinforcement learning",
+    "text": "Reinforcement learning\n\nAgent: The learner or decision-maker\nEnvironment: The world with which the agent interacts\nState: The current situation of the agent in the environment\nAction: What the agent can do in each state\nReward: Feedback from the environment indicating the desirability of an action"
+  },
+  {
+    "objectID": "slides-11-01.html#reinforcement-learning-2",
+    "href": "slides-11-01.html#reinforcement-learning-2",
+    "title": "Reinforcement Learning",
+    "section": "Reinforcement learning",
+    "text": "Reinforcement learning\n\nhttps://gymnasium.farama.org/introduction/basic_usage/"
+  },
+  {
+    "objectID": "slides-11-01.html#reinforcement-learning-3",
+    "href": "slides-11-01.html#reinforcement-learning-3",
+    "title": "Reinforcement Learning",
+    "section": "Reinforcement learning",
+    "text": "Reinforcement learning\n\nRL involves training an agent that interacts with its environment\nThe agent moves between different environmental states by taking actions\nThese actions produce rewards (positive, negative, or zero)\nThe agent’s goal is to maximize total rewards throughout an episode (a sequence from start to finish for the task)\nWe define rewards based on what we want the agent to accomplish"
+  },
+  {
+    "objectID": "slides-11-01.html#exploitation-vs.-exploration",
+    "href": "slides-11-01.html#exploitation-vs.-exploration",
+    "title": "Reinforcement Learning",
+    "section": "Exploitation vs. Exploration",
+    "text": "Exploitation vs. Exploration\n\nLearning trade-off: explotation vs. exploration\nExploitation – use the knowledge the agent already has is the best decision, meaning choose actions that have worked well in the past and are known to provide good rewards based on its current understanding\nExploration – try new actions or strategies"
+  },
+  {
+    "objectID": "slides-11-01.html#exploitation-vs.-exploration-1",
+    "href": "slides-11-01.html#exploitation-vs.-exploration-1",
+    "title": "Reinforcement Learning",
+    "section": "Exploitation vs. Exploration",
+    "text": "Exploitation vs. Exploration\nToo much exploitation (too greedy): The agent might get stuck using a suboptimal strategy because it never discovers better alternatives.\nToo much exploration: The agent spends too much time trying random actions instead of using what it already knows works well."
+  },
+  {
+    "objectID": "slides-11-01.html#cart-pole-balancing-problem",
+    "href": "slides-11-01.html#cart-pole-balancing-problem",
+    "title": "Reinforcement Learning",
+    "section": "Cart-pole balancing problem",
+    "text": "Cart-pole balancing problem\n\nYour’re trying to keep a pole standing up straight. The pole is connected to a cart with a joint that can move freely (no motor). The cart slides along a smooth track with no friction. At the start, the pole is standing straight up. The goal is to stop it from falling over by making the cart go left and right, faster or slower."
+  },
+  {
+    "objectID": "slides-11-01.html#cart-pole-balancing-problem-1",
+    "href": "slides-11-01.html#cart-pole-balancing-problem-1",
+    "title": "Reinforcement Learning",
+    "section": "Cart-pole balancing problem",
+    "text": "Cart-pole balancing problem\n\nObjective: keep a pole upright on a cart by applying forces to the cart\nEnvironment: The pole is attached to a cart that moves along a frictionless track\nState: the cart’s position and velocity, and the pole’s angle and angular velocity\nActions: move the cart either left or right\nReward: pole remains upright\n\nThe episode ends when the pole falls too far or the cart moves too far from the center"
+  },
+  {
+    "objectID": "slides-11-01.html#reinforcement-learning-approaches",
+    "href": "slides-11-01.html#reinforcement-learning-approaches",
+    "title": "Reinforcement Learning",
+    "section": "Reinforcement Learning approaches",
+    "text": "Reinforcement Learning approaches\nWe want to find the policy that can maximize the reward –find the optimal policy for each possible state\n\nQ-Learning: the agent learns a Q-table, which maps states and actions to their expected rewards\nDeep Q-Networks (DQN): a neural network is used to approximate the Q-function"
+  },
+  {
+    "objectID": "slides-11-01.html#rf-with-gymnasium",
+    "href": "slides-11-01.html#rf-with-gymnasium",
+    "title": "Reinforcement Learning",
+    "section": "RF with gymnasium",
+    "text": "RF with gymnasium\nYou need c++ installed in your computer – for macs, install Xcode; for windows machines use VS code\nhttps://gymnasium.farama.org/\n/path/to/bin/python3 -m pip install gymnasium  \n/path/to/bin/python3 -m pip install \"gymnasium[box2d]\"   \n/path/to/bin/python3 -m pip install swig   \ncart-pole problem"
+  },
+  {
+    "objectID": "slides-11-01.html#exploitation-vs.-exploration-methods",
+    "href": "slides-11-01.html#exploitation-vs.-exploration-methods",
+    "title": "Reinforcement Learning",
+    "section": "Exploitation vs. Exploration – methods",
+    "text": "Exploitation vs. Exploration – methods\n\nSome things are easy and provide instant gratification, others provide long term rewards\nGoal: optimize for maximum rewards over multiple episodes\nTraining does not depend only on current state, but the whole history of states"
+  },
+  {
+    "objectID": "slides-11-01.html#exploitation-vs.-exploration-methods-1",
+    "href": "slides-11-01.html#exploitation-vs.-exploration-methods-1",
+    "title": "Reinforcement Learning",
+    "section": "Exploitation vs. Exploration – methods",
+    "text": "Exploitation vs. Exploration – methods\n\nε-greedy: Choose the best known action most of the time (exploitation), but occasionally (with probability ε) choose a random action (exploration)\nSoftmax/Boltzmann exploration: Choose actions with probability relative to their estimated values\nUpper Confidence Bound (UCB): Select actions that have high potential value or high uncertainty\nAdding noise to the policy: Gradually reduce exploration over time as the agent learns"
+  },
+  {
+    "objectID": "slides-11-01.html#q-learning",
+    "href": "slides-11-01.html#q-learning",
+    "title": "Reinforcement Learning",
+    "section": "Q-learning",
+    "text": "Q-learning\n\nFundamental reinforcement learning algorithm\nThe goal is to find the policy that can maximize the reward –find the optimal policy for each possible state\nThe agent learns a Q-table, which maps states and actions to their expected rewards\nQ-table: matrix that estimates the expected future reward for each state-action pair\nThe “Q” stands for “quality” - representing the quality or value of a specific action in a specific state."
+  },
+  {
+    "objectID": "slides-11-01.html#q-learning-steps",
+    "href": "slides-11-01.html#q-learning-steps",
+    "title": "Reinforcement Learning",
+    "section": "Q-learning – steps",
+    "text": "Q-learning – steps\n\nInitialize the Q-table with zeros or random values\nFor each episode:\n\nStart in some initial state\nRepeat until goal is reached:\n\nChoose an action (exploration or exploitation)\nTake the action, observe the reward and next state\nUpdate the Q-value for the current state-action pair\nMove to the next state"
+  },
+  {
+    "objectID": "slides-11-01.html#delivery-truck",
+    "href": "slides-11-01.html#delivery-truck",
+    "title": "Reinforcement Learning",
+    "section": "Delivery Truck",
+    "text": "Delivery Truck\n\nSimplest RF problem\nObjective: move from one corner of a 2D grid (roads) to the other corner (delivery point)\nEnvironment: 2D grid, with blocked cells (obstacles)\nState: the cell in the grid the truck is on\nActions: 4 in total – up, down, left, right\nReward: positive reward for reaching the goal (delivery spot), negative reward for colliding with an obstacle, small positive reward for moving where there is no obstacle, positive reward for moving in the correct direction"
+  },
+  {
+    "objectID": "slides-11-01.html#delivery-truck-initial-state",
+    "href": "slides-11-01.html#delivery-truck-initial-state",
+    "title": "Reinforcement Learning",
+    "section": "Delivery Truck – initial state",
+    "text": "Delivery Truck – initial state"
+  },
+  {
+    "objectID": "slides-11-01.html#delivery-truck-initial-state-1",
+    "href": "slides-11-01.html#delivery-truck-initial-state-1",
+    "title": "Reinforcement Learning",
+    "section": "Delivery Truck – initial state",
+    "text": "Delivery Truck – initial state"
+  },
+  {
+    "objectID": "slides-11-01.html#delivery-truck-initial-state-2",
+    "href": "slides-11-01.html#delivery-truck-initial-state-2",
+    "title": "Reinforcement Learning",
+    "section": "Delivery Truck – initial state",
+    "text": "Delivery Truck – initial state\nDownload starter code"
+  },
+  {
+    "objectID": "slides-11-01.html#starter-code",
+    "href": "slides-11-01.html#starter-code",
+    "title": "Reinforcement Learning",
+    "section": "Starter code",
+    "text": "Starter code\nDownload starter code"
   }
 ]
