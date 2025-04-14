@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>CSIT 360/557 Advanced Techniques in Data Science – Reinforcement Learning</title>
+  <title>CSIT 360/557 Advanced Techniques in Data Science – Multi-armed bandit</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -126,153 +126,56 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Reinforcement Learning</h1>
+  <h1 class="title">Multi-armed bandit</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="reinforcement-learning" class="slide level2">
-<h2>Reinforcement learning</h2>
+<section id="multi-armed-bandit" class="slide level2">
+<h2>Multi-armed bandit</h2>
 <ul>
-<li>Machine learning with an agent that learns how to make decisions by taking actions in an environment to maximize some notion of cumulative reward</li>
-<li>The agent follows a policy (strategy) to decide which actions to take in different states</li>
-<li>Through trial and error, it learns which actions yield the highest rewards in specific situations</li>
-<li>Reinforcement learning is applied in domains including robotics, recommendation systems, and autonomous vehicles</li>
+<li>Classic reinforcement learning scenario</li>
+<li>Illustrates the exploration-exploitation dilemma</li>
+<li>Imagine a row of slot machines (sometimes known as “one-armed bandits”)</li>
+<li>Each machine has different unknown probabilities of paying out</li>
+<li>Which machines to play? How many times to play each machine? What order to play? Continue with the current machine or try a different machine?</li>
 </ul>
 </section>
-<section id="reinforcement-learning-1" class="slide level2">
-<h2>Reinforcement learning</h2>
+<section id="multi-armed-bandit-1" class="slide level2">
+<h2>Multi-armed bandit</h2>
 <ul>
-<li>Agent: The learner or decision-maker</li>
-<li>Environment: The world with which the agent interacts</li>
-<li>State: The current situation of the agent in the environment</li>
-<li>Action: What the agent can do in each state</li>
-<li>Reward: Feedback from the environment indicating the desirability of an action</li>
+<li><strong>Arms</strong> – pulling different slot machine levers (actions)</li>
+<li><strong>Reward</strong> – payoffs you receive after each pull</li>
+<li><strong>Regret</strong> – difference between your actual rewards and what you could have earned by always pulling the optimal arm</li>
 </ul>
 </section>
-<section id="reinforcement-learning-2" class="slide level2">
-<h2>Reinforcement learning</h2>
-
-<img data-src="images/AE_loop.png" class="r-stretch"><p><small><a href="https://gymnasium.farama.org/introduction/basic_usage/" class="uri">https://gymnasium.farama.org/introduction/basic_usage/</a></small></p>
-</section>
-<section id="reinforcement-learning-3" class="slide level2">
-<h2>Reinforcement learning</h2>
+<section id="multi-armed-bandit-2" class="slide level2">
+<h2>Multi-armed bandit</h2>
 <ul>
-<li>RL involves training an <strong>agent</strong> that interacts with its <strong>environment</strong></li>
-<li>The agent moves between different environmental <strong>states</strong> by taking <strong>actions</strong></li>
-<li>These actions produce <strong>rewards</strong> (positive, negative, or zero)</li>
-<li>The agent’s <strong>goal</strong> is to maximize total rewards throughout an episode (a sequence from start to finish for the task)</li>
-<li>We define rewards based on what we want the agent to accomplish</li>
+<li>Only one state, so no state transitions</li>
+<li>Actions don’t affect the environment’s future states</li>
+<li>Focus is on the exploration-exploitation trade-off</li>
 </ul>
 </section>
-<section id="exploitation-vs.-exploration" class="slide level2">
-<h2>Exploitation vs.&nbsp;Exploration</h2>
+<section id="multi-armed-bandit-strategies" class="slide level2">
+<h2>Multi-armed bandit – strategies</h2>
 <ul>
-<li>Learning trade-off: explotation vs.&nbsp;exploration</li>
-<li>Exploitation – use the knowledge the agent already has is the best decision, meaning choose actions that have worked well in the past and are known to provide good rewards based on its current understanding</li>
-<li>Exploration – try new actions or strategies</li>
+<li>ε-greedy: Choose the best-known arm most of the time (1-ε), but occasionally (ε) select a random arm</li>
+<li>Upper Confidence Bound (UCB): Select arms based on their potential upside, factoring in uncertainty</li>
+<li>Thompson Sampling: Choose arms proportionally to the probability they are optimal, using Bayesian updates</li>
+<li>Softmax: Select arms with probability proportional to their estimated values</li>
 </ul>
 </section>
-<section id="exploitation-vs.-exploration-1" class="slide level2">
-<h2>Exploitation vs.&nbsp;Exploration</h2>
-<p>Too much exploitation (too greedy): The agent might get stuck using a suboptimal strategy because it never discovers better alternatives.</p>
-<p>Too much exploration: The agent spends too much time trying random actions instead of using what it already knows works well.</p>
-</section>
-<section id="exploitation-vs.-exploration-methods" class="slide level2">
-<h2>Exploitation vs.&nbsp;Exploration – methods</h2>
+<section id="multi-armed-bandit-real-world-applications" class="slide level2">
+<h2>Multi-armed bandit – real-world Applications</h2>
 <ul>
-<li>Some things are easy and provide instant gratification, others provide long term rewards</li>
-<li>Goal: optimize for maximum rewards over multiple episodes</li>
-<li>Training does not depend only on current state, but the whole history of states</li>
+<li>A/B testing in websites</li>
+<li>Clinical trials for medical treatments</li>
+<li>Online advertising (which ad to show)</li>
+<li>Resource allocation problems</li>
+<li>Recommendation systems</li>
 </ul>
-</section>
-<section id="exploitation-vs.-exploration-methods-1" class="slide level2">
-<h2>Exploitation vs.&nbsp;Exploration – methods</h2>
-<ul>
-<li>ε-greedy: Choose the best known action most of the time (exploitation), but occasionally (with probability ε) choose a random action (exploration)</li>
-<li>Softmax/Boltzmann exploration: Choose actions with probability relative to their estimated values</li>
-<li>Upper Confidence Bound (UCB): Select actions that have high potential value or high uncertainty</li>
-<li>Adding noise to the policy: Gradually reduce exploration over time as the agent learns</li>
-</ul>
-</section>
-<section id="q-learning" class="slide level2">
-<h2>Q-learning</h2>
-<ul>
-<li>Fundamental reinforcement learning algorithm</li>
-<li>The goal is to find the policy that can maximize the reward –find the optimal policy for each possible state</li>
-<li>The agent learns a Q-table, which maps states and actions to their expected rewards</li>
-<li>Q-table: matrix that estimates the expected future reward for each state-action pair</li>
-<li>The “Q” stands for “quality” - representing the quality or value of a specific action in a specific state.</li>
-</ul>
-</section>
-<section id="q-learning-steps" class="slide level2">
-<h2>Q-learning – steps</h2>
-<ul>
-<li>Initialize the Q-table with zeros or random values</li>
-<li>For each episode:
-<ul>
-<li>Start in some initial state</li>
-<li>Repeat until goal is reached:
-<ul>
-<li>Choose an action (exploration or exploitation)</li>
-<li>Take the action, observe the reward and next state</li>
-<li>Update the Q-value for the current state-action pair</li>
-<li>Move to the next state</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="delivery-truck" class="slide level2">
-<h2>Delivery Truck</h2>
-<ul>
-<li>Objective: move from one corner of a 2D grid (roads) to the other corner (delivery point)</li>
-<li>Environment: 2D grid, with blocked cells (obstacles)</li>
-<li>State: the cell in the grid the truck is on</li>
-<li>Actions: 4 in total – up, down, left, right</li>
-<li>Reward: positive reward for reaching the goal (delivery spot), negative reward for colliding with an obstacle, small positive reward for moving where there is no obstacle, positive reward for moving in the correct direction</li>
-</ul>
-</section>
-<section id="delivery-truck-initial-state" class="slide level2">
-<h2>Delivery Truck – initial state</h2>
-
-<img data-src="images/rl-initial-state.png" class="r-stretch"></section>
-<section id="delivery-truck-initial-state-1" class="slide level2">
-<h2>Delivery Truck – initial state</h2>
-
-<img data-src="images/rl-final-state.png" class="r-stretch"></section>
-<section id="delivery-truck-initial-state-2" class="slide level2">
-<h2>Delivery Truck – initial state</h2>
-<p><a href="code/reinforcement-learning.zip">Download starter code</a></p>
-</section>
-<section id="cart-pole-balancing-problem" class="slide level2">
-<h2>Cart-pole balancing problem</h2>
-
-<img data-src="images/Cart-pole-balancing-problem-The-force-applied-to-the-cart-is-atF-where-01-at-1-is.png" class="r-stretch"><p>Your’re trying to keep a pole standing up straight. The pole is connected to a cart with a joint that can move freely (no motor). The cart slides along a smooth track with no friction. At the start, the pole is standing straight up. The goal is to stop it from falling over by making the cart go left and right, faster or slower.</p>
-</section>
-<section id="cart-pole-balancing-problem-1" class="slide level2">
-<h2>Cart-pole balancing problem</h2>
-<ul>
-<li>Objective: keep a pole upright on a cart by applying forces to the cart</li>
-<li>Environment: The pole is attached to a cart that moves along a frictionless track</li>
-<li>State: the cart’s position and velocity, and the pole’s angle and angular velocity</li>
-<li>Actions: move the cart either left or right</li>
-<li>Reward: pole remains upright</li>
-</ul>
-<p>The episode ends when the pole falls too far or the cart moves too far from the center</p>
-</section>
-<section id="rf-with-gymnasium" class="slide level2">
-<h2>RF with gymnasium</h2>
-<p>You need c++ installed in your computer – for macs, install Xcode; for windows machines use <a href="https://code.visualstudio.com/docs/languages/cpp">VS code</a></p>
-<p><a href="https://gymnasium.farama.org/" class="uri">https://gymnasium.farama.org/</a></p>
-<pre><code>/path/to/bin/python3 -m pip install gymnasium  
-/path/to/bin/python3 -m pip install "gymnasium[box2d]"   
-/path/to/bin/python3 -m pip install swig   </code></pre>
-<p><a href="https://www.gymlibrary.dev/environments/classic_control/cart_pole/">cart-pole problem</a></p>
-</section>
-<section id="starter-code" class="slide level2">
-<h2>Starter code</h2>
-<p><a href="code/cart_pole.py.zip">Download starter code</a></p>
 
 
 </section>
