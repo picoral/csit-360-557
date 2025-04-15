@@ -3099,5 +3099,12 @@
     "title": "Reinforcement Learning",
     "section": "Q-learning starter code",
     "text": "Q-learning starter code\nDownload Q-learning starter code"
+  },
+  {
+    "objectID": "slides-11-02.html#multi-armed-bandit-implementation",
+    "href": "slides-11-02.html#multi-armed-bandit-implementation",
+    "title": "Multi-armed bandit",
+    "section": "Multi-armed bandit – implementation",
+    "text": "Multi-armed bandit – implementation\nImplementation in Python"
   }
 ]
