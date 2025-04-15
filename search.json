@@ -2951,7 +2951,7 @@
     "href": "slides-11-01.html#cart-pole-balancing-problem",
     "title": "Reinforcement Learning",
     "section": "Cart-pole balancing problem",
-    "text": "Cart-pole balancing problem\n\nYour’re trying to keep a pole standing up straight. The pole is connected to a cart with a joint that can move freely (no motor). The cart slides along a smooth track with no friction. At the start, the pole is standing straight up. The goal is to stop it from falling over by making the cart go left and right, faster or slower."
+    "text": "Cart-pole balancing problem\n\nYou are trying to keep a pole standing up straight. The pole is connected to a cart with a joint that can move freely (no motor). The cart slides along a smooth track with no friction. At the start, the pole is standing straight up. The goal is to stop it from falling over by making the cart go left and right, faster or slower."
   },
   {
     "objectID": "slides-11-01.html#cart-pole-balancing-problem-1",
@@ -3078,5 +3078,19 @@
     "title": "Multi-armed bandit",
     "section": "Multi-armed bandit – real-world Applications",
     "text": "Multi-armed bandit – real-world Applications\n\nA/B testing in websites\nClinical trials for medical treatments\nOnline advertising (which ad to show)\nResource allocation problems\nRecommendation systems"
+  },
+  {
+    "objectID": "slides-11-01.html#q-learning-1",
+    "href": "slides-11-01.html#q-learning-1",
+    "title": "Reinforcement Learning",
+    "section": "Q-learning",
+    "text": "Q-learning\n\nDefine dimensions for the Q-table\nFit the observation space into the Q-table\nIndex for Q-Table is integer, define a tranformation from observation to index\nInitialize Q-Table – zeros or random number?"
+  },
+  {
+    "objectID": "slides-11-01.html#q-learning-started-code",
+    "href": "slides-11-01.html#q-learning-started-code",
+    "title": "Reinforcement Learning",
+    "section": "Q-learning started code",
+    "text": "Q-learning started code\nDownload Q-learning starter code"
   }
 ]
